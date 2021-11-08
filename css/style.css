@@ -29,8 +29,14 @@ html {
       background-color: var(--color-dark);
       color: var(--color-light); } }
 
+
+
+
 body {
   line-height: 1.6; }
+  @media (prefers-color-scheme: dark) {
+    html {
+    background:  var(--color-dark); } }
 
 html,
 body {
