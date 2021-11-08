@@ -35,8 +35,8 @@ html {
 body {
   line-height: 1.6; }
   @media (prefers-color-scheme: dark) {
-    html {
-    background:  var(--color-dark); } }
+    body {
+    background-color: var(--color-dark); } }
 
 html,
 body {
