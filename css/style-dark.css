@@ -18,7 +18,7 @@
 
 html {
   background-color: var(--color-dark);
-  color: var(--color-light);
+  color: var(--color-dark);
   font-family: var(--font-serif), serif;
   font-size: --font-size; }
   @media screen and (min-width: var(--breakpoint-sm)) {
