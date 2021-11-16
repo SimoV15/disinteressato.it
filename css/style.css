@@ -7,8 +7,9 @@
   --font-serif: 'Roboto Condensed';
   --font-monospace: 'Roboto Mono';
   --font-size: 1rem;
-  --font-size-large: 1.250rem;
-  --margin: 0 0 1rem; }
+  --font-size-large: 1.125rem;
+  --margin: 0 0 1rem;
+  --breakpoint-sm: 800px; } }
 
 *,
 *::before,
@@ -20,7 +21,7 @@ html {
   color: var(--color-dark);
   font-family: var(--font-serif), serif;
   font-size: 1rem; }
-  @media screen and (min-width: 770px) {
+  @media screen and (min-width: var(--breakpoint-sm)) {
     html {
       font-size: var(--font-size-large); } }
   @media (prefers-color-scheme: dark) {
