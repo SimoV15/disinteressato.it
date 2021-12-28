@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Disinteressato</title><link>https://disinteressato.it/categories/</link><description>Recent content in Categories on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><atom:link href="https://disinteressato.it/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Kindle, Kindle delle mie brame</title><link>https://disinteressato.it/posts/04-kindle/</link><pubDate>09 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/04-kindle/</guid><description>&lt;p>L’ultimo tassello del puzzle per arrivare a semplificare il più possibile la mia vita informatica è stato il ritorno all’utilizzo di un Kindle per le mie letture.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Disinteressato</title><link>https://disinteressato.it/categories/</link><description>Recent content in Categories on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><atom:link href="https://disinteressato.it/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Un Terminale è per sempre</title><link>https://disinteressato.it/posts/05-terminale/</link><pubDate>28 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/05-terminale/</guid><description>&lt;p>Quando a metà anni 2000 iniziai ad usare un Mac il &lt;a href="https://it.m.wikipedia.org/wiki/Terminale_virtuale">terminale&lt;/a> proprio non me lo filavo.&lt;/p>
+&lt;p>In quell&amp;rsquo;era geologica c&amp;rsquo;era ancora la sbornia evolutiva portata dall&amp;rsquo;aumento esponenziale e costante della potenza dei processori con interfacce sempre più belle e ricche di funzionalità, quindi fare un passo indietro ed usare il terminale non era contemplato.&lt;br>
+E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo cosa fosse.&lt;/p>
+&lt;p>Col tempo ho apprezzato l&amp;rsquo;uso che se ne può fare, come possa essere effettivamente più rapido per alcune operazioni, inutilmente complesso per altre, ma soprattutto che è l&amp;rsquo;ultima ancora di salvezza per uscire dai guai nei sistemi &lt;a href="https://it.wikipedia.org/wiki/Unix">Unix&lt;/a>.&lt;/p>
+&lt;p>Ritenendomi adesso un utente discretamente esperto, almeno nel riconoscere le mie necessità, il mio approccio in questo nuovo viaggio con macOS è stato questo: cerco tutto il software che mi serve nell&amp;rsquo;App Store, se non lo trovo la scarico dai rispettivi siti ufficiali e verifico che ci sia la possibilità di ricercare gli aggiornamenti all&amp;rsquo;interno dell&amp;rsquo;applicazione stessa.&lt;/p>
+&lt;p>Queste sono le applicazioni che ho installato esternamente all&amp;rsquo;App Store:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://code.visualstudio.com">Virtual Studio Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.office.com">Microsoft Office&lt;/a> con licenza Office 2021 acquistata su &lt;a href="http://topkeyshop.com">Top Key Shop&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.tug.org/mactex/">MacTex&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://calibre-ebook.com">Calibre&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://iina.io">IINA&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://handbrake.fr">HandBrake&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://freemacsoft.net/appcleaner/">App Cleaner&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Ho lasciato alla riga di comando le operazioni che possono essere svolte esclusivamente da terminale oppure quelle per le quali mi sento più a mio agio ad utilizzarlo.&lt;/p>
+&lt;p>Con macOS la prima cosa da fare è installare &lt;a href="https://brew.sh/index_it">Homebrew&lt;/a>, un gestore di pacchetti col quale scaricare, installare e mantenere aggiornato del software rigorosamente &lt;a href="https://it.wikipedia.org/wiki/Open_source">open source&lt;/a>: in pratica è una specie di App Store da linea di comando.&lt;br>
+Anche l&amp;rsquo;installazione, ovviamente, avviene da riga di comando:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ /bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;quot;
+&lt;/code>&lt;/pre>&lt;p>Piccolo extra, disattivare il monitoraggio di &lt;a href="https://docs.brew.sh/Analytics">Homebrew Analytics&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew analytics off
+&lt;/code>&lt;/pre>&lt;p>Invece, per aggiornare i pacchetti installati basteranno poi i seguenti comandi:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew update
+$ brew outdated
+$ brew upgrade
+&lt;/code>&lt;/pre>&lt;p>Ho installato veramente pochi pacchetti perché quello di cui necessito è residuale o al massimo serve per estendere o completare alcune funzioni di macOS.&lt;/p>
+&lt;h4 id="caratteri">Caratteri&lt;/h4>
+&lt;p>Ho installato solo il carattere &lt;a href="https://fonts.google.com/specimen/Roboto">Roboto&lt;/a>, lo stesso che uso anche in questo sito:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew tap homebrew/cask-fonts
+$ brew install svn
+$ sudo mkdir -p /Library/Java/Extensions
+$ sudo ln -s /opt/homebrew/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib
+$ brew install --cask font-roboto font-roboto-mono font-roboto-slab
+&lt;/code>&lt;/pre>&lt;h4 id="quick-look">Quick Look&lt;/h4>
+&lt;p>Per estendere le funzionalità di &lt;a href="https://en.wikipedia.org/wiki/Quick_Look">Quick Look&lt;/a> ho installato questi due plugins: &lt;a href="https://github.com/sbarex/QLMarkdown">QLMarkdown&lt;/a> permette di visualizzare il formato &lt;a href="https://it.wikipedia.org/wiki/Markdown">markdown&lt;/a>, mentre &lt;a href="https://github.com/Marginal/QLVideo">QLVideo&lt;/a> aggiunge il supporto ad altri formati video.&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install --cask qlmarkdown
+$ brew install --cask qlvideo
+&lt;/code>&lt;/pre>&lt;h4 id="youtube-dl">youtube-dl&lt;/h4>
+&lt;p>Immancabile &lt;a href="https://youtube-dl.org">youtube-dl&lt;/a> per scaricare i video da &lt;a href="https://www.youtube.com">YouTube&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install youtube-dl atomicparsley ffmpeg
+&lt;/code>&lt;/pre>&lt;p>Questo invece è il mio file di configurazione:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ nano ~/.config/youtube-dl/config
+--embed-thumbnail
+--add-metadata
+--no-mtime
+-o /Users/&amp;lt;USER&amp;gt;/Movies/%(title)s.%(ext)s
+-f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
+&lt;/code>&lt;/pre>&lt;h4 id="exiftool">ExifTool&lt;/h4>
+&lt;p>&lt;a href="https://exiftool.org">ExifTool&lt;/a> mi ha tolto dagli impicci di dover inserire i &lt;a href="https://it.wikipedia.org/wiki/Metadato">metadati&lt;/a> (nello specifico: data e ora) alle circa 1700 foto scattate dal fotografo al mio matrimonio:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install exiftool
+&lt;/code>&lt;/pre>&lt;p>Fortunatamente i file erano stati nominati in ordine cronologico crescente di scatto, quindi mi è bastato dapprima inserire in tutte le foto la stessa data e la stessa ora (&lt;code>DIR&lt;/code> è il nome della cartella che contiene i file):&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ exiftool -AllDates=&amp;quot;YYYY:MM:DD HH:MM:SS&amp;quot; DIR -overwrite_original -r
+&lt;/code>&lt;/pre>&lt;p>Dopodiché ad ogni foto, in base all&amp;rsquo;ordine crescente di nome, sono stati aggiunti 10 secondi all&amp;rsquo;ora di scatto rispetto a quella della precedente, il tutto con questo unico comando:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ exiftool '-AllDates+&amp;lt;0:0:${filesequence}0' DIR -fileOrder FileName -overwrite_original -r
+&lt;/code>&lt;/pre>&lt;p>Per verificare che la modifica sia stata effettuata correttamente, questo comando genera un file &lt;a href="https://it.wikipedia.org/wiki/Comma-separated_values">CSV&lt;/a> facilmente analizzabile:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ exiftool -AllDates -csv DIR &amp;gt; out.csv
+&lt;/code>&lt;/pre>&lt;p>In questo modo, una volta aggiunte alla libreria di &lt;a href="https://www.apple.com/it/macos/photos/">Foto&lt;/a>, erano in perfetto ordine cronologico (ovviamente l&amp;rsquo;ora di scatto era arbitraria e non rispettava quella effettiva, ma di meglio non potevo fare).&lt;/p>
+&lt;h4 id="zsh">ZSH&lt;/h4>
+&lt;p>Ed infine, visto che macOS utilizza &lt;a href="https://zsh.sourceforge.io">ZSH&lt;/a> come &lt;a href="https://it.wikipedia.org/wiki/Shell_(informatica)">shell&lt;/a> di default, perché non personalizzarla un pochino?&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ cd ~
+$ touch ~/.hushlogin
+$ nano .zshrc
+alias ..='cd ..'
+alias l='ls -na'
+alias ll='ls -al'
+alias gd='cd /Users/simo/Downloads'
+alias gh='cd ~'
+setopt NO_CASE_GLOB
+setopt AUTO_CD
+setopt EXTENDED_HISTORY
+SAVEHIST=5000
+HISTSIZE=2000
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt CORRECT
+setopt CORRECT_ALL
+plugins=(zsh-completions)
+autoload -Uz compinit
+compinit
+autoload -Uz vcs_info
+PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%1~%f%b %F{white}%#%f '
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
+zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%r%f'
+zstyle ':vcs_info:*' enable git
+$ source .zshrc
+&lt;/code>&lt;/pre>&lt;p>Si potrebbe fare molto di più, ma per il mio approccio questo è già abbastanza per avere tutto ciò di cui necessito razionalmente installato.&lt;/p>
+&lt;p>Adesso sì che mi sento a casa!&lt;/p></description></item><item><title>Kindle, Kindle delle mie brame</title><link>https://disinteressato.it/posts/04-kindle/</link><pubDate>09 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/04-kindle/</guid><description>&lt;p>L’ultimo tassello del puzzle per arrivare a semplificare il più possibile la mia vita informatica è stato il ritorno all’utilizzo di un Kindle per le mie letture.
 Un gentile regalo di mia moglie, dato che l’aveva acquistato anni fa e non l’aveva praticamente mai utilizzato: preferisce di gran lunga i classici libri cartacei.&lt;/p>
 &lt;p>Negli ultimi anni avevo usato un &lt;a href="https://pocketbook.it/it-it/catalog/allsupport-it/basic-lux-615-it">PocketBook Basic Lux&lt;/a>, acquistato essenzialmente perché non vincolato a nessuno store online (ricordate le mie fissazioni espresse negli articoli precedenti?) e che devo ammettere ha fatto il suo sporco lavoro: acquistavo in formato &lt;a href="https://it.wikipedia.org/wiki/EPub">ePub&lt;/a> dove preferivo (principalmente &lt;a href="https://bookrepublic.it">Bookrepublic&lt;/a>), gestivo la mia libreria con &lt;a href="https://calibre-ebook.com">Calibre&lt;/a>, copiavo i file sul dispositivo e li leggevo.
 Facile.&lt;/p>
