@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Disinteressato</title><link>https://disinteressato.it/tags/</link><description>Recent content in Tags on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><atom:link href="https://disinteressato.it/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Un Terminale è per sempre</title><link>https://disinteressato.it/posts/05-terminale/</link><pubDate>28 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/05-terminale/</guid><description>&lt;p>Quando a metà anni 2000 iniziai ad usare un Mac il &lt;a href="https://it.m.wikipedia.org/wiki/Terminale_virtuale">terminale&lt;/a> proprio non me lo filavo.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Disinteressato</title><link>https://disinteressato.it/tags/</link><description>Recent content in Tags on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><atom:link href="https://disinteressato.it/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>I siti non li porta la cicogna</title><link>https://disinteressato.it/posts/06-siti/</link><pubDate>01 January 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/06-siti/</guid><description>&lt;p>Dovessi mai ricominciate tutto daccapo, scrivo due righe su come ho impostato questo sito e su come viene pubblicato.&lt;/p>
+&lt;h4 id="prologo">Prologo&lt;/h4>
+&lt;p>Questa cosa di farmi un semplicissimo sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente. Saranno almeno 3 anni, e non sono mai riuscito a portarla a termine. Ora, in meno di un mese e senza le mie paranoie da ormai ex linuxaro eccolo qui.&lt;br>
+Che poi forse le paranoie mi venivano soltanto perché non avevo ancora accettato che la mia gioventù fosse terminata e tutto questo era soltanto il riflesso inconscio di questa consapevolezza. Per farla breve: i vecchi odiano le rotture di coglioni.&lt;/p>
+&lt;h4 id="hugo">Hugo&lt;/h4>
+&lt;p>&lt;a href="https://gohugo.io">Hugo&lt;/a> è il generatore di &lt;a href="https://it.wikipedia.org/wiki/Web_statico">siti statici&lt;/a> che utilizzo per questo sito. Non ne tesso le lodi perché non ne ho provati altri, ma funziona, è facile da usare, è comprensibile ed anche molto diffuso.&lt;/p>
+&lt;p>Installo anche &lt;a href="https://pygments.org">&lt;code>pygments&lt;/code>&lt;/a> che serve per la &lt;a href="https://it.wikipedia.org/wiki/Syntax_highlighting">colorazione della sintassi&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install hugo pygments
+&lt;/code>&lt;/pre>&lt;p>Per la configurazione rimando al &lt;a href="https://gohugo.io/getting-started/quick-start/">sito ufficiale&lt;/a> perché senza alcun dubbio è più completo ed esaustivo di quanto io possa mai esserlo.&lt;/p>
+&lt;h4 id="git-e-github">Git e GitHub&lt;/h4>
+&lt;p>Può sembrare complicato, ma comunque quando tutto è impostato funziona come un orologio svizzero senza necessità di manutenzione.&lt;/p>
+&lt;p>Prerequisito fondamentale è avere un account &lt;a href="https://github.com">GitHub&lt;/a>.&lt;/p>
+&lt;p>Installare e configurare &lt;a href="https://git-scm.com">Git&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install git
+$ git config --global user.name “[GitHub_Username]”
+$ git config --global user.email &amp;quot;1234567+[GitHub_Username]@users.noreply.github.com&amp;quot;
+$ git config --global color.ui auto
+$ git config --global merge.conflictstyle diff3
+$ git config --global init.defaultBranch main
+$ git config --global pull.rebase false
+$ git config --list
+&lt;/code>&lt;/pre>&lt;p>Io ho deciso di firmare i &lt;em>commit&lt;/em> con la mia &lt;a href="https://it.wikipedia.org/wiki/GNU_Privacy_Guard">chiave GPG&lt;/a> (assolutamente opzionale):&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install gnupg pinentry-mac
+&lt;/code>&lt;/pre>&lt;p>Creare una chiave GPG&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --full-generate-key
+Per favore scegli che tipo di chiave vuoi: RSA e RSA
+Che chiave vuoi? 4096
+Chiave valida per? 0
+Nome e Cognome: GitHub_Username
+Indirizzo di Email: 1234567+[GitHub_Username]@users.noreply.github.com
+Commento: GitHub
+&lt;/code>&lt;/pre>&lt;p>Visualizzare la chiave appena generata:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --list-secret-keys --keyid-format=long
+/Users/name/.gnupg/pubring.kbx
+------------------------------------
+sec rsa4096/EE05XXXXXXXXXXXX 2021-10-30 [SC]
+215556521B98225XXXXXXXXXXXXXXXXXXXXXXXXX
+uid [ultimo] [GitHub_Username] (GitHub) &amp;lt;1234567+[GitHub_Username]@users.noreply.github.com&amp;gt;
+ssb rsa4096/A226A4XXXXXXXXXX 2021-10-30 [E]
+&lt;/code>&lt;/pre>&lt;p>Questo comando copia la chiave che successivamente andremo ad inserire &lt;a href="https://github.com/settings/keys">qui&lt;/a> tra le impostazioni del nostro account GitHub:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --armor --export EE05XXXXXXXXXXXX | pbcopy
+&lt;/code>&lt;/pre>&lt;p>Configurare Git in modo che utilizzi questa chiave per firmare i commit:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ git config --global user.signingkey EE05XXXXXXXXXXXX
+$ git config --global commit.gpgSign true
+$ git config --global tag.forceSignAnnotated true
+&lt;/code>&lt;/pre>&lt;p>Configurare anche macOS:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ nano ~/.zshrc
+export GPG_TTY=$(tty)
+$ nano ~/.gnupg/gpg-agent.conf
+pinentry-program /opt/homebrew/bin/pinentry-mac
+$ gpgconf --kill gpg-agent
+&lt;/code>&lt;/pre>&lt;p>Questo è il comando da utilizzare se dovesse esserci la necessità di esportare la chiave &lt;em>privata&lt;/em>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --export-secret-keys 1234567+[GitHub_Username]@users.noreply.github.com &amp;gt; private.key
+&lt;/code>&lt;/pre>&lt;h4 id="pubblicazione">Pubblicazione&lt;/h4>
+&lt;p>A questo punto, al netto dei passaggi che non ho elencato perché già trattati in modo superlativo in svariati tutorial che si possono trovare in rete (basta una semplice ricerca &lt;code>Hugo GitHub&lt;/code> per avere a disposizione le risorse necessarie da studiare), seguendo anche in questo caso la &lt;a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">guida ufficiale&lt;/a> potremmo pubblicare il sito con Github Pages.&lt;/p>
+&lt;h4 id="epilogo">Epilogo&lt;/h4>
+&lt;p>Questo è quanto. Di sicuro non voglio che questo sia un tutorial passo passo, ed infatti non lo è, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: &lt;strong>non c&amp;rsquo;è mai un&amp;rsquo;unica via da percorrere per arrivare allo stesso risultato finale&lt;/strong>.&lt;/p></description></item><item><title>Un Terminale è per sempre</title><link>https://disinteressato.it/posts/05-terminale/</link><pubDate>28 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/05-terminale/</guid><description>&lt;p>Quando a metà anni 2000 iniziai ad usare un Mac il &lt;a href="https://it.m.wikipedia.org/wiki/Terminale_virtuale">terminale&lt;/a> proprio non me lo filavo.&lt;/p>
 &lt;p>In quell&amp;rsquo;era geologica c&amp;rsquo;era ancora la sbornia evolutiva portata dall&amp;rsquo;aumento esponenziale e costante della potenza dei processori con interfacce sempre più belle e ricche di funzionalità, quindi fare un passo indietro ed usare il terminale non era contemplato.&lt;br>
 E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo cosa fosse.&lt;/p>
 &lt;p>Col tempo ho apprezzato l&amp;rsquo;uso che se ne può fare, come possa essere effettivamente più rapido per alcune operazioni, inutilmente complesso per altre, ma soprattutto che è l&amp;rsquo;ultima ancora di salvezza per uscire dai guai nei sistemi &lt;a href="https://it.wikipedia.org/wiki/Unix">Unix&lt;/a>.&lt;/p>
