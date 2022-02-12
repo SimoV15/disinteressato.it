@@ -7,17 +7,17 @@
 &lt;blockquote>
 &lt;p>Eppure bisogna ammettere che proprio quest’ultima scena parla a favore di Matthäi, lo mostra nella giusta luce, lo trasforma in un genio, in un uomo che ha intuito così profondamente gli elementi a noi ignoti della realtà da riuscire ad andare oltre le ipotesi e le congetture che ci limitano, fino a giungere in prossimità di quelle leggi cui noi non perveniamo mai: le leggi che regolano lo slancio vitale del mondo. Soltanto in prossimità, beninteso. E proprio perché esiste, malauguratamente, questa orribile scena finale, sorta di emblema dell’imprevedibile, o meglio del caso, la genialità di Matthäi, la sua strategia e le sue azioni risultano a posteriori tanto più dolorose e assurde di quanto non fossero prima, cioè di quando noi della Kasernenstraße lo ritenevamo in errore: niente è più crudele di un genio che inciampa in un’idiozia. Ma in una circostanza del genere tutto dipende da come il genio reagisce alla situazione ridicola in cui è incappato: riesce ad accettarla oppure no? Matthäi non ci riuscì. Voleva che i suoi conti tornassero anche nella realtà. Di conseguenza fu costretto a negare la realtà, e a perdersi nel vuoto.&lt;/p>
 &lt;/blockquote>
-&lt;p>Di sicuro non può mancare nella libreria degli amanti del genere.&lt;/p></description></item><item><title>I siti non li porta la cicogna</title><link>https://disinteressato.it/posts/06-siti/</link><pubDate>01 January 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/06-siti/</guid><description>&lt;p>Dovessi mai ricominciare tutto daccapo, scrivo due righe su come ho impostato questo sito e su come viene pubblicato.&lt;/p>
+&lt;p>Di sicuro non può mancare nella libreria degli amanti del genere.&lt;/p></description></item><item><title>I siti non li porta la cicogna</title><link>https://disinteressato.it/posts/06-sito/</link><pubDate>01 January 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/06-sito/</guid><description>&lt;p>Dovessi mai ricominciare tutto daccapo, scrivo due righe su come ho impostato questo sito e su come viene pubblicato.&lt;/p>
 &lt;h4 id="prologo">Prologo&lt;/h4>
-&lt;p>Questa cosa di farmi un semplicissimo sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente. Saranno almeno 3 anni, e non sono mai riuscito a portarla a termine. Ora, in meno di un mese e senza le mie paranoie da ormai ex linuxaro eccolo qui.&lt;br>
-Che poi forse le paranoie mi venivano soltanto perché non avevo ancora accettato che la mia gioventù fosse terminata e che tutto questo fosse soltanto il riflesso inconscio di questa consapevolezza. Per farla breve: i vecchi odiano le rotture di coglioni.&lt;/p>
+&lt;p>Questa cosa di farmi un sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente, saranno almeno 3 anni, ma tra le vicissitudini da ormai ex linuxaro ed il voler trovare una soluzione semplice da impostare, da manutenere e, nel caso, da replicare, non sono mai riuscito a portarla a termine.&lt;br>
+Adesso, finalmente, ho trovato la quadra giusta.&lt;/p>
 &lt;h4 id="hugo">Hugo&lt;/h4>
 &lt;p>&lt;a href="https://gohugo.io">Hugo&lt;/a> è il generatore di &lt;a href="https://it.wikipedia.org/wiki/Web_statico">siti statici&lt;/a> che utilizzo per questo sito. Non ne tesso le lodi perché non ne ho provati altri, ma funziona, è facile da usare, è comprensibile ed anche molto diffuso.&lt;/p>
 &lt;p>Installo anche &lt;a href="https://pygments.org">&lt;code>pygments&lt;/code>&lt;/a> che serve per la &lt;a href="https://it.wikipedia.org/wiki/Syntax_highlighting">colorazione della sintassi&lt;/a>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install hugo pygments
 &lt;/code>&lt;/pre>&lt;p>Per la configurazione rimando al &lt;a href="https://gohugo.io/getting-started/quick-start/">sito ufficiale&lt;/a> perché senza alcun dubbio è più completo ed esaustivo di quanto io possa mai esserlo.&lt;/p>
 &lt;h4 id="git-e-github">Git e GitHub&lt;/h4>
-&lt;p>Prerequisito fondamentale è avere un account &lt;a href="https://github.com">GitHub&lt;/a>.&lt;/p>
+&lt;p>Prerequisito fondamentale è avere un account &lt;a href="https://github.com">GitHub&lt;/a> ed aver creato due &lt;a href="https://docs.github.com/en/get-started/quickstart/create-a-repo">repository&lt;/a>: uno privato il codice sorgente ed un&amp;rsquo;altro pubblico per la pubblicazione con &lt;a href="https://pages.github.com/">GitHub Pages&lt;/a>.&lt;/p>
 &lt;p>Installare e configurare &lt;a href="https://git-scm.com">Git&lt;/a>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install git
 $ git config --global user.name “[GitHub_Username]”
@@ -60,9 +60,44 @@ $ gpgconf --kill gpg-agent
 &lt;/code>&lt;/pre>&lt;p>Questo è il comando da utilizzare se dovesse esserci la necessità di esportare la chiave &lt;em>privata&lt;/em>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --export-secret-keys 1234567+[GitHub_Username]@users.noreply.github.com &amp;gt; private.key
 &lt;/code>&lt;/pre>&lt;h4 id="pubblicazione">Pubblicazione&lt;/h4>
-&lt;p>A questo punto, al netto dei passaggi che non ho elencato perché già trattati in modo superlativo in svariati tutorial che si possono trovare in rete (basta una semplice ricerca &lt;code>Hugo GitHub&lt;/code> per avere a disposizione le risorse necessarie da studiare), seguendo anche in questo caso la &lt;a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">guida ufficiale&lt;/a> potremmo pubblicare il sito con Github Pages.&lt;/p>
-&lt;h4 id="epilogo">Epilogo&lt;/h4>
-&lt;p>Questo è quanto. Di sicuro non voglio che questo sia un tutorial passo passo, ed infatti non lo è, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: &lt;strong>non c&amp;rsquo;è mai un&amp;rsquo;unica via da percorrere per arrivare allo stesso risultato finale&lt;/strong>.&lt;/p></description></item><item><title>Un Terminale è per sempre</title><link>https://disinteressato.it/posts/05-terminale/</link><pubDate>28 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/05-terminale/</guid><description>&lt;p>Quando a metà anni 2000 iniziai ad usare un Mac il &lt;a href="https://it.m.wikipedia.org/wiki/Terminale_virtuale">terminale&lt;/a> proprio non me lo filavo.&lt;/p>
+&lt;p>A questo punto rimane solo da configurare &lt;a href="https://pages.github.com/">GitHub Pages&lt;/a> ed automatizzare la pubblicazione usando &lt;a href="https://github.com/features/actions">GitHub Actions&lt;/a>: nello specifico &lt;a href="https://github.com/features/actions">actions-gh-pages&lt;/a>.&lt;br>
+Il risultato finale che si ottiene è che ogni volta che viene aggiornato il codice sorgente e viene fatto un push in GitHub parte automaticamente il processo di pubblicazione del sito.&lt;/p>
+&lt;p>Creare le chiavi pubbliche e private per la pubblicazione:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">ssh-keygen -t rsa -b 4096 -C &amp;quot;$(git config user.email)&amp;quot; -f gh-pages -N &amp;quot;&amp;quot;
+&lt;/code>&lt;/pre>&lt;p>Questo comando genererà due file: &lt;code>gh-pages&lt;/code> e &lt;code>gh-pages.pub&lt;/code>: il primo è la chiave privata, mentre il secondo la chiave pubblica.&lt;/p>
+&lt;p>Nel repository del codice sorgente, in &lt;em>Settings &amp;gt; Secrets &amp;gt; Actions &amp;gt; Add new secrets&lt;/em> col nome di ACTIONS_DEPLOY_KEY copiare il contenuto della chiave privata, che si ottiene con questo comando:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">pbcopy &amp;lt; ~/.ssh/gh-pages
+&lt;/code>&lt;/pre>&lt;p>Allo stesso modo, nel repository di pubblicazione con GitHub Pages, in &lt;em>Settings &amp;gt; Deploy Key &amp;gt; Add new deploy key&lt;/em> col nome di PUBLIC_DEPLOY_KEY copiare il contenuto della chiave pubblica e spuntare &lt;em>Allow write access&lt;/em>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">pbcopy &amp;lt; ~/.ssh/gh-pages.pub
+&lt;/code>&lt;/pre>&lt;p>Nel repository del codice sorgente creare il file &lt;code>.github/workflows/gh-pages.yml&lt;/code> inserendo il seguente contenuto modificando &lt;em>GitHub_Username/GitHub_Pages_Repository&lt;/em> con i propri riferimenti:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">name: hugo publish
+on:
+push:
+branches:
+- main
+jobs:
+build-deploy:
+runs-on: ubuntu-20.04
+steps:
+- uses: actions/checkout@v1
+- name: Setup Hugo
+uses: peaceiris/actions-hugo@v2
+with:
+hugo-version: 'latest'
+- name: Build
+run: hugo --minify
+- name: Deploy
+uses: peaceiris/actions-gh-pages@v2
+env:
+ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+EXTERNAL_REPOSITORY: GitHub_Username/GitHub_Pages_Repository
+PUBLISH_BRANCH: main
+PUBLISH_DIR: ./public
+with:
+emptyCommits: false
+commitMessage: ${{ github.event.head_commit.message }}
+&lt;/code>&lt;/pre>&lt;h4 id="epilogo">Epilogo&lt;/h4>
+&lt;p>Questo è quanto. Ho volutamente saltato alcuni passaggi, come la configurazione di Hugo e la sua integrazione con Git/GitHub perché non voglio che questo sia un tutorial passo passo, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: &lt;strong>non c&amp;rsquo;è mai un&amp;rsquo;unica via da percorrere per arrivare allo stesso risultato finale&lt;/strong>.&lt;/p></description></item><item><title>Un Terminale è per sempre</title><link>https://disinteressato.it/posts/05-terminale/</link><pubDate>28 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/05-terminale/</guid><description>&lt;p>Quando a metà anni 2000 iniziai ad usare un Mac il &lt;a href="https://it.m.wikipedia.org/wiki/Terminale_virtuale">terminale&lt;/a> proprio non me lo filavo.&lt;/p>
 &lt;p>In quell&amp;rsquo;era geologica c&amp;rsquo;era ancora la sbornia evolutiva portata dall&amp;rsquo;aumento esponenziale e costante della potenza dei processori con interfacce sempre più belle e ricche di funzionalità, quindi fare un passo indietro ed usare il terminale non era contemplato.&lt;br>
 E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo cosa fosse.&lt;/p>
 &lt;p>Col tempo ho apprezzato l&amp;rsquo;uso che se ne può fare, come possa essere effettivamente più rapido per alcune operazioni, inutilmente complesso per altre, ma soprattutto che è l&amp;rsquo;ultima ancora di salvezza per uscire dai guai nei sistemi &lt;a href="https://it.wikipedia.org/wiki/Unix">Unix&lt;/a>.&lt;/p>

@@ -5,7 +5,7 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=author content>
-<meta property="og:url" content="https://disinteressato.it/posts/06-siti/">
+<meta property="og:url" content="https://disinteressato.it/posts/06-sito/">
 <title>I siti non li porta la cicogna - Disinteressato</title>
 <meta property="og:title" content="I siti non li porta la cicogna - Disinteressato">
 <meta property="og:type" content="article">
@@ -31,15 +31,15 @@
 <h1 class=post-title>I siti non li porta la cicogna</h1><time class=post-date datetime=2022-01-01T00:00:00Z>1 gennaio 2022</time></header>
 <p>Dovessi mai ricominciare tutto daccapo, scrivo due righe su come ho impostato questo sito e su come viene pubblicato.</p>
 <h4 id=prologo>Prologo</h4>
-<p>Questa cosa di farmi un semplicissimo sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente. Saranno almeno 3 anni, e non sono mai riuscito a portarla a termine. Ora, in meno di un mese e senza le mie paranoie da ormai ex linuxaro eccolo qui.<br>
-Che poi forse le paranoie mi venivano soltanto perché non avevo ancora accettato che la mia gioventù fosse terminata e che tutto questo fosse soltanto il riflesso inconscio di questa consapevolezza. Per farla breve: i vecchi odiano le rotture di coglioni.</p>
+<p>Questa cosa di farmi un sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente, saranno almeno 3 anni, ma tra le vicissitudini da ormai ex linuxaro ed il voler trovare una soluzione semplice da impostare, da manutenere e, nel caso, da replicare, non sono mai riuscito a portarla a termine.<br>
+Adesso, finalmente, ho trovato la quadra giusta.</p>
 <h4 id=hugo>Hugo</h4>
 <p><a href=https://gohugo.io>Hugo</a> è il generatore di <a href=https://it.wikipedia.org/wiki/Web_statico>siti statici</a> che utilizzo per questo sito. Non ne tesso le lodi perché non ne ho provati altri, ma funziona, è facile da usare, è comprensibile ed anche molto diffuso.</p>
 <p>Installo anche <a href=https://pygments.org><code>pygments</code></a> che serve per la <a href=https://it.wikipedia.org/wiki/Syntax_highlighting>colorazione della sintassi</a>:</p>
 <pre tabindex=0><code class=language-default data-lang=default>$ brew install hugo pygments
 </code></pre><p>Per la configurazione rimando al <a href=https://gohugo.io/getting-started/quick-start/>sito ufficiale</a> perché senza alcun dubbio è più completo ed esaustivo di quanto io possa mai esserlo.</p>
 <h4 id=git-e-github>Git e GitHub</h4>
-<p>Prerequisito fondamentale è avere un account <a href=https://github.com>GitHub</a>.</p>
+<p>Prerequisito fondamentale è avere un account <a href=https://github.com>GitHub</a> ed aver creato due <a href=https://docs.github.com/en/get-started/quickstart/create-a-repo>repository</a>: uno privato il codice sorgente ed un&rsquo;altro pubblico per la pubblicazione con <a href=https://pages.github.com/>GitHub Pages</a>.</p>
 <p>Installare e configurare <a href=https://git-scm.com>Git</a>:</p>
 <pre tabindex=0><code class=language-default data-lang=default>$ brew install git
 $ git config --global user.name “[GitHub_Username]”
@@ -85,7 +85,47 @@ $ gpgconf --kill gpg-agent
 </code></pre><p>Questo è il comando da utilizzare se dovesse esserci la necessità di esportare la chiave <em>privata</em>:</p>
 <pre tabindex=0><code class=language-default data-lang=default>$ gpg --export-secret-keys 1234567+[GitHub_Username]@users.noreply.github.com  &gt; private.key
 </code></pre><h4 id=pubblicazione>Pubblicazione</h4>
-<p>A questo punto, al netto dei passaggi che non ho elencato perché già trattati in modo superlativo in svariati tutorial che si possono trovare in rete (basta una semplice ricerca <code>Hugo GitHub</code> per avere a disposizione le risorse necessarie da studiare), seguendo anche in questo caso la <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/>guida ufficiale</a> potremmo pubblicare il sito con Github Pages.</p>
-<h4 id=epilogo>Epilogo</h4>
-<p>Questo è quanto. Di sicuro non voglio che questo sia un tutorial passo passo, ed infatti non lo è, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: <strong>non c&rsquo;è mai un&rsquo;unica via da percorrere per arrivare allo stesso risultato finale</strong>.</p>
+<p>A questo punto rimane solo da configurare <a href=https://pages.github.com/>GitHub Pages</a> ed automatizzare la pubblicazione usando <a href=https://github.com/features/actions>GitHub Actions</a>: nello specifico <a href=https://github.com/features/actions>actions-gh-pages</a>.<br>
+Il risultato finale che si ottiene è che ogni volta che viene aggiornato il codice sorgente e viene fatto un push in GitHub parte automaticamente il processo di pubblicazione del sito.</p>
+<p>Creare le chiavi pubbliche e private per la pubblicazione:</p>
+<pre tabindex=0><code class=language-default data-lang=default>ssh-keygen -t rsa -b 4096 -C &quot;$(git config user.email)&quot; -f gh-pages -N &quot;&quot;
+</code></pre><p>Questo comando genererà due file: <code>gh-pages</code> e <code>gh-pages.pub</code>: il primo è la chiave privata, mentre il secondo la chiave pubblica.</p>
+<p>Nel repository del codice sorgente, in <em>Settings > Secrets > Actions > Add new secrets</em> col nome di ACTIONS_DEPLOY_KEY copiare il contenuto della chiave privata, che si ottiene con questo comando:</p>
+<pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; ~/.ssh/gh-pages
+</code></pre><p>Allo stesso modo, nel repository di pubblicazione con GitHub Pages, in <em>Settings > Deploy Key > Add new deploy key</em> col nome di PUBLIC_DEPLOY_KEY copiare il contenuto della chiave pubblica e spuntare <em>Allow write access</em>:</p>
+<pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; ~/.ssh/gh-pages.pub
+</code></pre><p>Nel repository del codice sorgente creare il file <code>.github/workflows/gh-pages.yml</code> inserendo il seguente contenuto modificando <em>GitHub_Username/GitHub_Pages_Repository</em> con i propri riferimenti:</p>
+<pre tabindex=0><code class=language-default data-lang=default>name: hugo publish
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+
+    - name: Build
+      run: hugo --minify
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        EXTERNAL_REPOSITORY: GitHub_Username/GitHub_Pages_Repository
+        PUBLISH_BRANCH: main
+        PUBLISH_DIR: ./public
+      with:
+        emptyCommits: false
+        commitMessage: ${{ github.event.head_commit.message }}
+</code></pre><h4 id=epilogo>Epilogo</h4>
+<p>Questo è quanto. Ho volutamente saltato alcuni passaggi, come la configurazione di Hugo e la sua integrazione con Git/GitHub perché non voglio che questo sia un tutorial passo passo, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: <strong>non c&rsquo;è mai un&rsquo;unica via da percorrere per arrivare allo stesso risultato finale</strong>.</p>
 </article>
