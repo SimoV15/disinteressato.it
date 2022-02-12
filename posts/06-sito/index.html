@@ -39,7 +39,7 @@ Adesso, finalmente, ho trovato la quadra giusta.</p>
 <pre tabindex=0><code class=language-default data-lang=default>$ brew install hugo pygments
 </code></pre><p>Per la configurazione rimando al <a href=https://gohugo.io/getting-started/quick-start/>sito ufficiale</a> perché senza alcun dubbio è più completo ed esaustivo di quanto io possa mai esserlo.</p>
 <h4 id=git-e-github>Git e GitHub</h4>
-<p>Prerequisito fondamentale è avere un account <a href=https://github.com>GitHub</a> ed aver creato due <a href=https://docs.github.com/en/get-started/quickstart/create-a-repo>repository</a>: uno privato il codice sorgente ed un&rsquo;altro pubblico per la pubblicazione con <a href=https://pages.github.com/>GitHub Pages</a>.</p>
+<p>Prerequisito fondamentale è avere un account <a href=https://github.com>GitHub</a> ed aver creato due <a href=https://docs.github.com/en/get-started/quickstart/create-a-repo>repository</a>: uno privato per il codice sorgente ed un&rsquo;altro pubblico per la pubblicazione con <a href=https://pages.github.com/>GitHub Pages</a>.</p>
 <p>Installare e configurare <a href=https://git-scm.com>Git</a>:</p>
 <pre tabindex=0><code class=language-default data-lang=default>$ brew install git
 $ git config --global user.name “[GitHub_Username]”
@@ -91,10 +91,10 @@ Il risultato finale che si ottiene è che ogni volta che viene aggiornato il cod
 <pre tabindex=0><code class=language-default data-lang=default>ssh-keygen -t rsa -b 4096 -C &quot;$(git config user.email)&quot; -f gh-pages -N &quot;&quot;
 </code></pre><p>Questo comando genererà due file: <code>gh-pages</code> e <code>gh-pages.pub</code>: il primo è la chiave privata, mentre il secondo la chiave pubblica.</p>
 <p>Nel repository del codice sorgente, in <em>Settings > Secrets > Actions > Add new secrets</em> col nome di ACTIONS_DEPLOY_KEY copiare il contenuto della chiave privata, che si ottiene con questo comando:</p>
-<pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; ~/.ssh/gh-pages
+<pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; gh-pages
 </code></pre><p>Allo stesso modo, nel repository di pubblicazione con GitHub Pages, in <em>Settings > Deploy Key > Add new deploy key</em> col nome di PUBLIC_DEPLOY_KEY copiare il contenuto della chiave pubblica e spuntare <em>Allow write access</em>:</p>
-<pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; ~/.ssh/gh-pages.pub
-</code></pre><p>Nel repository del codice sorgente creare il file <code>.github/workflows/gh-pages.yml</code> inserendo il seguente contenuto modificando <em>GitHub_Username/GitHub_Pages_Repository</em> con i propri riferimenti:</p>
+<pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; gh-pages.pub
+</code></pre><p>Nel repository del codice sorgente creare il file <code>.github/workflows/gh-pages.yaml</code> inserendo il seguente contenuto e modificando <em>GitHub_Username/GitHub_Pages_Repository</em> con i propri riferimenti:</p>
 <pre tabindex=0><code class=language-default data-lang=default>name: hugo publish
 
 on:
