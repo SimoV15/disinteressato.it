@@ -1,0 +1,91 @@
+<!doctype html><html lang=it-it>
+<head>
+<meta charset=utf-8>
+<meta name=generator content="Hugo 0.92.2">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=author content>
+<meta property="og:url" content="https://disinteressato.it/posts/06-siti/">
+<title>I siti non li porta la cicogna - Disinteressato</title>
+<meta property="og:title" content="I siti non li porta la cicogna - Disinteressato">
+<meta property="og:type" content="article">
+<meta name=description content="Sito">
+<link rel=stylesheet href=https://disinteressato.it/css/fonts.css>
+<link rel=stylesheet href=https://disinteressato.it/css/style.css>
+<link rel=apple-touch-icon sizes=180x180 href=https://disinteressato.it/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://disinteressato.it/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://disinteressato.it/favicon-16x16.png>
+<link rel=manifest href=https://disinteressato.it/site.webmanifest>
+<link rel=mask-icon href=https://disinteressato.it/safari-pinned-tab.svg color=#262626>
+<meta name=msapplication-TileColor content="#3dbda4">
+<link rel=stylesheet href=https://disinteressato.it/css/syntax-dark.css media="(prefers-color-scheme: dark)">
+<link rel=stylesheet href=https://disinteressato.it/css/syntax-light.css media="(prefers-color-scheme: light)">
+</head>
+<body>
+<div class=container>
+<nav class=site-nav>
+<a href=https://disinteressato.it/><span class=header-svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="svg-inline--fa fa-home fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" fill="currentcolor" d="M280.37 148.26 96 300.11V464a16 16 0 0016 16l112.06-.29a16 16 0 0015.92-16V368a16 16 0 0116-16h64a16 16 0 0116 16v95.64a16 16 0 0016 16.05L464 480a16 16 0 0016-16V3e2L295.67 148.26a12.19 12.19.0 00-15.3.0zM571.6 251.47 488 182.56V44.05a12 12 0 00-12-12h-56a12 12 0 00-12 12v72.61L318.47 43a48 48 0 00-61 0L4.34 251.47a12 12 0 00-1.6 16.9l25.5 31A12 12 0 0045.15 301l235.22-193.74a12.19 12.19.0 0115.3.0L530.9 301a12 12 0 0016.9-1.6l25.5-31a12 12 0 00-1.7-16.93z"/></svg></a>
+</nav>
+<article class=post>
+<header class=post-header>
+<h1 class=post-title>I siti non li porta la cicogna</h1><time class=post-date datetime=2022-01-01T00:00:00Z>1 gennaio 2022</time></header>
+<p>Dovessi mai ricominciare tutto daccapo, scrivo due righe su come ho impostato questo sito e su come viene pubblicato.</p>
+<h4 id=prologo>Prologo</h4>
+<p>Questa cosa di farmi un semplicissimo sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente. Saranno almeno 3 anni, e non sono mai riuscito a portarla a termine. Ora, in meno di un mese e senza le mie paranoie da ormai ex linuxaro eccolo qui.<br>
+Che poi forse le paranoie mi venivano soltanto perché non avevo ancora accettato che la mia gioventù fosse terminata e che tutto questo fosse soltanto il riflesso inconscio di questa consapevolezza. Per farla breve: i vecchi odiano le rotture di coglioni.</p>
+<h4 id=hugo>Hugo</h4>
+<p><a href=https://gohugo.io>Hugo</a> è il generatore di <a href=https://it.wikipedia.org/wiki/Web_statico>siti statici</a> che utilizzo per questo sito. Non ne tesso le lodi perché non ne ho provati altri, ma funziona, è facile da usare, è comprensibile ed anche molto diffuso.</p>
+<p>Installo anche <a href=https://pygments.org><code>pygments</code></a> che serve per la <a href=https://it.wikipedia.org/wiki/Syntax_highlighting>colorazione della sintassi</a>:</p>
+<pre tabindex=0><code class=language-default data-lang=default>$ brew install hugo pygments
+</code></pre><p>Per la configurazione rimando al <a href=https://gohugo.io/getting-started/quick-start/>sito ufficiale</a> perché senza alcun dubbio è più completo ed esaustivo di quanto io possa mai esserlo.</p>
+<h4 id=git-e-github>Git e GitHub</h4>
+<p>Prerequisito fondamentale è avere un account <a href=https://github.com>GitHub</a>.</p>
+<p>Installare e configurare <a href=https://git-scm.com>Git</a>:</p>
+<pre tabindex=0><code class=language-default data-lang=default>$ brew install git
+$ git config --global user.name “[GitHub_Username]”
+$ git config --global user.email &quot;1234567+[GitHub_Username]@users.noreply.github.com&quot;
+$ git config --global color.ui auto
+$ git config --global merge.conflictstyle diff3
+$ git config --global init.defaultBranch main
+$ git config --global pull.rebase false
+$ git config --list
+</code></pre><p>Io ho deciso di firmare i <em>commit</em> con la mia <a href=https://it.wikipedia.org/wiki/GNU_Privacy_Guard>chiave GPG</a> (assolutamente opzionale):</p>
+<pre tabindex=0><code class=language-default data-lang=default>$ brew install gnupg pinentry-mac
+</code></pre><p>Creare una chiave GPG</p>
+<pre tabindex=0><code class=language-default data-lang=default>$ gpg --full-generate-key
+
+Per favore scegli che tipo di chiave vuoi: RSA e RSA
+Che chiave vuoi? 4096
+Chiave valida per? 0
+Nome e Cognome: GitHub_Username
+Indirizzo di Email: 1234567+[GitHub_Username]@users.noreply.github.com
+Commento: GitHub
+</code></pre><p>Visualizzare la chiave appena generata:</p>
+<pre tabindex=0><code class=language-default data-lang=default>$ gpg --list-secret-keys --keyid-format=long
+/Users/name/.gnupg/pubring.kbx
+------------------------------------
+sec   rsa4096/EE05XXXXXXXXXXXX 2021-10-30 [SC]
+      215556521B98225XXXXXXXXXXXXXXXXXXXXXXXXX
+uid                 [ultimo] [GitHub_Username] (GitHub) &lt;1234567+[GitHub_Username]@users.noreply.github.com&gt;
+ssb   rsa4096/A226A4XXXXXXXXXX 2021-10-30 [E]
+</code></pre><p>Questo comando copia la chiave che successivamente andremo ad inserire <a href=https://github.com/settings/keys>qui</a> tra le impostazioni del nostro account GitHub:</p>
+<pre tabindex=0><code class=language-default data-lang=default>$ gpg --armor --export EE05XXXXXXXXXXXX | pbcopy
+</code></pre><p>Configurare Git in modo che utilizzi questa chiave per firmare i commit:</p>
+<pre tabindex=0><code class=language-default data-lang=default>$ git config --global user.signingkey EE05XXXXXXXXXXXX
+$ git config --global commit.gpgSign true
+$ git config --global tag.forceSignAnnotated true
+</code></pre><p>Configurare anche macOS:</p>
+<pre tabindex=0><code class=language-default data-lang=default>$ nano ~/.zshrc
+export GPG_TTY=$(tty)
+
+$ nano ~/.gnupg/gpg-agent.conf
+pinentry-program /opt/homebrew/bin/pinentry-mac
+
+$ gpgconf --kill gpg-agent
+</code></pre><p>Questo è il comando da utilizzare se dovesse esserci la necessità di esportare la chiave <em>privata</em>:</p>
+<pre tabindex=0><code class=language-default data-lang=default>$ gpg --export-secret-keys 1234567+[GitHub_Username]@users.noreply.github.com  &gt; private.key
+</code></pre><h4 id=pubblicazione>Pubblicazione</h4>
+<p>A questo punto, al netto dei passaggi che non ho elencato perché già trattati in modo superlativo in svariati tutorial che si possono trovare in rete (basta una semplice ricerca <code>Hugo GitHub</code> per avere a disposizione le risorse necessarie da studiare), seguendo anche in questo caso la <a href=https://gohugo.io/hosting-and-deployment/hosting-on-github/>guida ufficiale</a> potremmo pubblicare il sito con Github Pages.</p>
+<h4 id=epilogo>Epilogo</h4>
+<p>Questo è quanto. Di sicuro non voglio che questo sia un tutorial passo passo, ed infatti non lo è, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: <strong>non c&rsquo;è mai un&rsquo;unica via da percorrere per arrivare allo stesso risultato finale</strong>.</p>
+</article>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Disinteressato</title><link>https://disinteressato.it/categories/</link><description>Recent content in Categories on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><atom:link href="https://disinteressato.it/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>test</title><link>https://disinteressato.it/posts/test/</link><pubDate>11 February 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/test/</guid><description>&lt;p>TEST PROVA&lt;/p></description></item><item><title>La promessa</title><link>https://disinteressato.it/posts/07-promessa/</link><pubDate>06 February 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/07-promessa/</guid><description>&lt;p>&lt;a href="https://it.m.wikipedia.org/wiki/La_promessa_(Friedrich_D%C3%BCrrenmatt)">La promessa di Friedrich Dürrenmatt&lt;/a> è un giallo anomalo, particolare, ma soprattutto profondo. Una buona compagnia per passare qualche sera invernale davanti al focolare.&lt;/p>
+&lt;p>Ci sono due passaggi importanti nel libro, il primo nella parte iniziale:&lt;/p>
+&lt;blockquote>
+&lt;p>«Chi è l’assassino?» chiese, con una voce così calma e neutra che il commissario sbigottì. «Lo scoprirò, signora Moser». Allora la donna lo guardò, minacciosa, risoluta. «Lo promette?». «Lo prometto, signora Moser» rispose il commissario, di colpo preso dal desiderio urgente di andare via da quel posto. «Sull’anima sua?». Il commissario rimase turbato. «Sull’anima mia» rispose infine. Che altro poteva fare? «Allora vada» ordinò la donna. «Lei ha giurato sulla sua anima».&lt;/p>
+&lt;/blockquote>
+&lt;p>Il secondo al termine del libro:&lt;/p>
+&lt;blockquote>
+&lt;p>Eppure bisogna ammettere che proprio quest’ultima scena parla a favore di Matthäi, lo mostra nella giusta luce, lo trasforma in un genio, in un uomo che ha intuito così profondamente gli elementi a noi ignoti della realtà da riuscire ad andare oltre le ipotesi e le congetture che ci limitano, fino a giungere in prossimità di quelle leggi cui noi non perveniamo mai: le leggi che regolano lo slancio vitale del mondo. Soltanto in prossimità, beninteso. E proprio perché esiste, malauguratamente, questa orribile scena finale, sorta di emblema dell’imprevedibile, o meglio del caso, la genialità di Matthäi, la sua strategia e le sue azioni risultano a posteriori tanto più dolorose e assurde di quanto non fossero prima, cioè di quando noi della Kasernenstraße lo ritenevamo in errore: niente è più crudele di un genio che inciampa in un’idiozia. Ma in una circostanza del genere tutto dipende da come il genio reagisce alla situazione ridicola in cui è incappato: riesce ad accettarla oppure no? Matthäi non ci riuscì. Voleva che i suoi conti tornassero anche nella realtà. Di conseguenza fu costretto a negare la realtà, e a perdersi nel vuoto.&lt;/p>
+&lt;/blockquote>
+&lt;p>Di sicuro non può mancare nella libreria degli amanti del genere.&lt;/p></description></item><item><title>I siti non li porta la cicogna</title><link>https://disinteressato.it/posts/06-siti/</link><pubDate>01 January 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/06-siti/</guid><description>&lt;p>Dovessi mai ricominciare tutto daccapo, scrivo due righe su come ho impostato questo sito e su come viene pubblicato.&lt;/p>
+&lt;h4 id="prologo">Prologo&lt;/h4>
+&lt;p>Questa cosa di farmi un semplicissimo sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente. Saranno almeno 3 anni, e non sono mai riuscito a portarla a termine. Ora, in meno di un mese e senza le mie paranoie da ormai ex linuxaro eccolo qui.&lt;br>
+Che poi forse le paranoie mi venivano soltanto perché non avevo ancora accettato che la mia gioventù fosse terminata e che tutto questo fosse soltanto il riflesso inconscio di questa consapevolezza. Per farla breve: i vecchi odiano le rotture di coglioni.&lt;/p>
+&lt;h4 id="hugo">Hugo&lt;/h4>
+&lt;p>&lt;a href="https://gohugo.io">Hugo&lt;/a> è il generatore di &lt;a href="https://it.wikipedia.org/wiki/Web_statico">siti statici&lt;/a> che utilizzo per questo sito. Non ne tesso le lodi perché non ne ho provati altri, ma funziona, è facile da usare, è comprensibile ed anche molto diffuso.&lt;/p>
+&lt;p>Installo anche &lt;a href="https://pygments.org">&lt;code>pygments&lt;/code>&lt;/a> che serve per la &lt;a href="https://it.wikipedia.org/wiki/Syntax_highlighting">colorazione della sintassi&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install hugo pygments
+&lt;/code>&lt;/pre>&lt;p>Per la configurazione rimando al &lt;a href="https://gohugo.io/getting-started/quick-start/">sito ufficiale&lt;/a> perché senza alcun dubbio è più completo ed esaustivo di quanto io possa mai esserlo.&lt;/p>
+&lt;h4 id="git-e-github">Git e GitHub&lt;/h4>
+&lt;p>Prerequisito fondamentale è avere un account &lt;a href="https://github.com">GitHub&lt;/a>.&lt;/p>
+&lt;p>Installare e configurare &lt;a href="https://git-scm.com">Git&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install git
+$ git config --global user.name “[GitHub_Username]”
+$ git config --global user.email &amp;quot;1234567+[GitHub_Username]@users.noreply.github.com&amp;quot;
+$ git config --global color.ui auto
+$ git config --global merge.conflictstyle diff3
+$ git config --global init.defaultBranch main
+$ git config --global pull.rebase false
+$ git config --list
+&lt;/code>&lt;/pre>&lt;p>Io ho deciso di firmare i &lt;em>commit&lt;/em> con la mia &lt;a href="https://it.wikipedia.org/wiki/GNU_Privacy_Guard">chiave GPG&lt;/a> (assolutamente opzionale):&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install gnupg pinentry-mac
+&lt;/code>&lt;/pre>&lt;p>Creare una chiave GPG&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --full-generate-key
+Per favore scegli che tipo di chiave vuoi: RSA e RSA
+Che chiave vuoi? 4096
+Chiave valida per? 0
+Nome e Cognome: GitHub_Username
+Indirizzo di Email: 1234567+[GitHub_Username]@users.noreply.github.com
+Commento: GitHub
+&lt;/code>&lt;/pre>&lt;p>Visualizzare la chiave appena generata:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --list-secret-keys --keyid-format=long
+/Users/name/.gnupg/pubring.kbx
+------------------------------------
+sec rsa4096/EE05XXXXXXXXXXXX 2021-10-30 [SC]
+215556521B98225XXXXXXXXXXXXXXXXXXXXXXXXX
+uid [ultimo] [GitHub_Username] (GitHub) &amp;lt;1234567+[GitHub_Username]@users.noreply.github.com&amp;gt;
+ssb rsa4096/A226A4XXXXXXXXXX 2021-10-30 [E]
+&lt;/code>&lt;/pre>&lt;p>Questo comando copia la chiave che successivamente andremo ad inserire &lt;a href="https://github.com/settings/keys">qui&lt;/a> tra le impostazioni del nostro account GitHub:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --armor --export EE05XXXXXXXXXXXX | pbcopy
+&lt;/code>&lt;/pre>&lt;p>Configurare Git in modo che utilizzi questa chiave per firmare i commit:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ git config --global user.signingkey EE05XXXXXXXXXXXX
+$ git config --global commit.gpgSign true
+$ git config --global tag.forceSignAnnotated true
+&lt;/code>&lt;/pre>&lt;p>Configurare anche macOS:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ nano ~/.zshrc
+export GPG_TTY=$(tty)
+$ nano ~/.gnupg/gpg-agent.conf
+pinentry-program /opt/homebrew/bin/pinentry-mac
+$ gpgconf --kill gpg-agent
+&lt;/code>&lt;/pre>&lt;p>Questo è il comando da utilizzare se dovesse esserci la necessità di esportare la chiave &lt;em>privata&lt;/em>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --export-secret-keys 1234567+[GitHub_Username]@users.noreply.github.com &amp;gt; private.key
+&lt;/code>&lt;/pre>&lt;h4 id="pubblicazione">Pubblicazione&lt;/h4>
+&lt;p>A questo punto, al netto dei passaggi che non ho elencato perché già trattati in modo superlativo in svariati tutorial che si possono trovare in rete (basta una semplice ricerca &lt;code>Hugo GitHub&lt;/code> per avere a disposizione le risorse necessarie da studiare), seguendo anche in questo caso la &lt;a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">guida ufficiale&lt;/a> potremmo pubblicare il sito con Github Pages.&lt;/p>
+&lt;h4 id="epilogo">Epilogo&lt;/h4>
+&lt;p>Questo è quanto. Di sicuro non voglio che questo sia un tutorial passo passo, ed infatti non lo è, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: &lt;strong>non c&amp;rsquo;è mai un&amp;rsquo;unica via da percorrere per arrivare allo stesso risultato finale&lt;/strong>.&lt;/p></description></item><item><title>Un Terminale è per sempre</title><link>https://disinteressato.it/posts/05-terminale/</link><pubDate>28 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/05-terminale/</guid><description>&lt;p>Quando a metà anni 2000 iniziai ad usare un Mac il &lt;a href="https://it.m.wikipedia.org/wiki/Terminale_virtuale">terminale&lt;/a> proprio non me lo filavo.&lt;/p>
+&lt;p>In quell&amp;rsquo;era geologica c&amp;rsquo;era ancora la sbornia evolutiva portata dall&amp;rsquo;aumento esponenziale e costante della potenza dei processori con interfacce sempre più belle e ricche di funzionalità, quindi fare un passo indietro ed usare il terminale non era contemplato.&lt;br>
+E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo cosa fosse.&lt;/p>
+&lt;p>Col tempo ho apprezzato l&amp;rsquo;uso che se ne può fare, come possa essere effettivamente più rapido per alcune operazioni, inutilmente complesso per altre, ma soprattutto che è l&amp;rsquo;ultima ancora di salvezza per uscire dai guai nei sistemi &lt;a href="https://it.wikipedia.org/wiki/Unix">Unix&lt;/a>.&lt;/p>
+&lt;p>Ritenendomi adesso un utente discretamente esperto, almeno nel riconoscere le mie necessità, il mio approccio in questo nuovo viaggio con macOS è stato questo: cerco tutto il software che mi serve nell&amp;rsquo;App Store, se non lo trovo la scarico dai rispettivi siti ufficiali e verifico che ci sia la possibilità di ricercare gli aggiornamenti all&amp;rsquo;interno dell&amp;rsquo;applicazione stessa.&lt;/p>
+&lt;p>Queste sono le applicazioni che ho installato esternamente all&amp;rsquo;App Store:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://code.visualstudio.com">Virtual Studio Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.office.com">Microsoft Office&lt;/a> con licenza Office 2021 acquistata su &lt;a href="http://topkeyshop.com">Top Key Shop&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.tug.org/mactex/">MacTex&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://calibre-ebook.com">Calibre&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://iina.io">IINA&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://handbrake.fr">HandBrake&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://freemacsoft.net/appcleaner/">App Cleaner&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Ho lasciato alla riga di comando le operazioni che possono essere svolte esclusivamente da terminale oppure quelle per le quali mi sento più a mio agio ad utilizzarlo.&lt;/p>
+&lt;p>Con macOS la prima cosa da fare è installare &lt;a href="https://brew.sh/index_it">Homebrew&lt;/a>, un gestore di pacchetti col quale scaricare, installare e mantenere aggiornato del software rigorosamente &lt;a href="https://it.wikipedia.org/wiki/Open_source">open source&lt;/a>: in pratica è una specie di App Store da linea di comando.&lt;br>
+Anche l&amp;rsquo;installazione, ovviamente, avviene da riga di comando:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ /bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;quot;
+&lt;/code>&lt;/pre>&lt;p>Piccolo extra, disattivare il monitoraggio di &lt;a href="https://docs.brew.sh/Analytics">Homebrew Analytics&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew analytics off
+&lt;/code>&lt;/pre>&lt;p>Invece, per aggiornare i pacchetti installati basteranno poi i seguenti comandi:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew update
+$ brew outdated
+$ brew upgrade
+&lt;/code>&lt;/pre>&lt;p>Ho installato veramente pochi pacchetti perché quello di cui necessito è residuale o al massimo serve per estendere o completare alcune funzioni di macOS.&lt;/p>
+&lt;h4 id="caratteri">Caratteri&lt;/h4>
+&lt;p>Ho installato solo il carattere &lt;a href="https://fonts.google.com/specimen/Roboto">Roboto&lt;/a>, lo stesso che uso anche in questo sito:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew tap homebrew/cask-fonts
+$ brew install svn
+$ sudo mkdir -p /Library/Java/Extensions
+$ sudo ln -s /opt/homebrew/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib
+$ brew install --cask font-roboto font-roboto-mono font-roboto-slab
+&lt;/code>&lt;/pre>&lt;h4 id="quick-look">Quick Look&lt;/h4>
+&lt;p>Per estendere le funzionalità di &lt;a href="https://en.wikipedia.org/wiki/Quick_Look">Quick Look&lt;/a> ho installato questi due plugins: &lt;a href="https://github.com/sbarex/QLMarkdown">QLMarkdown&lt;/a> permette di visualizzare il formato &lt;a href="https://it.wikipedia.org/wiki/Markdown">markdown&lt;/a>, mentre &lt;a href="https://github.com/Marginal/QLVideo">QLVideo&lt;/a> aggiunge il supporto ad altri formati video.&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install --cask qlmarkdown
+$ brew install --cask qlvideo
+&lt;/code>&lt;/pre>&lt;h4 id="youtube-dl">youtube-dl&lt;/h4>
+&lt;p>Immancabile &lt;a href="https://youtube-dl.org">youtube-dl&lt;/a> per scaricare i video da &lt;a href="https://www.youtube.com">YouTube&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install youtube-dl atomicparsley ffmpeg
+&lt;/code>&lt;/pre>&lt;p>Questo invece è il mio file di configurazione:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ nano ~/.config/youtube-dl/config
+--embed-thumbnail
+--add-metadata
+--no-mtime
+-o /Users/&amp;lt;USER&amp;gt;/Movies/%(title)s.%(ext)s
+-f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
+&lt;/code>&lt;/pre>&lt;h4 id="exiftool">ExifTool&lt;/h4>
+&lt;p>&lt;a href="https://exiftool.org">ExifTool&lt;/a> mi ha tolto dagli impicci di dover inserire i &lt;a href="https://it.wikipedia.org/wiki/Metadato">metadati&lt;/a> (nello specifico: data e ora) alle circa 1700 foto scattate dal fotografo al mio matrimonio:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install exiftool
+&lt;/code>&lt;/pre>&lt;p>Fortunatamente i file erano stati nominati in ordine cronologico crescente di scatto, quindi mi è bastato dapprima inserire in tutte le foto la stessa data e la stessa ora (&lt;code>DIR&lt;/code> è il nome della cartella che contiene i file):&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ exiftool -AllDates=&amp;quot;YYYY:MM:DD HH:MM:SS&amp;quot; DIR -overwrite_original -r
+&lt;/code>&lt;/pre>&lt;p>Dopodiché ad ogni foto, in base all&amp;rsquo;ordine crescente di nome, sono stati aggiunti 10 secondi all&amp;rsquo;ora di scatto rispetto a quella della precedente, il tutto con questo unico comando:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ exiftool '-AllDates+&amp;lt;0:0:${filesequence}0' DIR -fileOrder FileName -overwrite_original -r
+&lt;/code>&lt;/pre>&lt;p>Per verificare che la modifica sia stata effettuata correttamente, questo comando genera un file &lt;a href="https://it.wikipedia.org/wiki/Comma-separated_values">CSV&lt;/a> facilmente analizzabile:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ exiftool -AllDates -csv DIR &amp;gt; out.csv
+&lt;/code>&lt;/pre>&lt;p>In questo modo, una volta aggiunte alla libreria di &lt;a href="https://www.apple.com/it/macos/photos/">Foto&lt;/a>, erano in perfetto ordine cronologico (ovviamente l&amp;rsquo;ora di scatto era arbitraria e non rispettava quella effettiva, ma di meglio non potevo fare).&lt;/p>
+&lt;h4 id="zsh">ZSH&lt;/h4>
+&lt;p>Ed infine, visto che macOS utilizza &lt;a href="https://zsh.sourceforge.io">ZSH&lt;/a> come &lt;a href="https://it.wikipedia.org/wiki/Shell_(informatica)">shell&lt;/a> di default, perché non personalizzarla un pochino?&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ cd ~
+$ touch ~/.hushlogin
+$ nano .zshrc
+alias ..='cd ..'
+alias l='ls -na'
+alias ll='ls -al'
+alias gd='cd /Users/simo/Downloads'
+alias gh='cd ~'
+setopt NO_CASE_GLOB
+setopt AUTO_CD
+setopt EXTENDED_HISTORY
+SAVEHIST=5000
+HISTSIZE=2000
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt CORRECT
+setopt CORRECT_ALL
+plugins=(zsh-completions)
+autoload -Uz compinit
+compinit
+autoload -Uz vcs_info
+PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%1~%f%b %F{white}%#%f '
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
+zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%r%f'
+zstyle ':vcs_info:*' enable git
+$ source .zshrc
+&lt;/code>&lt;/pre>&lt;p>Si potrebbe fare molto di più, ma per il mio approccio questo è già abbastanza per avere tutto ciò di cui necessito razionalmente installato.&lt;/p>
+&lt;p>Adesso sì che mi sento a casa!&lt;/p></description></item><item><title>Kindle, Kindle delle mie brame</title><link>https://disinteressato.it/posts/04-kindle/</link><pubDate>09 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/04-kindle/</guid><description>&lt;p>L’ultimo tassello del puzzle per arrivare a semplificare il più possibile la mia vita informatica è stato il ritorno all’utilizzo di un Kindle per le mie letture.
+Un gentile regalo di mia moglie, dato che l’aveva acquistato anni fa e non l’aveva praticamente mai utilizzato: preferisce di gran lunga i classici libri cartacei.&lt;/p>
+&lt;p>Negli ultimi anni avevo usato un &lt;a href="https://pocketbook.it/it-it/catalog/allsupport-it/basic-lux-615-it">PocketBook Basic Lux&lt;/a>, acquistato essenzialmente perché non vincolato a nessuno store online (ricordate le mie fissazioni espresse negli articoli precedenti?) e che devo ammettere ha fatto il suo sporco lavoro: acquistavo in formato &lt;a href="https://it.wikipedia.org/wiki/EPub">ePub&lt;/a> dove preferivo (principalmente &lt;a href="https://bookrepublic.it">Bookrepublic&lt;/a>), gestivo la mia libreria con &lt;a href="https://calibre-ebook.com">Calibre&lt;/a>, copiavo i file sul dispositivo e li leggevo.
+Facile.&lt;/p>
+&lt;p>Ma anche queste operazioni così semplici erano diventate troppo macchinose per il mio nuovo modo di vedere le cose, quindi cosa poteva capitarmi di meglio che appropriarmi a costo zero di un vecchio, inutilizzato, ma immacolato &lt;a href="https://www.amazon.it/gp/aw/d/B00QJDO0QC/ref=cm_cr_arp_mb_bdcrb_top?ie=UTF8">Kindle Paperwhite&lt;/a> di settima generazione?&lt;/p>
+&lt;p>Qualche ora di un sabato mattina per riorganizzare i miei libri, decidendomi finalmente di eliminarne una ragguardevole quantità, perché, insaziabilmente, ho passato periodi ad accumulare eBook che difficilmente avrei letto (infatti sono rimasti lì per anni) su argomenti discutibili e soprattutto dal contenuto dozzinale e raffazzonato.&lt;/p>
+&lt;p>Nel frattempo ho guadagnato anche tutte le piccole comodità che offre Amazon: dalla sincronizzazione delle letture alla possibilità di avere la mia libreria online su qualsiasi dispositivo. Non male, anche se dubito possa servirmi, se non in casi che al momento non riesco ad immaginare.&lt;/p>
+&lt;p>Tutto questo per dire cosa? Che leggo di più e che, come nel caso del passaggio ad un Mac, mi godo maggiormente il dispositivo. Questo Kindle offre una qualità superiore rispetto al mio vecchio lettore: lo schermo innanzitutto, per l’uniformità dell’illuminazione che, a parità di risoluzione, sembra rendere il testo più definito e la lettura meno stancante per gli occhi e l’ergonomia, che, grazie allo schermo touch, permette di cambiare pagina senza variare l’impugnatura.
+Tutte banalità, forse il mio vecchio dispositivo era stato ingegnerizzato nella preistoria, ma il miglioramento ottenuto è incredibile.&lt;/p></description></item><item><title>Piacevolezza</title><link>https://disinteressato.it/posts/03-piacevolezza/</link><pubDate>21 November 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/03-piacevolezza/</guid><description>&lt;p>Come ho scritto nel post precedente, nel giro di un mese ho dovuto sostituire sia il mio smartphone che il mio computer.&lt;/p>
+&lt;p>Da quando mi era presa la fissa per &lt;strong>Linux&lt;/strong>, avevo sempre fatto acquisti in funzione della compatibilità hardware, per cui da casa mia erano passati un &lt;strong>Dell&lt;/strong> ed uno &lt;strong>Xiaomi Mi Air&lt;/strong>, convinto che anche se erano poco costosi e poco performanti, un sistema operativo leggero e minimale li avrebbe resi adatti al mio utilizzo. Il che si è rivelato vero (alla fine ho veramente poche esigenze), però non li aveva mai resi degni di nota. Intendiamoci, non è che ci si può affezionare ad oggetti di questo tipo, ma non mi davano neanche piacere nell’utilizzarli: finivo quasi sempre a non fare le cose oppure a farle col computer portatile datomi in dotazione dall’azienda per cui lavoro (rigorosamente Windows e nel limite imposto dalla policy aziendale, che di solito è molto restrittiva, almeno nelle multinazionali).&lt;/p>
+&lt;p>Lo stesso ho notato accadermi anche con lo smartphone, che ovviamente avevo acquistato in funzione della voglia di avere un dispositivo &lt;strong>Android&lt;/strong> da poter degooglelizzare: è stato con me ogni ora del giorno per quasi 4 anni, ma non ci siamo mai voluti bene.&lt;/p>
+&lt;p>Per fortuna questa volta avevo abbastanza tempo per poter far fronte all’improvvisa doppia débâcle, pensarci con calma e per bene. E comunque mi conosco, se stavo prendendo tempo senza arrivare ad una decisione era perché l’accoppiata &lt;strong>Windows&lt;/strong> più un &lt;strong>Android&lt;/strong> qualunque non mi stuzzicava, troppo era il timore di rimanere nella situazione nella quale mi ero invischiato.&lt;/p>
+&lt;p>Poi, da un giorno all’altro, vengo chiamato dalla funzione IT dell’azienda per la sostituzione del mio &lt;strong>Samsung&lt;/strong> con un &lt;strong>iPhone 11&lt;/strong> e dopo veramente pochissimo tempo passato ad utilizzarlo, mi convinco: torno ad &lt;strong>Apple&lt;/strong>.
+La mente va indietro di 15, 20 anni e ripenso al mio &lt;strong>iBook G4&lt;/strong> e poi al mio primo &lt;strong>iPhone 3G&lt;/strong> preso quasi al day one: mi sento giovane, entusiasta e pieno di vita. Bello no perché non lo sono mai stato.&lt;/p>
+&lt;p>Mi infilo le cuffiette, cerco l’album &lt;strong>X&amp;amp;Y&lt;/strong> dei &lt;strong>Coldplay&lt;/strong>, mia moglie è nell’altra camera che sta mettendo a dormire nostra figlia seienne, io sto tornando all’estate del 2005 e nel mentre cerco di farmi un’idea di quello che potrebbe essere più adatto a me: finisco col scegliere un &lt;strong>iPhone 12 mini&lt;/strong> da 128GB ed un &lt;strong>MacBook Air M1&lt;/strong> nella versione da 512GB. Entrambi con una ottima percentuale di sconto rispetto al listino Apple.
+Mi sento sereno e penso al tempo che non dovrò più investire in prove e configurazioni varie, ma che potrò spendere in altre attività.
+Ho troppe cose che ho messo lì da parte e che dovrò prima o poi portare a compimento.&lt;/p>
+&lt;p>Chris Martin continua a cantare.&lt;/p>
+&lt;p>Io sorrido.&lt;/p></description></item><item><title>40: L'età della semplificazione</title><link>https://disinteressato.it/posts/02-40/</link><pubDate>14 November 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/02-40/</guid><description>&lt;p>Quando si compiono quarant’anni il secondo pensiero che passa per la testa (al primo posto: &lt;em>&lt;strong>“cazzo ho quarant’anni”&lt;/strong>&lt;/em>) è: &lt;em>&lt;strong>“cosa ho fatto negli ultimi anni che mi sta ancora complicando la vita?”&lt;/strong>&lt;/em>&lt;/p>
+&lt;p>Siccome le cose già risolte non contano e quelle importanti non sono l’oggetto di questo mio scritto, rimangono solo quelle futili.&lt;/p>
+&lt;p>Negli ultimi 10 anni sono stato esclusivamente un utente &lt;a href="https://it.wikipedia.org/wiki/Controversia_sul_nome_GNU/Linux">GNU/Linux&lt;/a>: perché mi sono appassionato alla filosofia che c’è dietro, al software libero, ai begl’ideali e all’incubo privacy se non mi fossi convinto a diventare come &lt;a href="https://it.wikipedia.org/wiki/Richard_Stallman">Stallman&lt;/a>.&lt;/p>
+&lt;p>Ed ho finito per essere come lui (GNU/Linux, non Stallman): un cantiere aperto.&lt;/p>
+&lt;p>Incompiuto come sistema operativo desktop e sempre più diretto verso l’irrilevanza (saranno 10 anni che “il prossimo anno è l’anno di Linux sul desktop”); sempre in attesa di un qualcosa che manca da anni; sempre più integralista; sempre più frazionato e sempre più complesso da gestire se si vuole usarlo in via esclusiva e sfruttare le possibilità odierne di integrazione tra dispositivi, col cloud e tra i servizi.&lt;/p>
+&lt;p>Per me sono stati anni di esperimenti alla ricerca della migliore soluzione, che poi finivano inevitabilmente con un compromesso al ribasso. Sempre alla ricerca della configurazione definitiva, mai raggiunta ovviamente, e sempre a modificare qualcosa piuttosto che ad utilizzare il mio computer. Insomma: tempo investito in studio che mi ha portato solo ad un livello maggiore di conoscenza, che di per sé è un risultato straordinario, ma solo se si riesce poi ad applicarla a qualcosa di concreto. Non si sta parlando di concetti filosofici astratti, ma di &lt;strong>un sistema informatico che deve essere qui, che deve essere usato adesso, che deve essere pronto ora. Non, eventualmente, fra un tot di anni.&lt;/strong>&lt;/p>
+&lt;p>Così, approfittando della dipartita praticamente contemporanea di smartphone e computer, sono tornato al passato.
+Ma di questo scriverò la prossima volta, dopo che mi sarò ripreso dall’addebito sul conto degli acquisti effettuati con la carta di credito.&lt;/p></description></item><item><title>Introduzione</title><link>https://disinteressato.it/posts/01-introduzione/</link><pubDate>08 November 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/01-introduzione/</guid><description>&lt;p>Il nome vorrebbe racchiudere tutto: &lt;strong>disinteressato&lt;/strong>.&lt;/p>
+&lt;p>Il dizionario suggerisce questa definizione:&lt;/p>
+&lt;blockquote>
+&lt;p>Che non agisce per interesse, che non è mosso da interesse egoistico.&lt;/p>
+&lt;/blockquote>
+&lt;p>È un po’ ciò che vorrei essere io nella vita, anche se è un ideale di comportamento abbastanza utopistico, soprattutto di questi tempi. Spesso sgarro, non fosse solo per autodifesa. Faccio un passo indietro allora e, più realisticamente, per adesso mi accontento di coricarmi con la coscienza a posto e di esprimere i miei pensieri liberamente.&lt;/p>
+&lt;p>Ed è con questi presupposti che ho deciso di scrivere in questo sperduto sito, che sarà un po’ un diario e un po’ una raccolta di appunti senza un filo conduttore.&lt;/p>
+&lt;p>Per chi vuole, c&amp;rsquo;è anche il &lt;a href="https://disinteressato.it/index.xml">feed RSS&lt;/a>.&lt;/p></description></item></channel></rss>
