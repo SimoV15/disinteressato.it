@@ -6,10 +6,10 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=author content>
 <meta property="og:url" content="https://disinteressato.it/posts/05-terminale/">
-<title>Un Terminale è per sempre - Disinteressato</title>
-<meta property="og:title" content="Un Terminale è per sempre - Disinteressato">
+<title>Un Terminale è per sempre (e altre cosette) - Disinteressato</title>
+<meta property="og:title" content="Un Terminale è per sempre (e altre cosette) - Disinteressato">
 <meta property="og:type" content="article">
-<meta name=description content="Terminale">
+<meta name=description content="Terminale,macOS">
 <link rel=stylesheet href=https://disinteressato.it/css/fonts.css>
 <link rel=stylesheet href=https://disinteressato.it/css/style.css>
 <link rel=apple-touch-icon sizes=180x180 href=https://disinteressato.it/apple-touch-icon.png>
@@ -28,7 +28,7 @@
 </nav>
 <article class=post>
 <header class=post-header>
-<h1 class=post-title>Un Terminale è per sempre</h1><time class=post-date datetime=2021-12-28T00:00:00Z>28 dicembre 2021</time></header>
+<h1 class=post-title>Un Terminale è per sempre (e altre cosette)</h1><time class=post-date datetime=2021-12-28T00:00:00Z>28 dicembre 2021</time></header>
 <p>Quando a metà anni 2000 iniziai ad usare un Mac il <a href=https://it.m.wikipedia.org/wiki/Terminale_virtuale>terminale</a> proprio non me lo filavo.</p>
 <p>In quell&rsquo;era geologica c&rsquo;era ancora la sbornia evolutiva portata dall&rsquo;aumento esponenziale e costante della potenza dei processori con interfacce sempre più belle e ricche di funzionalità, quindi fare un passo indietro ed usare il terminale non era contemplato.<br>
 E poi venivo da Windows e il <em>Prompt dei comandi</em> neanche sapevo cosa fosse.</p>
@@ -42,6 +42,8 @@ E poi venivo da Windows e il <em>Prompt dei comandi</em> neanche sapevo cosa fos
 <li><a href=https://calibre-ebook.com>Calibre</a></li>
 <li><a href=https://iina.io>IINA</a></li>
 <li><a href=https://handbrake.fr>HandBrake</a></li>
+<li><a href=https://transmissionbt.com/>Transmission</a></li>
+<li><a href=https://www.torproject.org>Tor Browser</a></li>
 <li><a href=https://freemacsoft.net/appcleaner/>App Cleaner</a></li>
 </ul>
 <p>Ho lasciato alla riga di comando le operazioni che possono essere svolte esclusivamente da terminale oppure quelle per le quali mi sento più a mio agio ad utilizzarlo.</p>
@@ -62,7 +64,24 @@ $ brew install svn
 $ sudo mkdir -p /Library/Java/Extensions
 $ sudo ln -s /opt/homebrew/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib
 $ brew install --cask font-roboto font-roboto-mono font-roboto-slab
-</code></pre><h4 id=quick-look>Quick Look</h4>
+</code></pre><h4 id=micro>micro</h4>
+<p>Mi trovo bene con <a href=https://micro-editor.github.io>micro</a>, facile da usare e completo.</p>
+<pre tabindex=0><code class=language-default data-lang=default>$ brew install micro
+$ micro ~/.zshrc
+export MICRO_TRUECOLOR=1
+$ micro ~/.config/micro/settings.json
+{
+    &quot;autosu&quot;: &quot;true&quot;,
+    &quot;colorscheme&quot;: &quot;simple&quot;,
+    &quot;diffgutter&quot;: true,
+    &quot;mkparents&quot;: true,
+    &quot;relativeruler&quot;: true,
+    &quot;rmtrailingws&quot;: true
+}
+
+</code></pre><p>Infine spuntare l&rsquo;opzione <em>Utilizza il tasto Opzione come Meta</em> nelle preferenze del Terminale predefinito in macOS:<br>
+<em>Preferenze -> Profili -> Tastiera -> Utilizza il tasto Opzione come Meta</em></p>
+<h4 id=quick-look>Quick Look</h4>
 <p>Per estendere le funzionalità di <a href=https://en.wikipedia.org/wiki/Quick_Look>Quick Look</a> ho installato questi due plugins: <a href=https://github.com/sbarex/QLMarkdown>QLMarkdown</a> permette di visualizzare il formato <a href=https://it.wikipedia.org/wiki/Markdown>markdown</a>, mentre <a href=https://github.com/Marginal/QLVideo>QLVideo</a> aggiunge il supporto ad altri formati video.</p>
 <pre tabindex=0><code class=language-default data-lang=default>$ brew install --cask qlmarkdown
 $ brew install --cask qlvideo
@@ -85,33 +104,48 @@ $ brew install --cask qlvideo
 <pre tabindex=0><code class=language-default data-lang=default>$ exiftool '-AllDates+&lt;0:0:${filesequence}0' DIR -fileOrder FileName -overwrite_original -r
 </code></pre><p>Per verificare che la modifica sia stata effettuata correttamente, questo comando genera un file <a href=https://it.wikipedia.org/wiki/Comma-separated_values>CSV</a> facilmente analizzabile:</p>
 <pre tabindex=0><code class=language-default data-lang=default>$ exiftool -AllDates -csv DIR &gt; out.csv
-</code></pre><p>In questo modo, una volta aggiunte alla libreria di <a href=https://www.apple.com/it/macos/photos/>Foto</a>, erano in perfetto ordine cronologico (ovviamente l&rsquo;ora di scatto era arbitraria e non rispettava quella effettiva, ma di meglio non potevo fare).</p>
+</code></pre><p>In questo modo, una volta aggiunte alla libreria di <a href=https://www.apple.com/it/macos/photos/>Foto</a>, erano in perfetto ordine cronologico (ovviamente l&rsquo;ora di scatto era arbitraria e non rispettava quella effettiva, ma di meglio non si poteva fare).</p>
 <h4 id=zsh>ZSH</h4>
 <p>Ed infine, visto che macOS utilizza <a href=https://zsh.sourceforge.io>ZSH</a> come <a href=https://it.wikipedia.org/wiki/Shell_(informatica)>shell</a> di default, perché non personalizzarla un pochino?</p>
 <pre tabindex=0><code class=language-default data-lang=default>$ cd ~
 $ touch ~/.hushlogin
-$ nano .zshrc
+$ micro .zshrc
+alias \$=''
+alias \%=''
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ll='ls -lh'
+alias la='ls -lah'
 alias ..='cd ..'
 alias l='ls -na'
 alias ll='ls -al'
-alias gd='cd /Users/simo/Downloads'
 alias gh='cd ~'
+alias rm=&quot;rm -rf&quot;
+alias edit='micro'
 setopt NO_CASE_GLOB
 setopt AUTO_CD
 setopt EXTENDED_HISTORY
-SAVEHIST=5000
-HISTSIZE=2000
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=10000
 setopt SHARE_HISTORY
-setopt INC_APPEND_HISTORY
-setopt HIST_EXPIRE_DUPS_FIRST 
-setopt HIST_IGNORE_DUPS
-setopt HIST_FIND_NO_DUPS
-setopt HIST_REDUCE_BLANKS
-setopt CORRECT
-setopt CORRECT_ALL
+setopt inc_append_history
+setopt auto_cd
+setopt histignoredups
+setopt ignoreeof
+unsetopt flowcontrol
+setopt correct_all
+autoload -U colors &amp;&amp; colors
+export SPROMPT=&quot;Correct $fg_bold[red]%R$reset_color to $fg_bold[green]%r?$reset_color ($fg_bold[green]Yes$reset_color, $fg_bold[yellow]No$reset_color, $fg_bold[red]Abort$reset_color, $fg_bold[blue]Edit$reset_color) &quot;
 plugins=(zsh-completions)
 autoload -Uz compinit
 compinit
+zstyle ':completion:*' menu select
+setopt list_rows_first
+setopt glob_complete
+zstyle ':completion:*' list-colors &quot;${(s.:.)LS_COLORS}&quot;
 autoload -Uz vcs_info
 PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%1~%f%b %F{white}%#%f '
 precmd_vcs_info() { vcs_info }
@@ -120,6 +154,17 @@ setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
 zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%r%f'
 zstyle ':vcs_info:*' enable git
+mkcd() { mkdir &quot;$1&quot;; cd &quot;$1&quot;; }
+export LESS_TERMCAP_md=$(tput bold; tput setaf 1)
+export LESS_TERMCAP_me=$(tput sgr0)
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 2)
+export LESS_TERMCAP_us=$(tput bold; tput setaf 2)
+export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
+export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4)
+export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
+export LESS=-R
+export EDITOR=micro
+export VISUAL=&quot;$EDITOR&quot;
 $ source .zshrc
 </code></pre><p>Si potrebbe fare molto di più, ma per il mio approccio questo è già abbastanza per avere tutto ciò di cui necessito razionalmente installato.</p>
 <p>Adesso sì che mi sento a casa!</p>
