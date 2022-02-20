@@ -143,9 +143,9 @@ $ sudo ln -s /opt/homebrew/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/lib
 $ brew install --cask font-inconsolata font-roboto font-roboto-mono font-roboto-slab
 &lt;/code>&lt;/pre>&lt;h4 id="micro">micro&lt;/h4>
 &lt;p>Mi trovo bene con &lt;a href="https://micro-editor.github.io">micro&lt;/a>, facile da usare e completo:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">$&lt;/span> &lt;span class="err">brew&lt;/span> &lt;span class="err">install&lt;/span> &lt;span class="err">micro&lt;/span>
-&lt;span class="err">$&lt;/span> &lt;span class="err">micro&lt;/span> &lt;span class="err">~/.config/micro/settings.json&lt;/span>
-&lt;span class="p">{&lt;/span>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install micro
+$ micro ~/.config/micro/settings.json
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;colorscheme&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;simple&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;diffgutter&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;mkparents&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
@@ -153,8 +153,8 @@ $ brew install --cask font-inconsolata font-roboto font-roboto-mono font-roboto-
 &lt;span class="nt">&amp;#34;rmtrailingws&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;saveundo&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;span class="err">$&lt;/span> &lt;span class="err">micro&lt;/span> &lt;span class="err">~/.config/micro/bindings.json&lt;/span>
-&lt;span class="p">{&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ micro ~/.config/micro/bindings.json
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;Alt-g&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;None&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;Ctrl-k&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;ToggleKeyMenu&amp;#34;&lt;/span>
 &lt;span class="p">}&lt;/span>
