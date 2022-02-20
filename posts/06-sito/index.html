@@ -9,7 +9,7 @@
 <title>Come è nato questo sito (appunti sparsi) - Disinteressato</title>
 <meta property="og:title" content="Come è nato questo sito (appunti sparsi) - Disinteressato">
 <meta property="og:type" content="article">
-<meta name=description content="Sito">
+<meta name=description content="sito,disinteressato,hugo,macos,git">
 <link rel=stylesheet href=https://disinteressato.it/css/fonts.css>
 <link rel=stylesheet href=https://disinteressato.it/css/style.css>
 <link rel=apple-touch-icon sizes=180x180 href=https://disinteressato.it/apple-touch-icon.png>
@@ -75,10 +75,12 @@ ssb   rsa4096/A226A4XXXXXXXXXX 2021-10-30 [E]
 $ git config --global commit.gpgSign true
 $ git config --global tag.forceSignAnnotated true
 </code></pre><p>Configurare anche macOS:</p>
-<pre tabindex=0><code class=language-default data-lang=default>$ nano ~/.zshrc
+<pre tabindex=0><code class=language-default data-lang=default>$ micro ~/.zshrc
+
 export GPG_TTY=$(tty)
 
-$ nano ~/.gnupg/gpg-agent.conf
+$ micro ~/.gnupg/gpg-agent.conf
+
 pinentry-program /opt/homebrew/bin/pinentry-mac
 
 $ gpgconf --kill gpg-agent
@@ -95,7 +97,7 @@ Il risultato finale che si ottiene è che ogni volta che viene aggiornato il cod
 </code></pre><p>Allo stesso modo, nel repository di pubblicazione con GitHub Pages, in <em>Settings > Deploy Key > Add new deploy key</em> col nome di PUBLIC_DEPLOY_KEY copiare il contenuto della chiave pubblica e spuntare <em>Allow write access</em>:</p>
 <pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; gh-pages.pub
 </code></pre><p>Nel repository del codice sorgente creare il file <code>.github/workflows/gh-pages.yaml</code> inserendo il seguente contenuto e modificando <em>GitHub_Username/GitHub_Pages_Repository</em> con i propri riferimenti:</p>
-<pre tabindex=0><code class=language-default data-lang=default>name: hugo publish
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>name: hugo publish
 
 on:
   push:
@@ -111,7 +113,7 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: 'latest'
+        hugo-version: <span class=s1>&#39;latest&#39;</span>
 
     - name: Build
       run: hugo --minify
@@ -119,13 +121,13 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
       env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        ACTIONS_DEPLOY_KEY: <span class=si>${</span><span class=p>{ secrets.ACTIONS_DEPLOY_KEY </span><span class=si>}</span><span class=o>}</span>
         EXTERNAL_REPOSITORY: GitHub_Username/GitHub_Pages_Repository
         PUBLISH_BRANCH: main
         PUBLISH_DIR: ./public
       with:
-        emptyCommits: false
-        commitMessage: ${{ github.event.head_commit.message }}
-</code></pre><h4 id=epilogo>Epilogo</h4>
+        emptyCommits: <span class=nb>false</span>
+        commitMessage: <span class=si>${</span><span class=p>{ github.event.head_commit.message </span><span class=si>}</span><span class=o>}</span>
+</code></pre></div><h4 id=epilogo>Epilogo</h4>
 <p>Questo è quanto. Ho volutamente saltato alcuni passaggi, come la configurazione di Hugo e la sua integrazione con Git/GitHub perché non voglio che questo sia un tutorial passo passo, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: <strong>non c&rsquo;è mai un&rsquo;unica via da percorrere per arrivare allo stesso risultato finale</strong>.</p>
 </article>

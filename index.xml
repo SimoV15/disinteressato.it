@@ -52,9 +52,9 @@ ssb rsa4096/A226A4XXXXXXXXXX 2021-10-30 [E]
 $ git config --global commit.gpgSign true
 $ git config --global tag.forceSignAnnotated true
 &lt;/code>&lt;/pre>&lt;p>Configurare anche macOS:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ nano ~/.zshrc
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ micro ~/.zshrc
 export GPG_TTY=$(tty)
-$ nano ~/.gnupg/gpg-agent.conf
+$ micro ~/.gnupg/gpg-agent.conf
 pinentry-program /opt/homebrew/bin/pinentry-mac
 $ gpgconf --kill gpg-agent
 &lt;/code>&lt;/pre>&lt;p>Questo è il comando da utilizzare se dovesse esserci la necessità di esportare la chiave &lt;em>privata&lt;/em>:&lt;/p>
@@ -70,7 +70,7 @@ Il risultato finale che si ottiene è che ogni volta che viene aggiornato il cod
 &lt;/code>&lt;/pre>&lt;p>Allo stesso modo, nel repository di pubblicazione con GitHub Pages, in &lt;em>Settings &amp;gt; Deploy Key &amp;gt; Add new deploy key&lt;/em> col nome di PUBLIC_DEPLOY_KEY copiare il contenuto della chiave pubblica e spuntare &lt;em>Allow write access&lt;/em>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">pbcopy &amp;lt; gh-pages.pub
 &lt;/code>&lt;/pre>&lt;p>Nel repository del codice sorgente creare il file &lt;code>.github/workflows/gh-pages.yaml&lt;/code> inserendo il seguente contenuto e modificando &lt;em>GitHub_Username/GitHub_Pages_Repository&lt;/em> con i propri riferimenti:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">name: hugo publish
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">name: hugo publish
 on:
 push:
 branches:
@@ -83,20 +83,20 @@ steps:
 - name: Setup Hugo
 uses: peaceiris/actions-hugo@v2
 with:
-hugo-version: 'latest'
+hugo-version: &lt;span class="s1">&amp;#39;latest&amp;#39;&lt;/span>
 - name: Build
 run: hugo --minify
 - name: Deploy
 uses: peaceiris/actions-gh-pages@v2
 env:
-ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+ACTIONS_DEPLOY_KEY: &lt;span class="si">${&lt;/span>&lt;span class="p">{ secrets.ACTIONS_DEPLOY_KEY &lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="o">}&lt;/span>
 EXTERNAL_REPOSITORY: GitHub_Username/GitHub_Pages_Repository
 PUBLISH_BRANCH: main
 PUBLISH_DIR: ./public
 with:
-emptyCommits: false
-commitMessage: ${{ github.event.head_commit.message }}
-&lt;/code>&lt;/pre>&lt;h4 id="epilogo">Epilogo&lt;/h4>
+emptyCommits: &lt;span class="nb">false&lt;/span>
+commitMessage: &lt;span class="si">${&lt;/span>&lt;span class="p">{ github.event.head_commit.message &lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="o">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="epilogo">Epilogo&lt;/h4>
 &lt;p>Questo è quanto. Ho volutamente saltato alcuni passaggi, come la configurazione di Hugo e la sua integrazione con Git/GitHub perché non voglio che questo sia un tutorial passo passo, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: &lt;strong>non c&amp;rsquo;è mai un&amp;rsquo;unica via da percorrere per arrivare allo stesso risultato finale&lt;/strong>.&lt;/p></description></item><item><title>Un Terminale è per sempre (e altre cosette)</title><link>https://disinteressato.it/posts/05-terminale/</link><pubDate>28 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/05-terminale/</guid><description>&lt;p>Quando a metà anni 2000 iniziai ad usare un Mac il &lt;a href="https://it.m.wikipedia.org/wiki/Terminale_virtuale">terminale&lt;/a> proprio non me lo filavo.&lt;/p>
 &lt;p>In quell&amp;rsquo;era geologica c&amp;rsquo;era ancora la sbornia evolutiva portata dall&amp;rsquo;aumento esponenziale e costante della potenza dei processori con interfacce sempre più belle e ricche di funzionalità, quindi fare un passo indietro ed usare il terminale non era contemplato.&lt;br>
 E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo cosa fosse.&lt;/p>
