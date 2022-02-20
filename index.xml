@@ -165,7 +165,7 @@ $ micro ~/.config/micro/settings.json
 &lt;p>Immancabile &lt;a href="https://youtube-dl.org">youtube-dl&lt;/a> per scaricare i video da &lt;a href="https://www.youtube.com">YouTube&lt;/a>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install youtube-dl atomicparsley ffmpeg
 &lt;/code>&lt;/pre>&lt;p>Questo invece è il mio file di configurazione:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ nano ~/.config/youtube-dl/config
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ micro ~/.config/youtube-dl/config
 --embed-thumbnail
 --add-metadata
 --no-mtime
