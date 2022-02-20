@@ -104,7 +104,7 @@ E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo co
 &lt;p>Ritenendomi adesso un utente discretamente esperto, almeno nel riconoscere le mie necessità, il mio approccio in questo nuovo viaggio con macOS è stato questo: cerco tutto il software che mi serve nell&amp;rsquo;App Store, se non lo trovo la scarico dai rispettivi siti ufficiali e verifico che ci sia la possibilità di ricercare gli aggiornamenti all&amp;rsquo;interno dell&amp;rsquo;applicazione stessa.&lt;/p>
 &lt;p>Queste sono le applicazioni che ho installato esternamente all&amp;rsquo;App Store:&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="https://code.visualstudio.com">Virtual Studio Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://code.visualstudio.com/docs/setup/mac">Virtual Studio Code&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.office.com">Microsoft Office&lt;/a> con licenza Office 2021 acquistata su &lt;a href="http://topkeyshop.com">Top Key Shop&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.tug.org/mactex/">MacTex&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://calibre-ebook.com">Calibre&lt;/a>&lt;/li>
@@ -124,34 +124,43 @@ Anche l&amp;rsquo;installazione, ovviamente, avviene da riga di comando:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew update
 $ brew outdated
 $ brew upgrade
-&lt;/code>&lt;/pre>&lt;p>Ho installato veramente pochi pacchetti perché quello di cui necessito è residuale o al massimo serve per estendere o completare alcune funzioni di macOS.&lt;/p>
-&lt;h4 id="caratteri">Caratteri&lt;/h4>
-&lt;p>Ho installato solo il carattere &lt;a href="https://fonts.google.com/specimen/Roboto">Roboto&lt;/a>, lo stesso che uso anche in questo sito:&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>Utilizzo pochi pacchetti perché quello di cui necessito è residuale o al massimo serve per estendere o completare alcune funzioni di macOS.&lt;/p>
+&lt;h4 id="quick-look">Quick Look&lt;/h4>
+&lt;p>Per estendere le funzionalità di &lt;a href="https://en.wikipedia.org/wiki/Quick_Look">Quick Look&lt;/a> ho installato questi plugin:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/sbarex/QLMarkdown">QLMarkdown&lt;/a> permette di visualizzare il formato &lt;a href="https://it.wikipedia.org/wiki/Markdown">markdown&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/Marginal/QLVideo">QLVideo&lt;/a> aggiunge il supporto a molti formati video&lt;/li>
+&lt;li>&lt;a href="https://github.com/p2/quicklook-csv">QuickLookCSV&lt;/a> per i file &lt;a href="https://it.wikipedia.org/wiki/Comma-separated_values">CSV&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/anthonygelibert/QLColorCode">QLColorCode&lt;/a> colora la sintassi del codice.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install --cask qlmarkdown qlvideo quicklook-csv qlcolorcode
+&lt;/code>&lt;/pre>&lt;h4 id="caratteri">Caratteri&lt;/h4>
+&lt;p>Ho installato solo i caratteri &lt;a href="https://fonts.google.com/specimen/Inconsolata">Inconsolata&lt;/a> e &lt;a href="https://fonts.google.com/specimen/Roboto">Roboto&lt;/a>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew tap homebrew/cask-fonts
 $ brew install svn
 $ sudo mkdir -p /Library/Java/Extensions
 $ sudo ln -s /opt/homebrew/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib
-$ brew install --cask font-roboto font-roboto-mono font-roboto-slab
+$ brew install --cask font-inconsolata font-roboto font-roboto-mono font-roboto-slab
 &lt;/code>&lt;/pre>&lt;h4 id="micro">micro&lt;/h4>
-&lt;p>Mi trovo bene con &lt;a href="https://micro-editor.github.io">micro&lt;/a>, facile da usare e completo.&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install micro
-$ micro ~/.zshrc
-export MICRO_TRUECOLOR=1
-$ micro ~/.config/micro/settings.json
-{
-&amp;quot;autosu&amp;quot;: &amp;quot;true&amp;quot;,
-&amp;quot;colorscheme&amp;quot;: &amp;quot;simple&amp;quot;,
-&amp;quot;diffgutter&amp;quot;: true,
-&amp;quot;mkparents&amp;quot;: true,
-&amp;quot;relativeruler&amp;quot;: true,
-&amp;quot;rmtrailingws&amp;quot;: true
-}
-&lt;/code>&lt;/pre>&lt;p>Infine spuntare l&amp;rsquo;opzione &lt;em>Utilizza il tasto Opzione come Meta&lt;/em> nelle preferenze del Terminale predefinito in macOS:&lt;br>
-&lt;em>Preferenze -&amp;gt; Profili -&amp;gt; Tastiera -&amp;gt; Utilizza il tasto Opzione come Meta&lt;/em>&lt;/p>
-&lt;h4 id="quick-look">Quick Look&lt;/h4>
-&lt;p>Per estendere le funzionalità di &lt;a href="https://en.wikipedia.org/wiki/Quick_Look">Quick Look&lt;/a> ho installato questi due plugins: &lt;a href="https://github.com/sbarex/QLMarkdown">QLMarkdown&lt;/a> permette di visualizzare il formato &lt;a href="https://it.wikipedia.org/wiki/Markdown">markdown&lt;/a>, mentre &lt;a href="https://github.com/Marginal/QLVideo">QLVideo&lt;/a> aggiunge il supporto ad altri formati video.&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install --cask qlmarkdown
-$ brew install --cask qlvideo
+&lt;p>Mi trovo bene con &lt;a href="https://micro-editor.github.io">micro&lt;/a>, facile da usare e completo:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">$&lt;/span> &lt;span class="err">brew&lt;/span> &lt;span class="err">install&lt;/span> &lt;span class="err">micro&lt;/span>
+&lt;span class="err">$&lt;/span> &lt;span class="err">micro&lt;/span> &lt;span class="err">~/.config/micro/settings.json&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;colorscheme&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;simple&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;diffgutter&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;mkparents&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;relativeruler&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;rmtrailingws&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;saveundo&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="err">$&lt;/span> &lt;span class="err">micro&lt;/span> &lt;span class="err">~/.config/micro/bindings.json&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;Alt-g&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;None&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;Ctrl-k&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;ToggleKeyMenu&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="rsync">rsync&lt;/h4>
+&lt;p>Sempre utile avere &lt;a href="https://rsync.samba.org">rsync&lt;/a> per sincronizzare file o cartelle:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install rsync
 &lt;/code>&lt;/pre>&lt;h4 id="youtube-dl">youtube-dl&lt;/h4>
 &lt;p>Immancabile &lt;a href="https://youtube-dl.org">youtube-dl&lt;/a> per scaricare i video da &lt;a href="https://www.youtube.com">YouTube&lt;/a>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install youtube-dl atomicparsley ffmpeg
@@ -172,68 +181,156 @@ $ brew install --cask qlvideo
 &lt;/code>&lt;/pre>&lt;p>Per verificare che la modifica sia stata effettuata correttamente, questo comando genera un file &lt;a href="https://it.wikipedia.org/wiki/Comma-separated_values">CSV&lt;/a> facilmente analizzabile:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ exiftool -AllDates -csv DIR &amp;gt; out.csv
 &lt;/code>&lt;/pre>&lt;p>In questo modo, una volta aggiunte alla libreria di &lt;a href="https://www.apple.com/it/macos/photos/">Foto&lt;/a>, erano in perfetto ordine cronologico (ovviamente l&amp;rsquo;ora di scatto era arbitraria e non rispettava quella effettiva, ma di meglio non si poteva fare).&lt;/p>
-&lt;h4 id="zsh">ZSH&lt;/h4>
+&lt;h4 id="wget-tree-e-trash">Wget, tree e trash&lt;/h4>
+&lt;p>Installo anche il classico &lt;a href="https://www.gnu.org/software/wget/">Wget&lt;/a>, &lt;a href="http://mama.indstate.edu/users/ice/tree/">Tree&lt;/a> per visualizzare le cartelle in una struttura ad albero e &lt;a href="https://github.com/ali-rantakari/trash">Trash&lt;/a> per spostare i file nel cestino da terminale evitando di poter solo cancellarli definitivamente usando il comando &lt;a href="https://it.wikipedia.org/wiki/Rm_(Unix)">rm&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install wget trash tree
+&lt;/code>&lt;/pre>&lt;h4 id="zsh">ZSH&lt;/h4>
 &lt;p>Ed infine, visto che macOS utilizza &lt;a href="https://zsh.sourceforge.io">ZSH&lt;/a> come &lt;a href="https://it.wikipedia.org/wiki/Shell_(informatica)">shell&lt;/a> di default, perché non personalizzarla un pochino?&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ cd ~
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ brew install pure zsh-autosuggestions
+$ &lt;span class="nb">cd&lt;/span> ~
 $ touch ~/.hushlogin
 $ micro .zshrc
-alias \$=''
-alias \%=''
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias ll='ls -lh'
-alias la='ls -lah'
-alias ..='cd ..'
-alias l='ls -na'
-alias ll='ls -al'
-alias gh='cd ~'
-alias rm=&amp;quot;rm -rf&amp;quot;
-alias edit='micro'
-setopt NO_CASE_GLOB
-setopt AUTO_CD
-setopt EXTENDED_HISTORY
-HISTFILE=~/.zsh_history
-HISTSIZE=50000
-SAVEHIST=10000
-setopt SHARE_HISTORY
-setopt inc_append_history
-setopt auto_cd
-setopt histignoredups
-setopt ignoreeof
-unsetopt flowcontrol
-setopt correct_all
-autoload -U colors &amp;amp;&amp;amp; colors
-export SPROMPT=&amp;quot;Correct $fg_bold[red]%R$reset_color to $fg_bold[green]%r?$reset_color ($fg_bold[green]Yes$reset_color, $fg_bold[yellow]No$reset_color, $fg_bold[red]Abort$reset_color, $fg_bold[blue]Edit$reset_color) &amp;quot;
-plugins=(zsh-completions)
+&lt;span class="c1">#!/usr/bin/env zsh&lt;/span>
+&lt;span class="c1">###############################&lt;/span>
+&lt;span class="c1"># EXPORT ENVIRONMENT VARIABLE #&lt;/span>
+&lt;span class="c1">###############################&lt;/span>
+&lt;span class="c1"># editor&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">EDITOR&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;micro&amp;#39;&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">VISUAL&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;micro&amp;#39;&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">MICRO_TRUECOLOR&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
+&lt;span class="c1"># zsh&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">HISTSIZE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10000&lt;/span> &lt;span class="c1"># Maximum events for internal history&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">SAVEHIST&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10000&lt;/span> &lt;span class="c1"># Maximum events in history file&lt;/span>
+&lt;span class="c1"># gpg needs this&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">GPG_TTY&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>tty&lt;span class="k">)&lt;/span>
+&lt;span class="c1">#############&lt;/span>
+&lt;span class="c1"># FUNCTIONS #&lt;/span>
+&lt;span class="c1">#############&lt;/span>
+&lt;span class="c1"># create a folder and move into it in one command&lt;/span>
+&lt;span class="k">function&lt;/span> mkcd&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span> mkdir -p &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$@&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">cd&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$_&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="o">}&lt;/span>
+&lt;span class="c1">###########&lt;/span>
+&lt;span class="c1"># HISTORY #&lt;/span>
+&lt;span class="c1">###########&lt;/span>
+setopt EXTENDED_HISTORY &lt;span class="c1"># Write the history file in the &amp;#39;:start:elapsed;command&amp;#39; format&lt;/span>
+setopt SHARE_HISTORY &lt;span class="c1"># Share history between all sessions&lt;/span>
+setopt HIST_EXPIRE_DUPS_FIRST &lt;span class="c1"># Expire a duplicate event first when trimming history&lt;/span>
+setopt HIST_IGNORE_DUPS &lt;span class="c1"># Do not record an event that was just recorded again&lt;/span>
+setopt HIST_IGNORE_ALL_DUPS &lt;span class="c1"># Delete an old recorded event if a new event is a duplicate&lt;/span>
+setopt HIST_FIND_NO_DUPS &lt;span class="c1"># Do not display a previously found event&lt;/span>
+setopt HIST_IGNORE_SPACE &lt;span class="c1"># Do not record an event starting with a space&lt;/span>
+setopt HIST_SAVE_NO_DUPS &lt;span class="c1"># Do not write a duplicate event to the history file&lt;/span>
+setopt HIST_VERIFY &lt;span class="c1"># Do not execute immediately upon history expansion&lt;/span>
+&lt;span class="c1">##############&lt;/span>
+&lt;span class="c1"># NAVIGATION #&lt;/span>
+&lt;span class="c1">##############&lt;/span>
+setopt AUTO_CD &lt;span class="c1"># Go to folder path without using cd&lt;/span>
+setopt AUTO_PUSHD &lt;span class="c1"># Push the old directory onto the stack on cd&lt;/span>
+setopt PUSHD_IGNORE_DUPS &lt;span class="c1"># Do not store duplicates in the stack&lt;/span>
+setopt PUSHD_SILENT &lt;span class="c1"># Do not print the directory stack after pushd or popd&lt;/span>
+setopt CDABLE_VARS &lt;span class="c1"># Change directory to a path stored in a variable&lt;/span>
+setopt EXTENDED_GLOB &lt;span class="c1"># Use extended globbing syntax&lt;/span>
+setopt NO_LIST_AMBIGUOUS &lt;span class="c1"># Case insensivity&lt;/span>
+&lt;span class="c1">##########&lt;/span>
+&lt;span class="c1"># COLORS #&lt;/span>
+&lt;span class="c1">##########&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">CLICOLOR&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">LSCOLORS&lt;/span>&lt;span class="o">=&lt;/span>ExGxBxDxCxEgEdxbxgxcxd
+&lt;span class="c1">###########&lt;/span>
+&lt;span class="c1"># ALIASES #&lt;/span>
+&lt;span class="c1">###########&lt;/span>
+&lt;span class="c1"># system&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">brewup&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;brew update; brew upgrade; brew cleanup; brew doctor&amp;#39;&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">myip&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;curl http://ipecho.net/plain; echo&amp;#39;&lt;/span>
+&lt;span class="c1"># folders&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">iCloud&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/&amp;#39;&lt;/span>
+&lt;span class="c1"># cp&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">cp&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;cp -iv&amp;#39;&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">mv&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;mv -iv&amp;#39;&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">rm&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;echo &amp;#34;This is not the command you are looking for. Use trash instead.&amp;#34;; false&amp;#39;&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">rcp&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;rsync -v --progress&amp;#39;&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">rmv&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;rsync -v --progress --remove-source-files&amp;#39;&lt;/span>
+&lt;span class="c1"># grep&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">grep&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;grep --color=auto&amp;#39;&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">fgrep&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;fgrep --color=auto&amp;#39;&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">egrep&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;egrep --color=auto&amp;#39;&lt;/span>
+&lt;span class="c1"># hugo&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">hugostart&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;hugo server -DEF --ignoreCache&amp;#39;&lt;/span>
+&lt;span class="c1"># directory stack&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">d&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;dirs -v&amp;#39;&lt;/span>
+&lt;span class="k">for&lt;/span> index &lt;span class="o">({&lt;/span>1..9&lt;span class="o">})&lt;/span> &lt;span class="nb">alias&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$index&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;cd +&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">index&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nb">unset&lt;/span> index
+&lt;span class="c1"># history&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">hs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;history | grep&amp;#39;&lt;/span>
+&lt;span class="c1"># commands&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">mkcd&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;foo(){ mkdir -p &amp;#34;$1&amp;#34;; cd &amp;#34;$1&amp;#34; }; foo &amp;#39;&lt;/span>
+&lt;span class="c1"># applications&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">edit&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;micro&amp;#39;&lt;/span>
+&lt;span class="c1">#####################&lt;/span>
+&lt;span class="c1"># COMPLETION SYSTEM #&lt;/span>
+&lt;span class="c1">#####################&lt;/span>
+&lt;span class="c1"># command completion&lt;/span>
 autoload -Uz compinit
 compinit
-zstyle ':completion:*' menu select
-setopt list_rows_first
-setopt glob_complete
-zstyle ':completion:*' list-colors &amp;quot;${(s.:.)LS_COLORS}&amp;quot;
-autoload -Uz vcs_info
-PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%1~%f%b %F{white}%#%f '
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-RPROMPT=\$vcs_info_msg_0_
-zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%r%f'
-zstyle ':vcs_info:*' enable git
-mkcd() { mkdir &amp;quot;$1&amp;quot;; cd &amp;quot;$1&amp;quot;; }
-export LESS_TERMCAP_md=$(tput bold; tput setaf 1)
-export LESS_TERMCAP_me=$(tput sgr0)
-export LESS_TERMCAP_mb=$(tput bold; tput setaf 2)
-export LESS_TERMCAP_us=$(tput bold; tput setaf 2)
-export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
-export LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4)
-export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
-export LESS=-R
-export EDITOR=micro
-export VISUAL=&amp;quot;$EDITOR&amp;quot;
-$ source .zshrc
-&lt;/code>&lt;/pre>&lt;p>Si potrebbe fare molto di più, ma per il mio approccio questo è già abbastanza per avere tutto ciò di cui necessito razionalmente installato.&lt;/p>
+&lt;span class="c1"># with hidden files&lt;/span>
+&lt;span class="nv">_comp_options&lt;/span>&lt;span class="o">+=(&lt;/span>globdots&lt;span class="o">)&lt;/span>
+&lt;span class="c1"># autocompletion with an arrow-key driven interface. To activate the menu, press Tab twice.&lt;/span>
+zstyle &lt;span class="s1">&amp;#39;:completion:*&amp;#39;&lt;/span> menu &lt;span class="k">select&lt;/span>
+&lt;span class="c1"># case insensitive path-completion&lt;/span>
+zstyle &lt;span class="s1">&amp;#39;:completion:*&amp;#39;&lt;/span> matcher-list &lt;span class="s1">&amp;#39;m:{a-zA-Z}={A-Za-z}&amp;#39;&lt;/span>
+&lt;span class="c1"># enables the auto-complete menu automatically selects the first item (yes) only for ls&lt;/span>
+zstyle &lt;span class="s1">&amp;#39;:completion:ls:*&amp;#39;&lt;/span> menu yes &lt;span class="k">select&lt;/span>
+&lt;span class="c1"># sets the auto-completion colors&lt;/span>
+zstyle &lt;span class="s1">&amp;#39;:completion:*:default&amp;#39;&lt;/span> list-colors &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="s1">&amp;#39;di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43&amp;#39;&lt;/span>
+&lt;span class="c1">##################&lt;/span>
+&lt;span class="c1"># HISTORY SEARCH #&lt;/span>
+&lt;span class="c1">##################&lt;/span>
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+&lt;span class="c1"># up&lt;/span>
+bindkey &lt;span class="s1">&amp;#39;^[[A&amp;#39;&lt;/span> up-line-or-beginning-search
+&lt;span class="c1"># down&lt;/span>
+bindkey &lt;span class="s1">&amp;#39;^[[B&amp;#39;&lt;/span> down-line-or-beginning-search
+&lt;span class="c1">###############&lt;/span>
+&lt;span class="c1"># PURE PROMPT #&lt;/span>
+&lt;span class="c1">###############&lt;/span>
+&lt;span class="c1"># initialize the prompt system&lt;/span>
+&lt;span class="nv">fpath&lt;/span>&lt;span class="o">+=&lt;/span>/opt/homebrew/share/zsh/site-functions
+autoload -U promptinit
+promptinit
+prompt pure
+&lt;span class="c1"># max execution time of a process before its run time is shown when it exits&lt;/span>
+&lt;span class="nv">PURE_CMD_MAX_EXEC_TIME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span>
+&lt;span class="c1"># change the path color&lt;/span>
+zstyle :prompt:pure:path color cyan
+&lt;span class="c1"># turn on git stash status&lt;/span>
+zstyle :prompt:pure:git:stash show yes
+&lt;span class="c1">###################&lt;/span>
+&lt;span class="c1"># AUTOSUGGESTIONS #&lt;/span>
+&lt;span class="c1">###################&lt;/span>
+&lt;span class="nb">source&lt;/span> /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+&lt;span class="c1"># suggestion strategy&lt;/span>
+&lt;span class="nv">ZSH_AUTOSUGGEST_STRATEGY&lt;/span>&lt;span class="o">=(&lt;/span>&lt;span class="nb">history&lt;/span> completion&lt;span class="o">)&lt;/span>
+&lt;span class="c1"># add forward-word widgets to PARTIAL_ACCEPT&lt;/span>
+&lt;span class="nv">ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS&lt;/span>&lt;span class="o">+=(&lt;/span>forward-word&lt;span class="o">)&lt;/span>
+&lt;span class="c1"># right&lt;/span>
+bindkey &lt;span class="s1">&amp;#39;^[[C&amp;#39;&lt;/span> forward-word
+&lt;span class="c1">####################&lt;/span>
+&lt;span class="c1"># COLOURED MANUALS #&lt;/span>
+&lt;span class="c1">####################&lt;/span>
+man&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span>
+env &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_mb&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[1;31m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_md&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[1;31m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_me&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[0m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_se&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[0m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_so&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[1;44;33m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_ue&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[0m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_us&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[1;32m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span> man &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$@&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;span class="o">}&lt;/span>
+$ &lt;span class="nb">source&lt;/span> .zshrc
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Si potrebbe fare molto di più, ma per il mio approccio questo è già abbastanza per avere tutto ciò di cui necessito razionalmente installato.&lt;/p>
 &lt;p>Adesso sì che mi sento a casa!&lt;/p></description></item><item><title>Kindle, Kindle delle mie brame</title><link>https://disinteressato.it/posts/04-kindle/</link><pubDate>09 December 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/04-kindle/</guid><description>&lt;p>L’ultimo tassello del puzzle per arrivare a semplificare il più possibile la mia vita informatica è stato il ritorno all’utilizzo di un Kindle per le mie letture.
 Un gentile regalo di mia moglie, dato che l’aveva acquistato anni fa e non l’aveva praticamente mai utilizzato: preferisce di gran lunga i classici libri cartacei.&lt;/p>
 &lt;p>Negli ultimi anni avevo usato un &lt;a href="https://pocketbook.it/it-it/catalog/allsupport-it/basic-lux-615-it">PocketBook Basic Lux&lt;/a>, acquistato essenzialmente perché non vincolato a nessuno store online (ricordate le mie fissazioni espresse negli articoli precedenti?) e che devo ammettere ha fatto il suo sporco lavoro: acquistavo in formato &lt;a href="https://it.wikipedia.org/wiki/EPub">ePub&lt;/a> dove preferivo (principalmente &lt;a href="https://bookrepublic.it">Bookrepublic&lt;/a>), gestivo la mia libreria con &lt;a href="https://calibre-ebook.com">Calibre&lt;/a>, copiavo i file sul dispositivo e li leggevo.
