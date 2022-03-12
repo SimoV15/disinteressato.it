@@ -34,11 +34,13 @@ h0 {
   font-family: var(--font-title);
   font-size: var(--font-size-title);
   color: var(--black);
+  line-height: 1.125rem;
 }
 
 h2, h3, h4, h5, h6 {
   margin: .375rem 0 1rem;
   color: var(--black);
+  line-height: 1.125rem;
 }
 
 p, ul, ol, table, pre, dl {
@@ -50,6 +52,7 @@ h1 {
   font-size: var(--font-size-large);
   font-weight: 700;
   color: var(--black);
+  line-height: 1.125rem;
 }
 
 h0 a, h1 a {
@@ -59,11 +62,7 @@ h0 a, h1 a {
 h0 a:hover, h1 a:hover {
   text-decoration: none;  
 }
-
-h0, h1, h2, h3, h4, h5, h6 {
-  line-height: 1.125rem;
-}
-    
+ 
 a {
   color: var(--black);
   text-decoration:underline;
