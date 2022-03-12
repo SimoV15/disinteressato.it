@@ -37,10 +37,16 @@ h0 {
   line-height: 1.125rem;
 }
 
-h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
   margin: .375rem 0 1rem;
   color: var(--black);
   line-height: 1.125rem;
+}
+
+h2 {
+  margin: .375rem 0 1rem;
+  color: var(--black);
+  line-height: 1.5rem;
 }
 
 p, ul, ol, table, pre, dl {
@@ -52,7 +58,7 @@ h1 {
   font-size: var(--font-size-large);
   font-weight: 700;
   color: var(--black);
-  line-height: 1.125rem;
+  line-height: 2rem;
 }
 
 h0 a, h1 a {
