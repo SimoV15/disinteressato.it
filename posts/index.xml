@@ -1,16 +1,461 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Disinteressato</title><link>https://disinteressato.it/posts/</link><description>Recent content in Posts on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><lastBuildDate>Sat, 12 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://disinteressato.it/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Un metodo semplice per gestire i dotfiles</title><link>https://disinteressato.it/posts/08-dotfiles/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/08-dotfiles/</guid><description>In vita mia non avevo mai approfondito la gestione dei dotfiles, avevo letto qualcosa, ma era rimasta nel cassetto tra i progetti incompiuti.
-Poi sono capitato per caso sul sito GitHub does dotfiles, così ho ricominciato a pensarci e a studiare qua e là per ottenere un risultato semplice e funzionale.
-La scelta è ricaduta sul metodo del bare repository (ovvero un repository privo della cartella di lavoro) e alias, come descritto in queste due fondamentali letture: The best way to store your dotfiles: A bare Git repository e l&amp;rsquo;irrinunciabile Wiki di Arch Linux.</description></item><item><title>La promessa</title><link>https://disinteressato.it/posts/07-promessa/</link><pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/07-promessa/</guid><description>La promessa di Friedrich Dürrenmatt è un giallo anomalo, particolare, ma soprattutto profondo. Una buona compagnia per passare qualche sera invernale davanti al focolare.
-Ci sono due passaggi importanti nel libro, il primo nella parte iniziale:
-«Chi è l’assassino?» chiese, con una voce così calma e neutra che il commissario sbigottì. «Lo scoprirò, signora Moser». Allora la donna lo guardò, minacciosa, risoluta. «Lo promette?». «Lo prometto, signora Moser» rispose il commissario, di colpo preso dal desiderio urgente di andare via da quel posto.</description></item><item><title>Come è nato questo sito (appunti sparsi)</title><link>https://disinteressato.it/posts/06-sito/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/06-sito/</guid><description>Dovessi mai ricominciare tutto daccapo, scrivo due righe su come ho impostato questo sito e su come viene pubblicato.
-Prologo Questa cosa di farmi un sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente, saranno almeno 3 anni, ma tra le vicissitudini da ormai ex linuxaro ed il voler trovare una soluzione semplice da impostare, da manutenere e, nel caso, da replicare, non sono mai riuscito a portarla a termine.</description></item><item><title>Un Terminale è per sempre (e altre cosette)</title><link>https://disinteressato.it/posts/05-terminale/</link><pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/05-terminale/</guid><description>Quando a metà anni 2000 iniziai ad usare un Mac il terminale proprio non me lo filavo.
-In quell&amp;rsquo;era geologica c&amp;rsquo;era ancora la sbornia evolutiva portata dall&amp;rsquo;aumento esponenziale e costante della potenza dei processori con interfacce sempre più belle e ricche di funzionalità, quindi fare un passo indietro ed usare il terminale non era contemplato.
-E poi venivo da Windows e il Prompt dei comandi neanche sapevo cosa fosse.
-Col tempo ho apprezzato l&amp;rsquo;uso che se ne può fare, come possa essere effettivamente più rapido per alcune operazioni, inutilmente complesso per altre, ma soprattutto che è l&amp;rsquo;ultima ancora di salvezza per uscire dai guai nei sistemi Unix.</description></item><item><title>Kindle, Kindle delle mie brame</title><link>https://disinteressato.it/posts/04-kindle/</link><pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/04-kindle/</guid><description>L’ultimo tassello del puzzle per arrivare a semplificare il più possibile la mia vita informatica è stato il ritorno all’utilizzo di un Kindle per le mie letture. Un gentile regalo di mia moglie, dato che l’aveva acquistato anni fa e non l’aveva praticamente mai utilizzato: preferisce di gran lunga i classici libri cartacei.
-Negli ultimi anni avevo usato un PocketBook Basic Lux, acquistato essenzialmente perché non vincolato a nessuno store online (ricordate le mie fissazioni espresse negli articoli precedenti?</description></item><item><title>Piacevolezza</title><link>https://disinteressato.it/posts/03-piacevolezza/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/03-piacevolezza/</guid><description>Come ho scritto nel post precedente, nel giro di un mese ho dovuto sostituire sia il mio smartphone che il mio computer.
-Da quando mi era presa la fissa per Linux, avevo sempre fatto acquisti in funzione della compatibilità hardware, per cui da casa mia erano passati un Dell ed uno Xiaomi Mi Air, convinto che anche se erano poco costosi e poco performanti, un sistema operativo leggero e minimale li avrebbe resi adatti al mio utilizzo.</description></item><item><title>40: L'età della semplificazione</title><link>https://disinteressato.it/posts/02-40/</link><pubDate>Sun, 14 Nov 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/02-40/</guid><description>Quando si compiono quarant’anni il secondo pensiero che passa per la testa (al primo posto: “cazzo ho quarant’anni”) è: “cosa ho fatto negli ultimi anni che mi sta ancora complicando la vita?”
-Siccome le cose già risolte non contano e quelle importanti non sono l’oggetto di questo mio scritto, rimangono solo quelle futili.
-Negli ultimi 10 anni sono stato esclusivamente un utente GNU/Linux: perché mi sono appassionato alla filosofia che c’è dietro, al software libero, ai begl’ideali e all’incubo privacy se non mi fossi convinto a diventare come Stallman.</description></item><item><title>Introduzione</title><link>https://disinteressato.it/posts/01-introduzione/</link><pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/01-introduzione/</guid><description>Il nome vorrebbe racchiudere tutto: disinteressato.
-Il dizionario suggerisce questa definizione:
-Che non agisce per interesse, che non è mosso da interesse egoistico.
-È un po’ ciò che vorrei essere io nella vita, anche se è un ideale di comportamento abbastanza utopistico, soprattutto di questi tempi. Spesso sgarro, non fosse solo per autodifesa. Faccio un passo indietro allora e, più realisticamente, per adesso mi accontento di coricarmi con la coscienza a posto e di esprimere i miei pensieri liberamente.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Disinteressato</title><link>https://disinteressato.it/posts/</link><description>Recent content in Posts on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><lastBuildDate>Sat, 12 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://disinteressato.it/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Un metodo semplice per gestire i dotfiles</title><link>https://disinteressato.it/posts/08-dotfiles/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/08-dotfiles/</guid><description>&lt;p>In vita mia non avevo mai approfondito la gestione dei &lt;a href="https://en.m.wikipedia.org/wiki/Hidden_file_and_hidden_directory#Unix_and_Unix-like_environments">dotfiles&lt;/a>, avevo letto qualcosa, ma era rimasta nel cassetto tra i progetti incompiuti.&lt;/p>
+&lt;p>Poi sono capitato per caso sul sito &lt;a href="http://dotfiles.github.io/">GitHub does dotfiles&lt;/a>, così ho ricominciato a pensarci e a studiare qua e là per ottenere un risultato semplice e funzionale.&lt;/p>
+&lt;p>La scelta è ricaduta sul metodo del &lt;strong>bare repository&lt;/strong> (ovvero un repository privo della cartella di lavoro) e &lt;strong>alias&lt;/strong>, come descritto in queste due fondamentali letture: &lt;a href="https://www.atlassian.com/git/tutorials/dotfiles">The best way to store your dotfiles: A bare Git repository&lt;/a> e l&amp;rsquo;irrinunciabile &lt;a href="https://wiki.archlinux.org/title/Dotfiles">Wiki&lt;/a> di Arch Linux.&lt;/p>
+&lt;p>Per prima cosa ho creato un repository in GitHub: deve essere vuoto, quindi senza README e LICENSE.&lt;/p>
+&lt;p>Da terminale, con questi soli 3 comandi, ho configurato il tutto:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ git init --bare ~/DOTFILES_FOLDER
+$ alias dotfiles=&amp;#39;/usr/bin/git --git-dir=$HOME/DOTFILES_FOLDER/ --work-tree=$HOME&amp;#39;
+$ dotfiles config status.showUntrackedFiles no
+&lt;/code>&lt;/pre>&lt;p>Utilizzando macOS è una buona idea escludere i file .DS_Store dal controllo di versione utilizzando &lt;code>gitignore&lt;/code>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ touch ~/.gitignore
+$ echo &amp;#34;.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
+$ echo &amp;#34;._.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
+$ echo &amp;#34;**/.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
+$ echo &amp;#34;**/._.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
+$ dotfiles add ~/.gitignore
+$ dotfiles commit -m &amp;#34;Ignoring .DS_Store&amp;#34;
+&lt;/code>&lt;/pre>&lt;p>Aggiungere il repository remoto:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ dotfiles remote add origin https://github.com/GitHub_Username/GitHub_Repository
+$ dotfiles branch -M main
+$ dotfiles push -u origin main
+&lt;/code>&lt;/pre>&lt;p>Per evitare che la cartella &lt;em>home&lt;/em> venga popolata con i file README e LICENSE utilizzo il comando di git &lt;code>sparse checkout&lt;/code>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ dotfiles config core.sparsecheckout true
+$ touch ~/DOTFILES_FOLDER/info/sparse-checkout
+$ echo &amp;#34;/*&amp;#34; &amp;gt;&amp;gt; ~/DOTFILES_FOLDER/info/sparse-checkout
+$ echo &amp;#39;!&amp;#39;&amp;#34;README.md&amp;#34; &amp;gt;&amp;gt; ~/DOTFILES_FOLDER/info/sparse-checkout
+$ echo &amp;#39;!&amp;#39;&amp;#34;LICENSE&amp;#34; &amp;gt;&amp;gt; ~/DOTFILES_FOLDER/info/sparse-checkout
+&lt;/code>&lt;/pre>&lt;p>Direttamente dall&amp;rsquo;interfaccia web di GitHub inserire i file README e LICENSE e per testare che vengano effettivamente ignorati fare un &lt;code>pull&lt;/code>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ dotfiles pull
+&lt;/code>&lt;/pre>&lt;p>Inserire un &lt;code>alias&lt;/code> a &lt;code>.zshrc&lt;/code>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ micro ~/.zshrc
+alias dotfiles=&amp;#39;/usr/bin/git --git-dir=$HOME/DOTFILES_FOLDER/ --work-tree=$HOME&amp;#39;
+$ source ~/.zshrc
+&lt;/code>&lt;/pre>&lt;p>Inviare al repository remoto su GitHub:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ dotfiles add ~/.zshrc
+$ dotfiles commit -m &amp;#34;Add .zshrc&amp;#34;
+$ dotfiles push
+&lt;/code>&lt;/pre>&lt;p>Ecco qua, adesso basterà aggiungere col comando &lt;code>add&lt;/code> ogni singolo file che si vuole tracciare ed il gioco è fatto.&lt;/p></description></item><item><title>La promessa</title><link>https://disinteressato.it/posts/07-promessa/</link><pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/07-promessa/</guid><description>&lt;p>&lt;a href="https://it.m.wikipedia.org/wiki/La_promessa_(Friedrich_D%C3%BCrrenmatt)">La promessa di Friedrich Dürrenmatt&lt;/a> è un giallo anomalo, particolare, ma soprattutto profondo. Una buona compagnia per passare qualche sera invernale davanti al focolare.&lt;/p>
+&lt;p>Ci sono due passaggi importanti nel libro, il primo nella parte iniziale:&lt;/p>
+&lt;blockquote>
+&lt;p>«Chi è l’assassino?» chiese, con una voce così calma e neutra che il commissario sbigottì. «Lo scoprirò, signora Moser». Allora la donna lo guardò, minacciosa, risoluta. «Lo promette?». «Lo prometto, signora Moser» rispose il commissario, di colpo preso dal desiderio urgente di andare via da quel posto. «Sull’anima sua?». Il commissario rimase turbato. «Sull’anima mia» rispose infine. Che altro poteva fare? «Allora vada» ordinò la donna. «Lei ha giurato sulla sua anima».&lt;/p>
+&lt;/blockquote>
+&lt;p>Il secondo al termine del libro:&lt;/p>
+&lt;blockquote>
+&lt;p>Eppure bisogna ammettere che proprio quest’ultima scena parla a favore di Matthäi, lo mostra nella giusta luce, lo trasforma in un genio, in un uomo che ha intuito così profondamente gli elementi a noi ignoti della realtà da riuscire ad andare oltre le ipotesi e le congetture che ci limitano, fino a giungere in prossimità di quelle leggi cui noi non perveniamo mai: le leggi che regolano lo slancio vitale del mondo. Soltanto in prossimità, beninteso. E proprio perché esiste, malauguratamente, questa orribile scena finale, sorta di emblema dell’imprevedibile, o meglio del caso, la genialità di Matthäi, la sua strategia e le sue azioni risultano a posteriori tanto più dolorose e assurde di quanto non fossero prima, cioè di quando noi della Kasernenstraße lo ritenevamo in errore: niente è più crudele di un genio che inciampa in un’idiozia. Ma in una circostanza del genere tutto dipende da come il genio reagisce alla situazione ridicola in cui è incappato: riesce ad accettarla oppure no? Matthäi non ci riuscì. Voleva che i suoi conti tornassero anche nella realtà. Di conseguenza fu costretto a negare la realtà, e a perdersi nel vuoto.&lt;/p>
+&lt;/blockquote>
+&lt;p>Di sicuro non può mancare nella libreria degli amanti del genere.&lt;/p></description></item><item><title>Come è nato questo sito (appunti sparsi)</title><link>https://disinteressato.it/posts/06-sito/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/06-sito/</guid><description>&lt;p>Dovessi mai ricominciare tutto daccapo, scrivo due righe su come ho impostato questo sito e su come viene pubblicato.&lt;/p>
+&lt;h2 id="prologo">Prologo&lt;/h2>
+&lt;p>Questa cosa di farmi un sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente, saranno almeno 3 anni, ma tra le vicissitudini da ormai ex linuxaro ed il voler trovare una soluzione semplice da impostare, da manutenere e, nel caso, da replicare, non sono mai riuscito a portarla a termine.&lt;br>
+Adesso, finalmente, ho trovato la quadra giusta.&lt;/p>
+&lt;h2 id="hugo">Hugo&lt;/h2>
+&lt;p>&lt;a href="https://gohugo.io">Hugo&lt;/a> è il generatore di &lt;a href="https://it.wikipedia.org/wiki/Web_statico">siti statici&lt;/a> che utilizzo per questo sito. Non ne tesso le lodi perché non ne ho provati altri, ma funziona, è facile da usare, è comprensibile ed anche molto diffuso.&lt;/p>
+&lt;p>Installo anche &lt;a href="https://pygments.org">&lt;code>pygments&lt;/code>&lt;/a> che serve per la &lt;a href="https://it.wikipedia.org/wiki/Syntax_highlighting">colorazione della sintassi&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install hugo pygments
+&lt;/code>&lt;/pre>&lt;p>Per la configurazione rimando al &lt;a href="https://gohugo.io/getting-started/quick-start/">sito ufficiale&lt;/a> perché senza alcun dubbio è più completo ed esaustivo di quanto io possa mai esserlo.&lt;/p>
+&lt;h2 id="git-e-github">Git e GitHub&lt;/h2>
+&lt;p>Prerequisito fondamentale è avere un account &lt;a href="https://github.com">GitHub&lt;/a> ed aver creato due &lt;a href="https://docs.github.com/en/get-started/quickstart/create-a-repo">repository&lt;/a>: uno privato per il codice sorgente ed un&amp;rsquo;altro pubblico per la pubblicazione con &lt;a href="https://pages.github.com/">GitHub Pages&lt;/a>.&lt;/p>
+&lt;p>Installare e configurare &lt;a href="https://git-scm.com">Git&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install git
+$ git config --global user.name “[GitHub_Username]”
+$ git config --global user.email &amp;#34;1234567+[GitHub_Username]@users.noreply.github.com&amp;#34;
+$ git config --global color.ui auto
+$ git config --global merge.conflictstyle diff3
+$ git config --global init.defaultBranch main
+$ git config --global pull.rebase false
+$ git config --list
+&lt;/code>&lt;/pre>&lt;p>Io ho deciso di firmare i &lt;em>commit&lt;/em> con la mia &lt;a href="https://it.wikipedia.org/wiki/GNU_Privacy_Guard">chiave GPG&lt;/a> (assolutamente opzionale):&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install gnupg pinentry-mac
+&lt;/code>&lt;/pre>&lt;p>Creare una chiave GPG&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --full-generate-key
+Per favore scegli che tipo di chiave vuoi: RSA e RSA
+Che chiave vuoi? 4096
+Chiave valida per? 0
+Nome e Cognome: GitHub_Username
+Indirizzo di Email: 1234567+[GitHub_Username]@users.noreply.github.com
+Commento: GitHub
+&lt;/code>&lt;/pre>&lt;p>Visualizzare la chiave appena generata:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --list-secret-keys --keyid-format=long
+/Users/name/.gnupg/pubring.kbx
+------------------------------------
+sec rsa4096/EE05XXXXXXXXXXXX 2021-10-30 [SC]
+215556521B98225XXXXXXXXXXXXXXXXXXXXXXXXX
+uid [ultimo] [GitHub_Username] (GitHub) &amp;lt;1234567+[GitHub_Username]@users.noreply.github.com&amp;gt;
+ssb rsa4096/A226A4XXXXXXXXXX 2021-10-30 [E]
+&lt;/code>&lt;/pre>&lt;p>Questo comando copia la chiave che successivamente andremo ad inserire &lt;a href="https://github.com/settings/keys">qui&lt;/a> tra le impostazioni del nostro account GitHub:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --armor --export EE05XXXXXXXXXXXX | pbcopy
+&lt;/code>&lt;/pre>&lt;p>Configurare Git in modo che utilizzi questa chiave per firmare i commit:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ git config --global user.signingkey EE05XXXXXXXXXXXX
+$ git config --global commit.gpgSign true
+$ git config --global tag.forceSignAnnotated true
+&lt;/code>&lt;/pre>&lt;p>Configurare anche macOS:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ micro ~/.zshrc
+export GPG_TTY=$(tty)
+$ micro ~/.gnupg/gpg-agent.conf
+pinentry-program /opt/homebrew/bin/pinentry-mac
+$ gpgconf --kill gpg-agent
+&lt;/code>&lt;/pre>&lt;p>Questo è il comando da utilizzare se dovesse esserci la necessità di esportare la chiave &lt;em>privata&lt;/em>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ gpg --export-secret-keys 1234567+[GitHub_Username]@users.noreply.github.com &amp;gt; private.key
+&lt;/code>&lt;/pre>&lt;h2 id="pubblicazione">Pubblicazione&lt;/h2>
+&lt;p>A questo punto rimane solo da configurare &lt;a href="https://pages.github.com/">GitHub Pages&lt;/a> ed automatizzare la pubblicazione usando &lt;a href="https://github.com/features/actions">GitHub Actions&lt;/a>: nello specifico &lt;a href="https://github.com/features/actions">actions-gh-pages&lt;/a>.&lt;br>
+Il risultato finale che si ottiene è che ogni volta che viene aggiornato il codice sorgente e viene fatto un push in GitHub parte automaticamente il processo di pubblicazione del sito.&lt;/p>
+&lt;p>Creare le chiavi pubbliche e private per la pubblicazione:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">ssh-keygen -t rsa -b 4096 -C &amp;#34;$(git config user.email)&amp;#34; -f gh-pages -N &amp;#34;&amp;#34;
+&lt;/code>&lt;/pre>&lt;p>Questo comando genererà i file &lt;code>gh-pages&lt;/code> e &lt;code>gh-pages.pub&lt;/code>: il primo è la chiave privata, mentre il secondo la chiave pubblica.&lt;/p>
+&lt;p>Nel repository del codice sorgente, in &lt;em>Settings &amp;gt; Secrets &amp;gt; Actions &amp;gt; Add new secrets&lt;/em> col nome di ACTIONS_DEPLOY_KEY copiare il contenuto della chiave privata, che si ottiene con questo comando:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">pbcopy &amp;lt; gh-pages
+&lt;/code>&lt;/pre>&lt;p>Allo stesso modo, nel repository di pubblicazione con GitHub Pages, in &lt;em>Settings &amp;gt; Deploy Key &amp;gt; Add new deploy key&lt;/em> col nome di PUBLIC_DEPLOY_KEY copiare il contenuto della chiave pubblica e spuntare &lt;em>Allow write access&lt;/em>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">pbcopy &amp;lt; gh-pages.pub
+&lt;/code>&lt;/pre>&lt;p>Nel repository del codice sorgente creare il file &lt;code>.github/workflows/gh-pages.yaml&lt;/code> inserendo il seguente contenuto e modificando &lt;em>GitHub_Username/GitHub_Pages_Repository&lt;/em> con i propri riferimenti:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">name: hugo publish
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">on:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> branches:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - main
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> build-deploy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-20.04
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: actions/checkout@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setup Hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: peaceiris/actions-hugo@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> hugo-version: &lt;span class="s1">&amp;#39;latest&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: hugo --minify
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Deploy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: peaceiris/actions-gh-pages@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> env:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ACTIONS_DEPLOY_KEY: &lt;span class="si">${&lt;/span>&lt;span class="p">{ secrets.ACTIONS_DEPLOY_KEY &lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> EXTERNAL_REPOSITORY: GitHub_Username/GitHub_Pages_Repository
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> PUBLISH_BRANCH: main
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> PUBLISH_DIR: ./public
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> emptyCommits: &lt;span class="nb">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> commitMessage: &lt;span class="si">${&lt;/span>&lt;span class="p">{ github.event.head_commit.message &lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="epilogo">Epilogo&lt;/h2>
+&lt;p>Questo è quanto. Ho volutamente saltato alcuni passaggi, come la configurazione di Hugo e la sua integrazione con Git/GitHub perché non voglio che questo sia un tutorial passo passo, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: &lt;strong>non c&amp;rsquo;è mai un&amp;rsquo;unica via da percorrere per arrivare allo stesso risultato finale&lt;/strong>.&lt;/p></description></item><item><title>Un Terminale è per sempre (e altre cosette)</title><link>https://disinteressato.it/posts/05-terminale/</link><pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/05-terminale/</guid><description>&lt;p>Quando a metà anni 2000 iniziai ad usare un Mac il &lt;a href="https://it.m.wikipedia.org/wiki/Terminale_virtuale">terminale&lt;/a> proprio non me lo filavo.&lt;/p>
+&lt;p>In quell&amp;rsquo;era geologica c&amp;rsquo;era ancora la sbornia evolutiva portata dall&amp;rsquo;aumento esponenziale e costante della potenza dei processori con interfacce sempre più belle e ricche di funzionalità, quindi fare un passo indietro ed usare il terminale non era contemplato.&lt;br>
+E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo cosa fosse.&lt;/p>
+&lt;p>Col tempo ho apprezzato l&amp;rsquo;uso che se ne può fare, come possa essere effettivamente più rapido per alcune operazioni, inutilmente complesso per altre, ma soprattutto che è l&amp;rsquo;ultima ancora di salvezza per uscire dai guai nei sistemi &lt;a href="https://it.wikipedia.org/wiki/Unix">Unix&lt;/a>.&lt;/p>
+&lt;p>Ritenendomi adesso un utente discretamente esperto, almeno nel riconoscere le mie necessità, il mio approccio in questo nuovo viaggio con macOS è stato questo: cerco tutto il software che mi serve nell&amp;rsquo;App Store, se non lo trovo la scarico dai rispettivi siti ufficiali e verifico che ci sia la possibilità di ricercare gli aggiornamenti all&amp;rsquo;interno dell&amp;rsquo;applicazione stessa.&lt;/p>
+&lt;p>Queste sono le applicazioni che ho installato esternamente all&amp;rsquo;App Store:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://code.visualstudio.com/docs/setup/mac">Virtual Studio Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.office.com">Microsoft Office&lt;/a> con licenza Office 2021 acquistata su &lt;a href="http://topkeyshop.com">Top Key Shop&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.tug.org/mactex/">MacTex&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://calibre-ebook.com">Calibre&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://iina.io">IINA&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://handbrake.fr">HandBrake&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://transmissionbt.com/">Transmission&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.torproject.org">Tor Browser&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://freemacsoft.net/appcleaner/">App Cleaner&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Ho lasciato alla riga di comando le operazioni che possono essere svolte esclusivamente da terminale oppure quelle per le quali mi sento più a mio agio ad utilizzarlo.&lt;/p>
+&lt;p>Con macOS la prima cosa da fare è installare &lt;a href="https://brew.sh/index_it">Homebrew&lt;/a>, un gestore di pacchetti col quale scaricare, installare e mantenere aggiornato del software rigorosamente &lt;a href="https://it.wikipedia.org/wiki/Open_source">open source&lt;/a>: in pratica è una specie di App Store da linea di comando.&lt;br>
+Anche l&amp;rsquo;installazione, ovviamente, avviene da riga di comando:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ /bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34;
+&lt;/code>&lt;/pre>&lt;p>Piccolo extra, disattivare il monitoraggio di &lt;a href="https://docs.brew.sh/Analytics">Homebrew Analytics&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew analytics off
+&lt;/code>&lt;/pre>&lt;p>Invece, per aggiornare i pacchetti installati basteranno poi i seguenti comandi:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew update
+$ brew outdated
+$ brew upgrade
+&lt;/code>&lt;/pre>&lt;p>Utilizzo pochi pacchetti perché quello di cui necessito è residuale o al massimo serve per estendere o completare alcune funzioni di macOS.&lt;/p>
+&lt;h2 id="quick-look">Quick Look&lt;/h2>
+&lt;p>Per estendere le funzionalità di &lt;a href="https://en.wikipedia.org/wiki/Quick_Look">Quick Look&lt;/a> ho installato questi plugin:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/sbarex/QLMarkdown">QLMarkdown&lt;/a> permette di visualizzare il formato &lt;a href="https://it.wikipedia.org/wiki/Markdown">markdown&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/Marginal/QLVideo">QLVideo&lt;/a> aggiunge il supporto a molti formati video&lt;/li>
+&lt;li>&lt;a href="https://github.com/p2/quicklook-csv">QuickLookCSV&lt;/a> per i file &lt;a href="https://it.wikipedia.org/wiki/Comma-separated_values">CSV&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install --cask qlmarkdown qlvideo quicklook-csv
+&lt;/code>&lt;/pre>&lt;h2 id="caratteri">Caratteri&lt;/h2>
+&lt;p>Ho installato solo i caratteri &lt;a href="https://fonts.google.com/specimen/Roboto">Roboto&lt;/a> e &lt;a href="https://fonts.google.com/specimen/Bebas+Neue">Bebas Neue&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew tap homebrew/cask-fonts
+$ brew install svn
+$ sudo mkdir -p /Library/Java/Extensions
+$ sudo ln -s /opt/homebrew/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib
+$ brew install --cask font-roboto font-roboto-mono font-roboto-slab font-bebas-neue
+&lt;/code>&lt;/pre>&lt;h2 id="micro">micro&lt;/h2>
+&lt;p>Mi trovo bene con &lt;a href="https://micro-editor.github.io">micro&lt;/a>, facile da usare e completo:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install micro
+$ micro ~/.config/micro/settings.json
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;colorscheme&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;simple&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;diffgutter&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;mkparents&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;relativeruler&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;rmtrailingws&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;saveundo&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ micro ~/.config/micro/bindings.json
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Alt-g&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;None&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Ctrl-k&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;ToggleKeyMenu&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="rsync">rsync&lt;/h2>
+&lt;p>Sempre utile avere &lt;a href="https://rsync.samba.org">rsync&lt;/a> per sincronizzare file o cartelle:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install rsync
+&lt;/code>&lt;/pre>&lt;h2 id="youtube-dl">youtube-dl&lt;/h2>
+&lt;p>Immancabile &lt;a href="https://youtube-dl.org">youtube-dl&lt;/a> per scaricare i video da &lt;a href="https://www.youtube.com">YouTube&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install youtube-dl atomicparsley ffmpeg
+&lt;/code>&lt;/pre>&lt;p>Questo invece è il mio file di configurazione:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ micro ~/.config/youtube-dl/config
+--embed-thumbnail
+--add-metadata
+--no-mtime
+-o /Users/&amp;lt;USER&amp;gt;/Movies/%(title)s.%(ext)s
+-f &amp;#39;bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best&amp;#39;
+&lt;/code>&lt;/pre>&lt;h2 id="exiftool">ExifTool&lt;/h2>
+&lt;p>&lt;a href="https://exiftool.org">ExifTool&lt;/a> mi ha tolto dagli impicci di dover inserire i &lt;a href="https://it.wikipedia.org/wiki/Metadato">metadati&lt;/a> (nello specifico: data e ora) alle circa 1700 foto scattate dal fotografo al mio matrimonio:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install exiftool
+&lt;/code>&lt;/pre>&lt;p>Fortunatamente i file erano stati nominati in ordine cronologico crescente di scatto, quindi mi è bastato dapprima inserire in tutte le foto la stessa data e la stessa ora (&lt;code>DIR&lt;/code> è il nome della cartella che contiene i file):&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ exiftool -AllDates=&amp;#34;YYYY:MM:DD HH:MM:SS&amp;#34; DIR -overwrite_original -r
+&lt;/code>&lt;/pre>&lt;p>Dopodiché ad ogni foto, in base all&amp;rsquo;ordine crescente di nome, sono stati aggiunti 10 secondi all&amp;rsquo;ora di scatto rispetto a quella della precedente, il tutto con questo unico comando:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ exiftool &amp;#39;-AllDates+&amp;lt;0:0:${filesequence}0&amp;#39; DIR -fileOrder FileName -overwrite_original -r
+&lt;/code>&lt;/pre>&lt;p>Per verificare che la modifica sia stata effettuata correttamente, questo comando genera un file &lt;a href="https://it.wikipedia.org/wiki/Comma-separated_values">CSV&lt;/a> facilmente analizzabile:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ exiftool -AllDates -csv DIR &amp;gt; out.csv
+&lt;/code>&lt;/pre>&lt;p>In questo modo, una volta aggiunte alla libreria di &lt;a href="https://www.apple.com/it/macos/photos/">Foto&lt;/a>, erano in perfetto ordine cronologico (ovviamente l&amp;rsquo;ora di scatto era arbitraria e non rispettava quella effettiva, ma di meglio non si poteva fare).&lt;/p>
+&lt;h2 id="wget-tree-e-trash">Wget, tree e trash&lt;/h2>
+&lt;p>Installo anche il classico &lt;a href="https://www.gnu.org/software/wget/">Wget&lt;/a>, &lt;a href="http://mama.indstate.edu/users/ice/tree/">Tree&lt;/a> per visualizzare le cartelle in una struttura ad albero e &lt;a href="https://github.com/ali-rantakari/trash">Trash&lt;/a> per spostare i file nel cestino da terminale evitando di poter solo cancellarli definitivamente usando il comando &lt;a href="https://it.wikipedia.org/wiki/Rm_(Unix)">rm&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ brew install wget trash tree
+&lt;/code>&lt;/pre>&lt;h2 id="zsh">ZSH&lt;/h2>
+&lt;p>Ed infine, visto che macOS utilizza &lt;a href="https://zsh.sourceforge.io">ZSH&lt;/a> come &lt;a href="https://it.wikipedia.org/wiki/Shell_(informatica)">shell&lt;/a> di default, perché non personalizzarla un pochino?&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">$ brew install pure zsh-autosuggestions
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ &lt;span class="nb">cd&lt;/span> ~
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ touch ~/.hushlogin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ micro .zshrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#!/usr/bin/env zsh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###############################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># EXPORT ENVIRONMENT VARIABLE #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###############################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># editor&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">EDITOR&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;micro&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">VISUAL&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;micro&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">MICRO_TRUECOLOR&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># zsh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">HISTSIZE&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10000&lt;/span> &lt;span class="c1"># Maximum events for internal history&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">SAVEHIST&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10000&lt;/span> &lt;span class="c1"># Maximum events in history file&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># gpg needs this&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GPG_TTY&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>tty&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#############&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># FUNCTIONS #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#############&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># create a folder and move into it in one command&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">function&lt;/span> mkcd&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span> mkdir -p &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$@&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">cd&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$_&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###########&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># HISTORY #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###########&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt EXTENDED_HISTORY &lt;span class="c1"># Write the history file in the &amp;#39;:start:elapsed;command&amp;#39; format&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt SHARE_HISTORY &lt;span class="c1"># Share history between all sessions&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt HIST_EXPIRE_DUPS_FIRST &lt;span class="c1"># Expire a duplicate event first when trimming history&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt HIST_IGNORE_DUPS &lt;span class="c1"># Do not record an event that was just recorded again&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt HIST_IGNORE_ALL_DUPS &lt;span class="c1"># Delete an old recorded event if a new event is a duplicate&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt HIST_FIND_NO_DUPS &lt;span class="c1"># Do not display a previously found event&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt HIST_IGNORE_SPACE &lt;span class="c1"># Do not record an event starting with a space&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt HIST_SAVE_NO_DUPS &lt;span class="c1"># Do not write a duplicate event to the history file&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt HIST_VERIFY &lt;span class="c1"># Do not execute immediately upon history expansion&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##############&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># NAVIGATION #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##############&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt AUTO_CD &lt;span class="c1"># Go to folder path without using cd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt AUTO_PUSHD &lt;span class="c1"># Push the old directory onto the stack on cd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt PUSHD_IGNORE_DUPS &lt;span class="c1"># Do not store duplicates in the stack&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt PUSHD_SILENT &lt;span class="c1"># Do not print the directory stack after pushd or popd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt CDABLE_VARS &lt;span class="c1"># Change directory to a path stored in a variable&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt EXTENDED_GLOB &lt;span class="c1"># Use extended globbing syntax&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setopt NO_LIST_AMBIGUOUS &lt;span class="c1"># Case insensivity&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##########&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># COLORS #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##########&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">CLICOLOR&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">LSCOLORS&lt;/span>&lt;span class="o">=&lt;/span>ExGxBxDxCxEgEdxbxgxcxd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###########&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ALIASES #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###########&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># system&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">brewup&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;brew update; brew upgrade; brew cleanup; brew doctor&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">myip&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;curl http://ipecho.net/plain; echo&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># folders&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">iCloud&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># cp&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">cp&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;cp -iv&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">mv&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;mv -iv&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">rm&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;echo &amp;#34;This is not the command you are looking for. Use trash instead.&amp;#34;; false&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">rcp&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;rsync -v --progress&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">rmv&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;rsync -v --progress --remove-source-files&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># grep&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">grep&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;grep --color=auto&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">fgrep&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;fgrep --color=auto&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">egrep&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;egrep --color=auto&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># hugo&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">hugostart&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;hugo server -DEF --ignoreCache&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># directory stack&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">d&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;dirs -v&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> index &lt;span class="o">({&lt;/span>1..9&lt;span class="o">})&lt;/span> &lt;span class="nb">alias&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$index&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;cd +&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">index&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nb">unset&lt;/span> index
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># history&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">hs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;history | grep&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># commands&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">mkcd&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;foo(){ mkdir -p &amp;#34;$1&amp;#34;; cd &amp;#34;$1&amp;#34; }; foo &amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># applications&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">edit&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;micro&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#####################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># COMPLETION SYSTEM #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#####################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># command completion&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">autoload -Uz compinit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">compinit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># with hidden files&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">_comp_options&lt;/span>&lt;span class="o">+=(&lt;/span>globdots&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># autocompletion with an arrow-key driven interface. To activate the menu, press Tab twice.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zstyle &lt;span class="s1">&amp;#39;:completion:*&amp;#39;&lt;/span> menu &lt;span class="k">select&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># case insensitive path-completion&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zstyle &lt;span class="s1">&amp;#39;:completion:*&amp;#39;&lt;/span> matcher-list &lt;span class="s1">&amp;#39;m:{a-zA-Z}={A-Za-z}&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># enables the auto-complete menu automatically selects the first item (yes) only for ls&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zstyle &lt;span class="s1">&amp;#39;:completion:ls:*&amp;#39;&lt;/span> menu yes &lt;span class="k">select&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># sets the auto-completion colors&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zstyle &lt;span class="s1">&amp;#39;:completion:*:default&amp;#39;&lt;/span> list-colors &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="s1">&amp;#39;di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># HISTORY SEARCH #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">##################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zle -N up-line-or-beginning-search
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zle -N down-line-or-beginning-search
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># up&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bindkey &lt;span class="s1">&amp;#39;^[[A&amp;#39;&lt;/span> up-line-or-beginning-search
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># down&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bindkey &lt;span class="s1">&amp;#39;^[[B&amp;#39;&lt;/span> down-line-or-beginning-search
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###############&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># PURE PROMPT #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###############&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># initialize the prompt system&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">fpath&lt;/span>&lt;span class="o">+=&lt;/span>/opt/homebrew/share/zsh/site-functions
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">autoload -U promptinit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">promptinit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">prompt pure
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># max execution time of a process before its run time is shown when it exits&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">PURE_CMD_MAX_EXEC_TIME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># change the path color&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zstyle :prompt:pure:path color cyan
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># turn on git stash status&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zstyle :prompt:pure:git:stash show yes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># AUTOSUGGESTIONS #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># suggestion strategy&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ZSH_AUTOSUGGEST_STRATEGY&lt;/span>&lt;span class="o">=(&lt;/span>&lt;span class="nb">history&lt;/span> completion&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># add forward-word widgets to PARTIAL_ACCEPT&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS&lt;/span>&lt;span class="o">+=(&lt;/span>forward-word&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># right&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bindkey &lt;span class="s1">&amp;#39;^[[C&amp;#39;&lt;/span> forward-word
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">####################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># COLORED MANUALS #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">####################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">man&lt;span class="o">()&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> env &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_mb&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[1;31m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_md&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[1;31m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_me&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[0m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_se&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[0m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_so&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[1;44;33m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_ue&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[0m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">LESS_TERMCAP_us&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;\e[1;32m&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> man &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$@&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ &lt;span class="nb">source&lt;/span> .zshrc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Si potrebbe fare molto di più, ma per il mio approccio questo è già abbastanza per avere tutto ciò di cui necessito razionalmente installato.&lt;/p>
+&lt;p>Adesso sì che mi sento a casa!&lt;/p></description></item><item><title>Kindle, Kindle delle mie brame</title><link>https://disinteressato.it/posts/04-kindle/</link><pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/04-kindle/</guid><description>&lt;p>L’ultimo tassello del puzzle per arrivare a semplificare il più possibile la mia vita informatica è stato il ritorno all’utilizzo di un Kindle per le mie letture.
+Un gentile regalo di mia moglie, dato che l’aveva acquistato anni fa e non l’aveva praticamente mai utilizzato: preferisce di gran lunga i classici libri cartacei.&lt;/p>
+&lt;p>Negli ultimi anni avevo usato un &lt;a href="https://pocketbook.it/it-it/catalog/allsupport-it/basic-lux-615-it">PocketBook Basic Lux&lt;/a>, acquistato essenzialmente perché non vincolato a nessuno store online (ricordate le mie fissazioni espresse negli articoli precedenti?) e che devo ammettere ha fatto il suo sporco lavoro: acquistavo in formato &lt;a href="https://it.wikipedia.org/wiki/EPub">ePub&lt;/a> dove preferivo (principalmente &lt;a href="https://bookrepublic.it">Bookrepublic&lt;/a>), gestivo la mia libreria con &lt;a href="https://calibre-ebook.com">Calibre&lt;/a>, copiavo i file sul dispositivo e li leggevo.
+Facile.&lt;/p>
+&lt;p>Ma anche queste operazioni così semplici erano diventate troppo macchinose per il mio nuovo modo di vedere le cose, quindi cosa poteva capitarmi di meglio che appropriarmi a costo zero di un vecchio, inutilizzato, ma immacolato &lt;a href="https://www.amazon.it/gp/aw/d/B00QJDO0QC/ref=cm_cr_arp_mb_bdcrb_top?ie=UTF8">Kindle Paperwhite&lt;/a> di settima generazione?&lt;/p>
+&lt;p>Qualche ora di un sabato mattina per riorganizzare i miei libri, decidendomi finalmente di eliminarne una ragguardevole quantità, perché, insaziabilmente, ho passato periodi ad accumulare eBook che difficilmente avrei letto (infatti sono rimasti lì per anni) su argomenti discutibili e soprattutto dal contenuto dozzinale e raffazzonato.&lt;/p>
+&lt;p>Nel frattempo ho guadagnato anche tutte le piccole comodità che offre Amazon: dalla sincronizzazione delle letture alla possibilità di avere la mia libreria online su qualsiasi dispositivo. Non male, anche se dubito possa servirmi, se non in casi che al momento non riesco ad immaginare.&lt;/p>
+&lt;p>Tutto questo per dire cosa? Che leggo di più e che, come nel caso del passaggio ad un Mac, mi godo maggiormente il dispositivo. Questo Kindle offre una qualità superiore rispetto al mio vecchio lettore: lo schermo innanzitutto, per l’uniformità dell’illuminazione che, a parità di risoluzione, sembra rendere il testo più definito e la lettura meno stancante per gli occhi e l’ergonomia, che, grazie allo schermo touch, permette di cambiare pagina senza variare l’impugnatura.
+Tutte banalità, forse il mio vecchio dispositivo era stato ingegnerizzato nella preistoria, ma il miglioramento ottenuto è incredibile.&lt;/p></description></item><item><title>Piacevolezza</title><link>https://disinteressato.it/posts/03-piacevolezza/</link><pubDate>Sun, 21 Nov 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/03-piacevolezza/</guid><description>&lt;p>Come ho scritto nel post precedente, nel giro di un mese ho dovuto sostituire sia il mio smartphone che il mio computer.&lt;/p>
+&lt;p>Da quando mi era presa la fissa per &lt;strong>Linux&lt;/strong>, avevo sempre fatto acquisti in funzione della compatibilità hardware, per cui da casa mia erano passati un &lt;strong>Dell&lt;/strong> ed uno &lt;strong>Xiaomi Mi Air&lt;/strong>, convinto che anche se erano poco costosi e poco performanti, un sistema operativo leggero e minimale li avrebbe resi adatti al mio utilizzo. Il che si è rivelato vero (alla fine ho veramente poche esigenze), però non li aveva mai resi degni di nota. Intendiamoci, non è che ci si può affezionare ad oggetti di questo tipo, ma non mi davano neanche piacere nell’utilizzarli: finivo quasi sempre a non fare le cose oppure a farle col computer portatile datomi in dotazione dall’azienda per cui lavoro (rigorosamente Windows e nel limite imposto dalla policy aziendale, che di solito è molto restrittiva, almeno nelle multinazionali).&lt;/p>
+&lt;p>Lo stesso ho notato accadermi anche con lo smartphone, che ovviamente avevo acquistato in funzione della voglia di avere un dispositivo &lt;strong>Android&lt;/strong> da poter degooglelizzare: è stato con me ogni ora del giorno per quasi 4 anni, ma non ci siamo mai voluti bene.&lt;/p>
+&lt;p>Per fortuna questa volta avevo abbastanza tempo per poter far fronte all’improvvisa doppia débâcle, pensarci con calma e per bene. E comunque mi conosco, se stavo prendendo tempo senza arrivare ad una decisione era perché l’accoppiata &lt;strong>Windows&lt;/strong> più un &lt;strong>Android&lt;/strong> qualunque non mi stuzzicava, troppo era il timore di rimanere nella situazione nella quale mi ero invischiato.&lt;/p>
+&lt;p>Poi, da un giorno all’altro, vengo chiamato dalla funzione IT dell’azienda per la sostituzione del mio &lt;strong>Samsung&lt;/strong> con un &lt;strong>iPhone 11&lt;/strong> e dopo veramente pochissimo tempo passato ad utilizzarlo, mi convinco: torno ad &lt;strong>Apple&lt;/strong>.
+La mente va indietro di 15, 20 anni e ripenso al mio &lt;strong>iBook G4&lt;/strong> e poi al mio primo &lt;strong>iPhone 3G&lt;/strong> preso quasi al day one: mi sento giovane, entusiasta e pieno di vita. Bello no perché non lo sono mai stato.&lt;/p>
+&lt;p>Mi infilo le cuffiette, cerco l’album &lt;strong>X&amp;amp;Y&lt;/strong> dei &lt;strong>Coldplay&lt;/strong>, mia moglie è nell’altra camera che sta mettendo a dormire nostra figlia seienne, io sto tornando all’estate del 2005 e nel mentre cerco di farmi un’idea di quello che potrebbe essere più adatto a me: finisco col scegliere un &lt;strong>iPhone 12 mini&lt;/strong> da 128GB ed un &lt;strong>MacBook Air M1&lt;/strong> nella versione da 512GB. Entrambi con una ottima percentuale di sconto rispetto al listino Apple.
+Mi sento sereno e penso al tempo che non dovrò più investire in prove e configurazioni varie, ma che potrò spendere in altre attività.
+Ho troppe cose che ho messo lì da parte e che dovrò prima o poi portare a compimento.&lt;/p>
+&lt;p>Chris Martin continua a cantare.&lt;/p>
+&lt;p>Io sorrido.&lt;/p></description></item><item><title>40: L'età della semplificazione</title><link>https://disinteressato.it/posts/02-40/</link><pubDate>Sun, 14 Nov 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/02-40/</guid><description>&lt;p>Quando si compiono quarant’anni il secondo pensiero che passa per la testa (al primo posto: &lt;em>&lt;strong>“cazzo ho quarant’anni”&lt;/strong>&lt;/em>) è: &lt;em>&lt;strong>“cosa ho fatto negli ultimi anni che mi sta ancora complicando la vita?”&lt;/strong>&lt;/em>&lt;/p>
+&lt;p>Siccome le cose già risolte non contano e quelle importanti non sono l’oggetto di questo mio scritto, rimangono solo quelle futili.&lt;/p>
+&lt;p>Negli ultimi 10 anni sono stato esclusivamente un utente &lt;a href="https://it.wikipedia.org/wiki/Controversia_sul_nome_GNU/Linux">GNU/Linux&lt;/a>: perché mi sono appassionato alla filosofia che c’è dietro, al software libero, ai begl’ideali e all’incubo privacy se non mi fossi convinto a diventare come &lt;a href="https://it.wikipedia.org/wiki/Richard_Stallman">Stallman&lt;/a>.&lt;/p>
+&lt;p>Ed ho finito per essere come lui (GNU/Linux, non Stallman): un cantiere aperto.&lt;/p>
+&lt;p>Incompiuto come sistema operativo desktop e sempre più diretto verso l’irrilevanza (saranno 10 anni che “il prossimo anno è l’anno di Linux sul desktop”); sempre in attesa di un qualcosa che manca da anni; sempre più integralista; sempre più frazionato e sempre più complesso da gestire se si vuole usarlo in via esclusiva e sfruttare le possibilità odierne di integrazione tra dispositivi, col cloud e tra i servizi.&lt;/p>
+&lt;p>Per me sono stati anni di esperimenti alla ricerca della migliore soluzione, che poi finivano inevitabilmente con un compromesso al ribasso. Sempre alla ricerca della configurazione definitiva, mai raggiunta ovviamente, e sempre a modificare qualcosa piuttosto che ad utilizzare il mio computer. Insomma: tempo investito in studio che mi ha portato solo ad un livello maggiore di conoscenza, che di per sé è un risultato straordinario, ma solo se si riesce poi ad applicarla a qualcosa di concreto. Non si sta parlando di concetti filosofici astratti, ma di &lt;strong>un sistema informatico che deve essere qui, che deve essere usato adesso, che deve essere pronto ora. Non, eventualmente, fra un tot di anni.&lt;/strong>&lt;/p>
+&lt;p>Così, approfittando della dipartita praticamente contemporanea di smartphone e computer, sono tornato al passato.
+Ma di questo scriverò la prossima volta, dopo che mi sarò ripreso dall’addebito sul conto degli acquisti effettuati con la carta di credito.&lt;/p></description></item><item><title>Introduzione</title><link>https://disinteressato.it/posts/01-introduzione/</link><pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/01-introduzione/</guid><description>&lt;p>Il nome vorrebbe racchiudere tutto: &lt;strong>disinteressato&lt;/strong>.&lt;/p>
+&lt;p>Il dizionario suggerisce questa definizione:&lt;/p>
+&lt;blockquote>
+&lt;p>Che non agisce per interesse, che non è mosso da interesse egoistico.&lt;/p>
+&lt;/blockquote>
+&lt;p>È un po’ ciò che vorrei essere io nella vita, anche se è un ideale di comportamento abbastanza utopistico, soprattutto di questi tempi. Spesso sgarro, non fosse solo per autodifesa. Faccio un passo indietro allora e, più realisticamente, per adesso mi accontento di coricarmi con la coscienza a posto e di esprimere i miei pensieri liberamente.&lt;/p>
+&lt;p>Ed è con questi presupposti che ho deciso di scrivere in questo sperduto sito, che sarà un po’ un diario e un po’ una raccolta di appunti senza un filo conduttore.&lt;/p>
+&lt;p>Per chi vuole, c&amp;rsquo;è anche il &lt;a href="https://disinteressato.it/index.xml">feed RSS&lt;/a>.&lt;/p></description></item></channel></rss>
