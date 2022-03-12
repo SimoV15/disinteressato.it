@@ -1,0 +1,374 @@
+:root {
+  --black: #1e1e1e;
+  --white: #f6f6f4;
+  --grey: #737373;
+  --ultra-light-grey: #dfdddb;
+  --light-grey: #949492;
+  --dark-grey: #383838;
+  --orange: #f37329;
+  --pink: #f4679d;
+  --white-code: #f8f8f4;
+  --black-code: #383b40;
+  --font-size-normal: .875rem;
+  --font-size-small: .75rem;
+  --font-size-large: 1.75rem;
+  --font-size-pre: 12px;
+  --font-size-code: .8125rem;
+  --font-size-title: 2.5rem;
+  --font-sans: 'Roboto Condensed';
+  --font-monospace: 'Roboto Mono';
+  --font-title: 'Bebas Neue';
+}
+
+body {
+  background-color: var(--white);
+  padding: 1rem;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--font-size-normal);
+  line-height: 1.6rem;
+  color: var(--black);
+}
+
+h0 {
+  font-family: var(--font-title);
+  font-size: var(--font-size-title);
+  color: var(--black);
+}
+
+h2, h3, h4, h5, h6 {
+  margin: .375rem 0 1rem;
+  color: var(--black);
+}
+
+p, ul, ol, table, pre, dl {
+  margin: 0 0 1.25rem;
+}
+
+h1 {
+  margin: .375rem 0 2rem;
+  font-size: var(--font-size-large);
+  font-weight: 700;
+  color: var(--black);
+}
+
+h0 a, h1 a {
+  text-decoration: none;
+}
+
+h0 a:hover, h1 a:hover {
+  text-decoration: none;  
+}
+
+h0, h1, h2, h3, h4, h5, h6 {
+  line-height: 1.125rem;
+}
+    
+a {
+  color: var(--black);
+  text-decoration:underline;
+}
+
+a:hover {
+  color: var(--black);
+  text-decoration:none;  
+}
+
+small {
+  font-size: var(--font-size-small);
+  color: var(--light-grey);
+  margin-top: -0.3rem;
+  display: block;
+ }
+
+small a {
+  color: var(--light-grey);
+}
+
+small a:hover {
+  color: var(--light-grey);
+}
+
+.wrapper {
+  width: 54rem;
+  margin: 0 auto;
+}
+
+blockquote {
+  border-left: .125rem solid var(--grey);
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+code {
+  font-family: var(--font-monospace);
+  color: var(--black);
+  background-color: var(--ultra-light-grey);
+  border-radius: .25rem;
+  font-size: var(--font-size-code);
+  font-weight: 400;
+  line-height: 1.25rem;
+  padding: .125rem .125rem;
+  overflow-x: scroll;
+}
+
+pre>code {
+  font-size: var(--font-size-pre);
+  font-weight: 400;
+  display: block;
+  background-color: var(--black-code);
+  color: var(--white-code);
+  padding: .625rem .625rem;
+  overflow-x: scroll;
+}
+
+.highlight {
+  position: relative
+}
+
+.highlight>.chroma {
+  margin: 0 0 2rem;
+  border-radius: .25rem;
+  overflow-x: auto;
+  position: relative;
+}
+
+.highlight>.chroma code {
+  padding: .625rem .625rem .625rem;
+}
+
+.highlight>.chroma table {
+  position: relative;
+  border: none
+}
+
+.highlight>.chroma table code {
+  padding: 0
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td, dt {
+  text-align: left;
+  padding: .3rem .6rem;
+  border-bottom: .075rem solid var(--ultra-light-grey);
+}
+
+kbd > kbd {
+  background-color: var(--black);
+  border-radius: .25rem;
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: .875em/1.5;
+  padding: .3rem .5rem;
+  margin: .125em;
+}
+
+kbd > kbd + span {
+  font-weight: 700;
+  margin: 0 -.5em;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  width: 17rem;
+  float: left;
+  position: fixed;
+  padding-top: 1rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+section {
+  width: 31.25rem;
+  float: right;
+  padding-bottom: 3.125rem;
+}
+
+footer {
+  width: 17rem;
+  float: left;
+  position: fixed;
+  bottom: 3.125rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+@media print, screen and (max-width: 60rem) {
+
+  div.wrapper {
+    width: auto;
+    margin: 0;
+  }
+
+  header, section, footer {
+    float: none;
+    position: static;
+    width: auto;
+  }
+
+  header {
+    padding-right: 20rem;
+    padding-top: 1rem;
+  }
+
+  section {
+    padding: 1.25rem 0;
+    margin: 0 0 1.25rem;
+  }
+
+  header a small {
+    display: inline;
+  }
+
+  header ul {
+    position: absolute;
+    right: 3.125rem;
+    top: 3.25rem;
+  }
+}
+
+@media print, screen and (max-width: 45rem) {
+  body {
+    word-wrap: break-word;
+  }
+
+  header {
+    padding: 0;
+    padding-top: 1rem;
+  }
+
+  pre, code {
+    word-wrap: normal;
+  }
+}
+
+@media print, screen and (max-width: 30rem) {
+  body {
+    padding: 1rem;
+  }
+}
+
+@media print {
+  body {
+    padding: 2.4rem;
+    font-size: 1rem;
+    color: var(--grey);
+  }
+}
+
+.remove-margin-bottom {
+  margin-bottom: 0;
+}
+
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  background: var(--white);
+  border-radius: .25rem;
+  border: 0rem solid var(--ultra-light-grey);
+  display: inline-block;
+}
+
+.pagination li {
+float: left;
+}
+
+.pagination ul a {
+  line-height: 1;
+  font-size: var(--font-size-small);
+  color: var(--light-grey);
+  display: block;
+  text-align: center;
+  padding: .375rem .375rem;
+  min-width: 2rem;
+  text-decoration: none;
+}
+
+.pagination ul a:hover {
+  text-decoration: underline;
+  border-radius: .25rem;
+  background-color:  var(--ultra-light-grey);
+}
+
+.footer-svg {
+  color: var(--light-grey);
+  display: inline-block;
+  position: relative;
+  top: .065rem;
+  left: .3125rem;
+  height: .625rem;
+  width: .625rem;
+}
+
+.footer-svg:hover {
+  color: var(--orange);
+}
+
+.footnote-ref {
+  color: var(--pink);
+  text-decoration: none;
+}
+
+.footnotes {
+  color: var(--light-grey);
+  font-size: var(--font-size-small);
+}
+
+.footnotes a {
+  color: var(--light-grey);
+}
+
+.footnotes a:hover {
+  color: var(--light-grey);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--black);
+    color: var(--white);
+    }
+
+  h0, h1, h2, h3, h4, h5, h6 {
+      color: var(--white);
+    }
+
+  a {
+      color: var(--white);
+    }
+  
+  a:hover {
+        color: var(--white);
+    }
+    
+  th, td, dt {
+      border-bottom: 1px solid var(--dark-grey);
+    }
+  
+  code {
+      color: var(--white);
+      background-color: var(--grey);
+    }
+
+  kbd > kbd {
+      background-color: var(--white);
+      color: var(--black);
+    }
+
+  .pagination ul {
+      background: var(--black);
+      border:0px solid var(--ultra-light-grey);
+    }
+
+  .pagination ul a:hover {
+      background-color:  var(--dark-grey);
+    }
+
+}

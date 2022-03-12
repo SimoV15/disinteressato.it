@@ -1,58 +1,14 @@
-<!doctype html><html lang=it-it>
-<head>
-<meta charset=utf-8>
-<meta name=generator content="Hugo 0.92.2">
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=author content>
-<meta property="og:url" content="https://disinteressato.it/posts/06-sito/">
-<title>Come è nato questo sito (appunti sparsi) - Disinteressato</title>
-<meta property="og:title" content="Come è nato questo sito (appunti sparsi) - Disinteressato">
-<meta property="og:type" content="article">
-<meta name=description content="sito,disinteressato,hugo,macos,git">
-<link rel=stylesheet href=https://disinteressato.it/css/fonts.css>
-<link rel=stylesheet href=https://disinteressato.it/css/style.css>
-<link rel=apple-touch-icon sizes=180x180 href=https://disinteressato.it/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=https://disinteressato.it/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=https://disinteressato.it/favicon-16x16.png>
-<link rel=manifest href=https://disinteressato.it/site.webmanifest>
-<link rel=mask-icon href=https://disinteressato.it/safari-pinned-tab.svg color=#262626>
-<meta name=msapplication-TileColor content="#3dbda4">
-<link rel=stylesheet href=https://disinteressato.it/css/syntax-dark.css media="(prefers-color-scheme: dark)">
-<link rel=stylesheet href=https://disinteressato.it/css/syntax-light.css media="(prefers-color-scheme: light)">
-</head>
-<body>
-<div class=container>
-<nav class=site-nav>
-<a href=https://disinteressato.it/><span class=header-svg><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="svg-inline--fa fa-home fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" fill="currentcolor" d="M280.37 148.26 96 300.11V464a16 16 0 0016 16l112.06-.29a16 16 0 0015.92-16V368a16 16 0 0116-16h64a16 16 0 0116 16v95.64a16 16 0 0016 16.05L464 480a16 16 0 0016-16V3e2L295.67 148.26a12.19 12.19.0 00-15.3.0zM571.6 251.47 488 182.56V44.05a12 12 0 00-12-12h-56a12 12 0 00-12 12v72.61L318.47 43a48 48 0 00-61 0L4.34 251.47a12 12 0 00-1.6 16.9l25.5 31A12 12 0 0045.15 301l235.22-193.74a12.19 12.19.0 0115.3.0L530.9 301a12 12 0 0016.9-1.6l25.5-31a12 12 0 00-1.7-16.93z"/></svg></a>
-</nav>
-<article class=post>
-<header class=post-header>
-<h1 class=post-title>Come è nato questo sito (appunti sparsi)</h1><time class=post-date datetime=2022-01-01T00:00:00Z>1 gennaio 2022</time></header>
-<p>Dovessi mai ricominciare tutto daccapo, scrivo due righe su come ho impostato questo sito e su come viene pubblicato.</p>
-<h4 id=prologo>Prologo</h4>
-<p>Questa cosa di farmi un sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente, saranno almeno 3 anni, ma tra le vicissitudini da ormai ex linuxaro ed il voler trovare una soluzione semplice da impostare, da manutenere e, nel caso, da replicare, non sono mai riuscito a portarla a termine.<br>
-Adesso, finalmente, ho trovato la quadra giusta.</p>
-<h4 id=hugo>Hugo</h4>
-<p><a href=https://gohugo.io>Hugo</a> è il generatore di <a href=https://it.wikipedia.org/wiki/Web_statico>siti statici</a> che utilizzo per questo sito. Non ne tesso le lodi perché non ne ho provati altri, ma funziona, è facile da usare, è comprensibile ed anche molto diffuso.</p>
-<p>Installo anche <a href=https://pygments.org><code>pygments</code></a> che serve per la <a href=https://it.wikipedia.org/wiki/Syntax_highlighting>colorazione della sintassi</a>:</p>
-<pre tabindex=0><code class=language-default data-lang=default>$ brew install hugo pygments
-</code></pre><p>Per la configurazione rimando al <a href=https://gohugo.io/getting-started/quick-start/>sito ufficiale</a> perché senza alcun dubbio è più completo ed esaustivo di quanto io possa mai esserlo.</p>
-<h4 id=git-e-github>Git e GitHub</h4>
-<p>Prerequisito fondamentale è avere un account <a href=https://github.com>GitHub</a> ed aver creato due <a href=https://docs.github.com/en/get-started/quickstart/create-a-repo>repository</a>: uno privato per il codice sorgente ed un&rsquo;altro pubblico per la pubblicazione con <a href=https://pages.github.com/>GitHub Pages</a>.</p>
-<p>Installare e configurare <a href=https://git-scm.com>Git</a>:</p>
-<pre tabindex=0><code class=language-default data-lang=default>$ brew install git
+<!doctype html><html lang=it-it><head><meta charset=utf-8><meta name=generator content="Hugo 0.94.1"><meta http-equiv=content-type content="text/html" charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta property="og:url" content="https://disinteressato.it/posts/06-sito/"><meta name=author content><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><title>Come è nato questo sito (appunti sparsi) - Disinteressato</title><meta property="og:title" content="Disinteressato"><meta property="og:type" content="article"><meta name=description content><link rel=alternate type=application/rss+xml href=https://disinteressato.it//index.xml title=Disinteressato><link rel="shortcut icon" href=https://disinteressato.it/img/favicon.ico><link rel=stylesheet href=https://disinteressato.it/css/styles.css><link rel=stylesheet href=https://disinteressato.it/css/fonts.css><link rel=stylesheet href=https://disinteressato.it/css/syntax.css><link rel=manifest href=https://disinteressato.it/manifest.webmanifest><link rel=icon href=https://disinteressato.it/favicon.ico sizes=any><link rel=icon href=https://disinteressato.it/icon.svg type=image/svg+xml><link rel=apple-touch-icon href=https://disinteressato.it/apple-touch-icon.png></head><body><div class=wrapper><header class=text-center><h0><a href=https://disinteressato.it/>Disinteressato</a></h0></header><section><p class=remove-margin-bottom><small><time datetime=2022-01-01T00:00:00Z>1 gennaio 2022</time></small></p><h1>Come è nato questo sito (appunti sparsi)</h1><p>Dovessi mai ricominciare tutto daccapo, scrivo due righe su come ho impostato questo sito e su come viene pubblicato.</p><h2 id=prologo>Prologo</h2><p>Questa cosa di farmi un sito per scrivere i miei pensieri o qualche appunto è da parecchio che ce l’ho in mente, saranno almeno 3 anni, ma tra le vicissitudini da ormai ex linuxaro ed il voler trovare una soluzione semplice da impostare, da manutenere e, nel caso, da replicare, non sono mai riuscito a portarla a termine.<br>Adesso, finalmente, ho trovato la quadra giusta.</p><h2 id=hugo>Hugo</h2><p><a href=https://gohugo.io>Hugo</a> è il generatore di <a href=https://it.wikipedia.org/wiki/Web_statico>siti statici</a> che utilizzo per questo sito. Non ne tesso le lodi perché non ne ho provati altri, ma funziona, è facile da usare, è comprensibile ed anche molto diffuso.</p><p>Installo anche <a href=https://pygments.org><code>pygments</code></a> che serve per la <a href=https://it.wikipedia.org/wiki/Syntax_highlighting>colorazione della sintassi</a>:</p><pre tabindex=0><code class=language-default data-lang=default>$ brew install hugo pygments
+</code></pre><p>Per la configurazione rimando al <a href=https://gohugo.io/getting-started/quick-start/>sito ufficiale</a> perché senza alcun dubbio è più completo ed esaustivo di quanto io possa mai esserlo.</p><h2 id=git-e-github>Git e GitHub</h2><p>Prerequisito fondamentale è avere un account <a href=https://github.com>GitHub</a> ed aver creato due <a href=https://docs.github.com/en/get-started/quickstart/create-a-repo>repository</a>: uno privato per il codice sorgente ed un&rsquo;altro pubblico per la pubblicazione con <a href=https://pages.github.com/>GitHub Pages</a>.</p><p>Installare e configurare <a href=https://git-scm.com>Git</a>:</p><pre tabindex=0><code class=language-default data-lang=default>$ brew install git
 $ git config --global user.name “[GitHub_Username]”
-$ git config --global user.email &quot;1234567+[GitHub_Username]@users.noreply.github.com&quot;
+$ git config --global user.email &#34;1234567+[GitHub_Username]@users.noreply.github.com&#34;
 $ git config --global color.ui auto
 $ git config --global merge.conflictstyle diff3
 $ git config --global init.defaultBranch main
 $ git config --global pull.rebase false
 $ git config --list
-</code></pre><p>Io ho deciso di firmare i <em>commit</em> con la mia <a href=https://it.wikipedia.org/wiki/GNU_Privacy_Guard>chiave GPG</a> (assolutamente opzionale):</p>
-<pre tabindex=0><code class=language-default data-lang=default>$ brew install gnupg pinentry-mac
-</code></pre><p>Creare una chiave GPG</p>
-<pre tabindex=0><code class=language-default data-lang=default>$ gpg --full-generate-key
+</code></pre><p>Io ho deciso di firmare i <em>commit</em> con la mia <a href=https://it.wikipedia.org/wiki/GNU_Privacy_Guard>chiave GPG</a> (assolutamente opzionale):</p><pre tabindex=0><code class=language-default data-lang=default>$ brew install gnupg pinentry-mac
+</code></pre><p>Creare una chiave GPG</p><pre tabindex=0><code class=language-default data-lang=default>$ gpg --full-generate-key
 
 Per favore scegli che tipo di chiave vuoi: RSA e RSA
 Che chiave vuoi? 4096
@@ -60,22 +16,18 @@ Chiave valida per? 0
 Nome e Cognome: GitHub_Username
 Indirizzo di Email: 1234567+[GitHub_Username]@users.noreply.github.com
 Commento: GitHub
-</code></pre><p>Visualizzare la chiave appena generata:</p>
-<pre tabindex=0><code class=language-default data-lang=default>$ gpg --list-secret-keys --keyid-format=long
+</code></pre><p>Visualizzare la chiave appena generata:</p><pre tabindex=0><code class=language-default data-lang=default>$ gpg --list-secret-keys --keyid-format=long
 /Users/name/.gnupg/pubring.kbx
 ------------------------------------
 sec   rsa4096/EE05XXXXXXXXXXXX 2021-10-30 [SC]
       215556521B98225XXXXXXXXXXXXXXXXXXXXXXXXX
 uid                 [ultimo] [GitHub_Username] (GitHub) &lt;1234567+[GitHub_Username]@users.noreply.github.com&gt;
 ssb   rsa4096/A226A4XXXXXXXXXX 2021-10-30 [E]
-</code></pre><p>Questo comando copia la chiave che successivamente andremo ad inserire <a href=https://github.com/settings/keys>qui</a> tra le impostazioni del nostro account GitHub:</p>
-<pre tabindex=0><code class=language-default data-lang=default>$ gpg --armor --export EE05XXXXXXXXXXXX | pbcopy
-</code></pre><p>Configurare Git in modo che utilizzi questa chiave per firmare i commit:</p>
-<pre tabindex=0><code class=language-default data-lang=default>$ git config --global user.signingkey EE05XXXXXXXXXXXX
+</code></pre><p>Questo comando copia la chiave che successivamente andremo ad inserire <a href=https://github.com/settings/keys>qui</a> tra le impostazioni del nostro account GitHub:</p><pre tabindex=0><code class=language-default data-lang=default>$ gpg --armor --export EE05XXXXXXXXXXXX | pbcopy
+</code></pre><p>Configurare Git in modo che utilizzi questa chiave per firmare i commit:</p><pre tabindex=0><code class=language-default data-lang=default>$ git config --global user.signingkey EE05XXXXXXXXXXXX
 $ git config --global commit.gpgSign true
 $ git config --global tag.forceSignAnnotated true
-</code></pre><p>Configurare anche macOS:</p>
-<pre tabindex=0><code class=language-default data-lang=default>$ micro ~/.zshrc
+</code></pre><p>Configurare anche macOS:</p><pre tabindex=0><code class=language-default data-lang=default>$ micro ~/.zshrc
 
 export GPG_TTY=$(tty)
 
@@ -84,50 +36,40 @@ $ micro ~/.gnupg/gpg-agent.conf
 pinentry-program /opt/homebrew/bin/pinentry-mac
 
 $ gpgconf --kill gpg-agent
-</code></pre><p>Questo è il comando da utilizzare se dovesse esserci la necessità di esportare la chiave <em>privata</em>:</p>
-<pre tabindex=0><code class=language-default data-lang=default>$ gpg --export-secret-keys 1234567+[GitHub_Username]@users.noreply.github.com  &gt; private.key
-</code></pre><h4 id=pubblicazione>Pubblicazione</h4>
-<p>A questo punto rimane solo da configurare <a href=https://pages.github.com/>GitHub Pages</a> ed automatizzare la pubblicazione usando <a href=https://github.com/features/actions>GitHub Actions</a>: nello specifico <a href=https://github.com/features/actions>actions-gh-pages</a>.<br>
-Il risultato finale che si ottiene è che ogni volta che viene aggiornato il codice sorgente e viene fatto un push in GitHub parte automaticamente il processo di pubblicazione del sito.</p>
-<p>Creare le chiavi pubbliche e private per la pubblicazione:</p>
-<pre tabindex=0><code class=language-default data-lang=default>ssh-keygen -t rsa -b 4096 -C &quot;$(git config user.email)&quot; -f gh-pages -N &quot;&quot;
-</code></pre><p>Questo comando genererà due file: <code>gh-pages</code> e <code>gh-pages.pub</code>: il primo è la chiave privata, mentre il secondo la chiave pubblica.</p>
-<p>Nel repository del codice sorgente, in <em>Settings > Secrets > Actions > Add new secrets</em> col nome di ACTIONS_DEPLOY_KEY copiare il contenuto della chiave privata, che si ottiene con questo comando:</p>
-<pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; gh-pages
-</code></pre><p>Allo stesso modo, nel repository di pubblicazione con GitHub Pages, in <em>Settings > Deploy Key > Add new deploy key</em> col nome di PUBLIC_DEPLOY_KEY copiare il contenuto della chiave pubblica e spuntare <em>Allow write access</em>:</p>
-<pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; gh-pages.pub
-</code></pre><p>Nel repository del codice sorgente creare il file <code>.github/workflows/gh-pages.yaml</code> inserendo il seguente contenuto e modificando <em>GitHub_Username/GitHub_Pages_Repository</em> con i propri riferimenti:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>name: hugo publish
-
-on:
-  push:
-    branches:
-    - main
-
-jobs:
-  build-deploy:
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: <span class=s1>&#39;latest&#39;</span>
-
-    - name: Build
-      run: hugo --minify
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2
-      env:
-        ACTIONS_DEPLOY_KEY: <span class=si>${</span><span class=p>{ secrets.ACTIONS_DEPLOY_KEY </span><span class=si>}</span><span class=o>}</span>
-        EXTERNAL_REPOSITORY: GitHub_Username/GitHub_Pages_Repository
-        PUBLISH_BRANCH: main
-        PUBLISH_DIR: ./public
-      with:
-        emptyCommits: <span class=nb>false</span>
-        commitMessage: <span class=si>${</span><span class=p>{ github.event.head_commit.message </span><span class=si>}</span><span class=o>}</span>
-</code></pre></div><h4 id=epilogo>Epilogo</h4>
-<p>Questo è quanto. Ho volutamente saltato alcuni passaggi, come la configurazione di Hugo e la sua integrazione con Git/GitHub perché non voglio che questo sia un tutorial passo passo, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: <strong>non c&rsquo;è mai un&rsquo;unica via da percorrere per arrivare allo stesso risultato finale</strong>.</p>
-</article>
+</code></pre><p>Questo è il comando da utilizzare se dovesse esserci la necessità di esportare la chiave <em>privata</em>:</p><pre tabindex=0><code class=language-default data-lang=default>$ gpg --export-secret-keys 1234567+[GitHub_Username]@users.noreply.github.com  &gt; private.key
+</code></pre><h2 id=pubblicazione>Pubblicazione</h2><p>A questo punto rimane solo da configurare <a href=https://pages.github.com/>GitHub Pages</a> ed automatizzare la pubblicazione usando <a href=https://github.com/features/actions>GitHub Actions</a>: nello specifico <a href=https://github.com/features/actions>actions-gh-pages</a>.<br>Il risultato finale che si ottiene è che ogni volta che viene aggiornato il codice sorgente e viene fatto un push in GitHub parte automaticamente il processo di pubblicazione del sito.</p><p>Creare le chiavi pubbliche e private per la pubblicazione:</p><pre tabindex=0><code class=language-default data-lang=default>ssh-keygen -t rsa -b 4096 -C &#34;$(git config user.email)&#34; -f gh-pages -N &#34;&#34;
+</code></pre><p>Questo comando genererà i file <code>gh-pages</code> e <code>gh-pages.pub</code>: il primo è la chiave privata, mentre il secondo la chiave pubblica.</p><p>Nel repository del codice sorgente, in <em>Settings > Secrets > Actions > Add new secrets</em> col nome di ACTIONS_DEPLOY_KEY copiare il contenuto della chiave privata, che si ottiene con questo comando:</p><pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; gh-pages
+</code></pre><p>Allo stesso modo, nel repository di pubblicazione con GitHub Pages, in <em>Settings > Deploy Key > Add new deploy key</em> col nome di PUBLIC_DEPLOY_KEY copiare il contenuto della chiave pubblica e spuntare <em>Allow write access</em>:</p><pre tabindex=0><code class=language-default data-lang=default>pbcopy &lt; gh-pages.pub
+</code></pre><p>Nel repository del codice sorgente creare il file <code>.github/workflows/gh-pages.yaml</code> inserendo il seguente contenuto e modificando <em>GitHub_Username/GitHub_Pages_Repository</em> con i propri riferimenti:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>name: hugo publish
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>on:
+</span></span><span class=line><span class=cl>  push:
+</span></span><span class=line><span class=cl>    branches:
+</span></span><span class=line><span class=cl>    - main
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>jobs:
+</span></span><span class=line><span class=cl>  build-deploy:
+</span></span><span class=line><span class=cl>    runs-on: ubuntu-20.04
+</span></span><span class=line><span class=cl>    steps:
+</span></span><span class=line><span class=cl>    - uses: actions/checkout@v2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    - name: Setup Hugo
+</span></span><span class=line><span class=cl>      uses: peaceiris/actions-hugo@v2
+</span></span><span class=line><span class=cl>      with:
+</span></span><span class=line><span class=cl>        hugo-version: <span class=s1>&#39;latest&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    - name: Build
+</span></span><span class=line><span class=cl>      run: hugo --minify
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    - name: Deploy
+</span></span><span class=line><span class=cl>      uses: peaceiris/actions-gh-pages@v2
+</span></span><span class=line><span class=cl>      env:
+</span></span><span class=line><span class=cl>        ACTIONS_DEPLOY_KEY: <span class=si>${</span><span class=p>{ secrets.ACTIONS_DEPLOY_KEY </span><span class=si>}</span><span class=o>}</span>
+</span></span><span class=line><span class=cl>        EXTERNAL_REPOSITORY: GitHub_Username/GitHub_Pages_Repository
+</span></span><span class=line><span class=cl>        PUBLISH_BRANCH: main
+</span></span><span class=line><span class=cl>        PUBLISH_DIR: ./public
+</span></span><span class=line><span class=cl>      with:
+</span></span><span class=line><span class=cl>        emptyCommits: <span class=nb>false</span>
+</span></span><span class=line><span class=cl>        commitMessage: <span class=si>${</span><span class=p>{ github.event.head_commit.message </span><span class=si>}</span><span class=o>}</span>
+</span></span></code></pre></div><h2 id=epilogo>Epilogo</h2><p>Questo è quanto. Ho volutamente saltato alcuni passaggi, come la configurazione di Hugo e la sua integrazione con Git/GitHub perché non voglio che questo sia un tutorial passo passo, ma sono semplicemente delle integrazioni personali alle varie guide che si possono trovare in rete, molte meritevoli di lettura e di sicuro ricche di spunti interessanti: <strong>non c&rsquo;è mai un&rsquo;unica via da percorrere per arrivare allo stesso risultato finale</strong>.</p></section><footer><p class="remove-margin-bottom add-padding-right"><small>&copy; 2021-2022 Simone Vaccarin</a>
+<a href=https://disinteressato.it//index.xml><span class=footer-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328.0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765.0 183.105.0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686.0 38.981.0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"/></svg></a></small></p></footer></div><script src=https://disinteressato.it/js/scale.fix.js></script></body></html>
