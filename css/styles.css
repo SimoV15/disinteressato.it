@@ -12,7 +12,7 @@
   --font-size-normal: .95rem;
   --font-size-small: .75rem;
   --font-size-large: 1.75rem;
-  --font-size-pre: 13px;
+  --font-size-pre: 12px;
   --font-size-code: .8125rem;
   --font-size-title: 2.5rem;
   --font-sans: 'Roboto Condensed';
@@ -243,7 +243,11 @@ footer {
 @media print, screen and (max-width: 45rem) {
   body {
     word-wrap: break-word;
-    font-size: 1rem;
+    font-size: 1.1rem;
+  }
+
+  pre>code {
+    font-size: 14px;
   }
 
   header {
