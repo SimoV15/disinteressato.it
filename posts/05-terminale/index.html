@@ -1,47 +1,79 @@
-<!doctype html><html lang=it-it><head><meta charset=utf-8><meta name=generator content="Hugo 0.94.1"><meta http-equiv=content-type content="text/html" charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta property="og:url" content="https://disinteressato.it/posts/05-terminale/"><meta name=author content><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><title>Un Terminale è per sempre (e altre cosette) - Disinteressato</title><meta property="og:title" content="Disinteressato"><meta property="og:type" content="article"><meta name=description content><link rel=alternate type=application/rss+xml href=https://disinteressato.it//index.xml title=Disinteressato><link rel="shortcut icon" href=https://disinteressato.it/img/favicon.ico><link rel=stylesheet href=https://disinteressato.it/css/styles.css><link rel=stylesheet href=https://disinteressato.it/css/fonts.css><link rel=stylesheet href=https://disinteressato.it/css/syntax.css><link rel=manifest href=https://disinteressato.it/manifest.webmanifest><link rel=icon href=https://disinteressato.it/favicon.ico sizes=any><link rel=icon href=https://disinteressato.it/icon.svg type=image/svg+xml><link rel=apple-touch-icon href=https://disinteressato.it/apple-touch-icon.png></head><body><div class=wrapper><header class=text-center><h0><a href=https://disinteressato.it/>Disinteressato</a></h0></header><section><p class=remove-margin-bottom><small><time datetime=2021-12-28T00:00:00Z>28 dicembre 2021</time></small></p><h1>Un Terminale è per sempre (e altre cosette)</h1><p>Quando a metà anni 2000 iniziai ad usare un Mac il <a href=https://it.m.wikipedia.org/wiki/Terminale_virtuale>terminale</a> proprio non me lo filavo.</p><p>In quell&rsquo;era geologica c&rsquo;era ancora la sbornia evolutiva portata dall&rsquo;aumento esponenziale e costante della potenza dei processori con interfacce sempre più belle e ricche di funzionalità, quindi fare un passo indietro ed usare il terminale non era contemplato.<br>E poi venivo da Windows e il <em>Prompt dei comandi</em> neanche sapevo cosa fosse.</p><p>Col tempo ho apprezzato l&rsquo;uso che se ne può fare, come possa essere effettivamente più rapido per alcune operazioni, inutilmente complesso per altre, ma soprattutto che è l&rsquo;ultima ancora di salvezza per uscire dai guai nei sistemi <a href=https://it.wikipedia.org/wiki/Unix>Unix</a>.</p><p>Ritenendomi adesso un utente discretamente esperto, almeno nel riconoscere le mie necessità, il mio approccio in questo nuovo viaggio con macOS è stato questo: cerco tutto il software che mi serve nell&rsquo;App Store, se non lo trovo la scarico dai rispettivi siti ufficiali e verifico che ci sia la possibilità di ricercare gli aggiornamenti all&rsquo;interno dell&rsquo;applicazione stessa.</p><p>Queste sono le applicazioni che ho installato esternamente all&rsquo;App Store:</p><ul><li><a href=https://code.visualstudio.com/docs/setup/mac>Virtual Studio Code</a></li><li><a href=https://www.office.com>Microsoft Office</a> con licenza Office 2021 acquistata su <a href=http://topkeyshop.com>Top Key Shop</a></li><li><a href=https://www.tug.org/mactex/>MacTex</a></li><li><a href=https://calibre-ebook.com>Calibre</a></li><li><a href=https://iina.io>IINA</a></li><li><a href=https://handbrake.fr>HandBrake</a></li><li><a href=https://transmissionbt.com/>Transmission</a></li><li><a href=https://www.torproject.org>Tor Browser</a></li><li><a href=https://freemacsoft.net/appcleaner/>App Cleaner</a></li></ul><p>Ho lasciato alla riga di comando le operazioni che possono essere svolte esclusivamente da terminale oppure quelle per le quali mi sento più a mio agio ad utilizzarlo.</p><p>Con macOS la prima cosa da fare è installare <a href=https://brew.sh/index_it>Homebrew</a>, un gestore di pacchetti col quale scaricare, installare e mantenere aggiornato del software rigorosamente <a href=https://it.wikipedia.org/wiki/Open_source>open source</a>: in pratica è una specie di App Store da linea di comando.<br>Anche l&rsquo;installazione, ovviamente, avviene da riga di comando:</p><pre tabindex=0><code class=language-default data-lang=default>$ /bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34;
-</code></pre><p>Piccolo extra, disattivare il monitoraggio di <a href=https://docs.brew.sh/Analytics>Homebrew Analytics</a>:</p><pre tabindex=0><code class=language-default data-lang=default>$ brew analytics off
-</code></pre><p>Invece, per aggiornare i pacchetti installati basteranno poi i seguenti comandi:</p><pre tabindex=0><code class=language-default data-lang=default>$ brew update
-$ brew outdated
-$ brew upgrade
-</code></pre><p>Utilizzo pochi pacchetti perché quello di cui necessito è residuale o al massimo serve per estendere o completare alcune funzioni di macOS.</p><h2 id=quick-look>Quick Look</h2><p>Per estendere le funzionalità di <a href=https://en.wikipedia.org/wiki/Quick_Look>Quick Look</a> ho installato questi plugin:</p><ul><li><a href=https://github.com/sbarex/QLMarkdown>QLMarkdown</a> permette di visualizzare il formato <a href=https://it.wikipedia.org/wiki/Markdown>markdown</a></li><li><a href=https://github.com/Marginal/QLVideo>QLVideo</a> aggiunge il supporto a molti formati video</li><li><a href=https://github.com/p2/quicklook-csv>QuickLookCSV</a> per i file <a href=https://it.wikipedia.org/wiki/Comma-separated_values>CSV</a></li></ul><pre tabindex=0><code class=language-default data-lang=default>$ brew install --cask qlmarkdown qlvideo quicklook-csv
-</code></pre><h2 id=caratteri>Caratteri</h2><p>Ho installato solo i caratteri <a href=https://fonts.google.com/specimen/Roboto>Roboto</a> e <a href=https://fonts.google.com/specimen/Bebas+Neue>Bebas Neue</a>:</p><pre tabindex=0><code class=language-default data-lang=default>$ brew tap homebrew/cask-fonts
-$ brew install svn
-$ sudo mkdir -p /Library/Java/Extensions
-$ sudo ln -s /opt/homebrew/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib
-$ brew install --cask font-roboto font-roboto-mono font-roboto-slab font-bebas-neue
-</code></pre><h2 id=micro>micro</h2><p>Mi trovo bene con <a href=https://micro-editor.github.io>micro</a>, facile da usare e completo:</p><pre tabindex=0><code class=language-default data-lang=default>$ brew install micro
-$ micro ~/.config/micro/settings.json
-</code></pre><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nt>&#34;colorscheme&#34;</span><span class=p>:</span> <span class=s2>&#34;simple&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>    <span class=nt>&#34;diffgutter&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>    <span class=nt>&#34;mkparents&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>    <span class=nt>&#34;relativeruler&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>    <span class=nt>&#34;rmtrailingws&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>    <span class=nt>&#34;saveundo&#34;</span><span class=p>:</span> <span class=kc>true</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></div><pre tabindex=0><code class=language-default data-lang=default>$ micro ~/.config/micro/bindings.json
-</code></pre><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nt>&#34;Alt-g&#34;</span><span class=p>:</span> <span class=s2>&#34;None&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>	<span class=nt>&#34;Ctrl-k&#34;</span><span class=p>:</span> <span class=s2>&#34;ToggleKeyMenu&#34;</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></div><h2 id=rsync>rsync</h2><p>Sempre utile avere <a href=https://rsync.samba.org>rsync</a> per sincronizzare file o cartelle:</p><pre tabindex=0><code class=language-default data-lang=default>$ brew install rsync
-</code></pre><h2 id=youtube-dl>youtube-dl</h2><p>Immancabile <a href=https://youtube-dl.org>youtube-dl</a> per scaricare i video da <a href=https://www.youtube.com>YouTube</a>:</p><pre tabindex=0><code class=language-default data-lang=default>$ brew install youtube-dl atomicparsley ffmpeg
-</code></pre><p>Questo invece è il mio file di configurazione:</p><pre tabindex=0><code class=language-default data-lang=default>$ micro ~/.config/youtube-dl/config
+<!doctype html><html lang=it-it><head><meta charset=utf-8><meta name=generator content="Hugo 0.95.0"><meta http-equiv=content-type content="text/html" charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta property="og:url" content="https://disinteressato.it/posts/05-terminale/"><meta name=author content><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><title>Un Terminale è per sempre (e altre cosette) - Disinteressato</title><meta property="og:title" content="Disinteressato"><meta property="og:type" content="article"><meta name=description content><link rel=alternate type=application/rss+xml href=https://disinteressato.it//index.xml title=Disinteressato><link rel="shortcut icon" href=https://disinteressato.it/img/favicon.ico><link rel=stylesheet href=https://disinteressato.it/css/styles.css><link rel=stylesheet href=https://disinteressato.it/css/fonts.css><link rel=stylesheet href=https://disinteressato.it/css/syntax.css><link rel=manifest href=https://disinteressato.it/manifest.webmanifest><link rel=icon href=https://disinteressato.it/favicon.ico sizes=any><link rel=icon href=https://disinteressato.it/icon.svg type=image/svg+xml><link rel=apple-touch-icon href=https://disinteressato.it/apple-touch-icon.png></head><body><div class=wrapper><header class=text-center><h0><a href=https://disinteressato.it/>Disinteressato</a></h0></header><section><p class=remove-margin-bottom><small><time datetime=2021-12-28T00:00:00Z>28 dicembre 2021</time></small></p><h1>Un Terminale è per sempre (e altre cosette)</h1><p>Quando a metà anni 2000 iniziai ad usare un Mac il <a href=https://it.m.wikipedia.org/wiki/Terminale_virtuale>terminale</a> proprio non me lo filavo.</p><p>In quell&rsquo;era geologica c&rsquo;era ancora la sbornia evolutiva portata dall&rsquo;aumento esponenziale e costante della potenza dei processori con interfacce sempre più belle e ricche di funzionalità, quindi fare un passo indietro ed usare il terminale non era contemplato.
+E poi venivo da Windows e il <em>Prompt dei comandi</em> neanche sapevo cosa fosse.</p><p>Col tempo ho apprezzato l&rsquo;uso che se ne può fare, come possa essere effettivamente più rapido per alcune operazioni, inutilmente complesso per altre, ma soprattutto che è l&rsquo;ultima ancora di salvezza per uscire dai guai nei sistemi <a href=https://it.wikipedia.org/wiki/Unix>Unix</a>.</p><p>Ritenendomi adesso un utente discretamente esperto, almeno nel riconoscere le mie necessità, il mio approccio in questo nuovo viaggio con macOS è stato questo: cerco tutto il software che mi serve nell&rsquo;App Store, se non lo trovo la scarico dai rispettivi siti ufficiali e verifico che ci sia la possibilità di ricercare gli aggiornamenti all&rsquo;interno dell&rsquo;applicazione stessa.</p><p>Queste sono le applicazioni che ho installato esternamente all&rsquo;App Store:</p><ul><li><a href=https://code.visualstudio.com/docs/setup/mac>Virtual Studio Code</a></li><li><a href=https://www.office.com>Microsoft Office</a> con licenza Office 2021 acquistata su <a href=http://topkeyshop.com>Top Key Shop</a></li><li><a href=https://calibre-ebook.com>Calibre</a></li><li><a href=https://iina.io>IINA</a></li><li><a href=https://handbrake.fr>HandBrake</a></li><li><a href=https://transmissionbt.com/>Transmission</a></li><li><a href=https://www.torproject.org>Tor Browser</a></li><li><a href=https://freemacsoft.net/appcleaner/>App Cleaner</a></li><li><a href=https://www.cakebrew.com>Cakebrew</a></li></ul><p>Ho lasciato alla riga di comando le operazioni che possono essere svolte esclusivamente da terminale oppure quelle per le quali mi sento più a mio agio ad utilizzarlo.</p><p>Con macOS la prima cosa da fare è installare <a href=https://brew.sh/index_it>Homebrew</a>, un gestore di pacchetti col quale scaricare, installare e mantenere aggiornato del software rigorosamente <a href=https://it.wikipedia.org/wiki/Open_source>open source</a>: in pratica è una specie di App Store da linea di comando.
+Anche l&rsquo;installazione, ovviamente, avviene da riga di comando:</p><pre tabindex=0><code class=language-default data-lang=default>/bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34;
+</code></pre><p>Piccolo extra, disattivare il monitoraggio di <a href=https://docs.brew.sh/Analytics>Homebrew Analytics</a>:</p><pre tabindex=0><code class=language-default data-lang=default>brew analytics off
+</code></pre><p>Invece, per aggiornare i pacchetti installati basteranno poi i seguenti comandi:</p><pre tabindex=0><code class=language-default data-lang=default>brew update
+brew outdated
+brew upgrade
+</code></pre><p>Utilizzo pochi pacchetti perché quello di cui necessito è residuale o al massimo serve per estendere o completare alcune funzioni di macOS.</p><h2 id=quick-look>Quick Look</h2><p>Per estendere le funzionalità di <a href=https://en.wikipedia.org/wiki/Quick_Look>Quick Look</a> ho installato questi plugin:</p><ul><li><a href=https://github.com/sbarex/QLMarkdown>QLMarkdown</a> permette di visualizzare il formato <a href=https://it.wikipedia.org/wiki/Markdown>markdown</a></li><li><a href=https://github.com/Marginal/QLVideo>QLVideo</a> aggiunge il supporto a molti formati video</li><li><a href=https://github.com/p2/quicklook-csv>QuickLookCSV</a> per i file <a href=https://it.wikipedia.org/wiki/Comma-separated_values>CSV</a></li></ul><pre tabindex=0><code class=language-default data-lang=default>brew install --cask qlmarkdown qlvideo quicklook-csv
+</code></pre><h2 id=latex>LaTeX</h2><p>Per installare <a href=https://www.tug.org/mactex/>MacTex</a> utilizzo Homebrew perché mi permette di non installare le applicazioni con <a href=https://it.wikipedia.org/wiki/Interfaccia_grafica>interfaccia grafica</a>, dato che andrò ad utilizzare
+<a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop</a> e Virtual Studio Code:</p><pre tabindex=0><code class=language-default data-lang=default>brew install --cask mactex-no-gui
+</code></pre><p>Per aggiornare i pacchetti basterà utilizzare <a href=https://www.tug.org/texlive/doc/tlmgr.html>Tex Live Manager</a>:</p><pre tabindex=0><code class=language-default data-lang=default>sudo tlmgr update --self &amp;&amp; sudo tlmgr update --all
+</code></pre><h2 id=caratteri>Caratteri</h2><p>Ho installato solo i caratteri <a href=https://fonts.google.com/specimen/Roboto>Roboto</a> e <a href=https://fonts.google.com/specimen/Bebas+Neue>Bebas Neue</a>:</p><pre tabindex=0><code class=language-default data-lang=default>brew tap homebrew/cask-fonts
+brew install svn
+sudo mkdir -p /Library/Java/Extensions
+sudo ln -s /opt/homebrew/lib/libsvnjavahl-1.dylib /Library/Java/Extensions/libsvnjavahl-1.dylib
+brew install --cask font-roboto font-roboto-mono font-roboto-slab font-bebas-neue
+</code></pre><h2 id=nano>nano</h2><p>Per modificare da terminale i file di testo <a href=https://www.nano-editor.org>nano</a> rimane insuperabile:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>brew install nano nanorc
+</span></span><span class=line><span class=cl>nano ~/.nanorc
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Non-default settings</span>
+</span></span><span class=line><span class=cl><span class=nb>set</span> atblanks
+</span></span><span class=line><span class=cl><span class=nb>set</span> cutfromcursor
+</span></span><span class=line><span class=cl><span class=nb>set</span> nohelp
+</span></span><span class=line><span class=cl><span class=nb>set</span> softwrap
+</span></span><span class=line><span class=cl><span class=nb>set</span> tabsize         <span class=m>4</span>
+</span></span><span class=line><span class=cl><span class=nb>set</span> tabstospaces
+</span></span><span class=line><span class=cl><span class=nb>set</span> constantshow
+</span></span><span class=line><span class=cl><span class=nb>set</span> linenumbers
+</span></span><span class=line><span class=cl><span class=nb>set</span> numbercolor     grey
+</span></span><span class=line><span class=cl><span class=nb>set</span> stateflags
+</span></span><span class=line><span class=cl><span class=nb>set</span> casesensitive
+</span></span><span class=line><span class=cl><span class=nb>set</span> historylog
+</span></span><span class=line><span class=cl><span class=nb>set</span> positionlog
+</span></span><span class=line><span class=cl><span class=nb>set</span> zap
+</span></span><span class=line><span class=cl><span class=nb>set</span> autoindent
+</span></span><span class=line><span class=cl><span class=nb>set</span> minibar
+</span></span><span class=line><span class=cl><span class=nb>set</span> minicolor       grey
+</span></span><span class=line><span class=cl><span class=nb>set</span> promptcolor     magenta
+</span></span><span class=line><span class=cl><span class=nb>set</span> selectedcolor   black,yellow
+</span></span><span class=line><span class=cl><span class=nb>set</span> spotlightcolor  bold,black,red
+</span></span><span class=line><span class=cl><span class=nb>set</span> mouse
+</span></span><span class=line><span class=cl><span class=nb>set</span> nonewlines
+</span></span><span class=line><span class=cl><span class=nb>set</span> saveonexit
+</span></span><span class=line><span class=cl><span class=nb>set</span> locking
+</span></span><span class=line><span class=cl><span class=nb>set</span> boldtext
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Shortcut key bindings</span>
+</span></span><span class=line><span class=cl><span class=nb>bind</span> ^c copy main
+</span></span><span class=line><span class=cl><span class=nb>bind</span> ^v paste all
+</span></span><span class=line><span class=cl><span class=nb>bind</span> ^f whereis all
+</span></span><span class=line><span class=cl><span class=nb>bind</span> ^s savefile main
+</span></span><span class=line><span class=cl><span class=nb>bind</span> ^z undo main
+</span></span><span class=line><span class=cl><span class=nb>bind</span> ^y redo main
+</span></span><span class=line><span class=cl><span class=nb>bind</span> ^q <span class=nb>exit</span> main
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Add colour syntax</span>
+</span></span><span class=line><span class=cl>include <span class=s2>&#34;/opt/homebrew/Cellar/nano/*/share/nano/*.nanorc&#34;</span>
+</span></span></code></pre></div><h2 id=rsync>rsync</h2><p>Sempre utile avere <a href=https://rsync.samba.org>rsync</a> per sincronizzare file o cartelle:</p><pre tabindex=0><code class=language-default data-lang=default>brew install rsync
+</code></pre><h2 id=youtube-dl>youtube-dl</h2><p>Immancabile <a href=https://youtube-dl.org>youtube-dl</a> per scaricare i video da <a href=https://www.youtube.com>YouTube</a>:</p><pre tabindex=0><code class=language-default data-lang=default>brew install youtube-dl atomicparsley ffmpeg
+</code></pre><p>Questo invece è il mio file di configurazione:</p><pre tabindex=0><code class=language-default data-lang=default>$ nano ~/.config/youtube-dl/config
 
 --embed-thumbnail
 --add-metadata
 --no-mtime
 -o /Users/&lt;USER&gt;/Movies/%(title)s.%(ext)s
 -f &#39;bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best&#39;
-</code></pre><h2 id=exiftool>ExifTool</h2><p><a href=https://exiftool.org>ExifTool</a> mi ha tolto dagli impicci di dover inserire i <a href=https://it.wikipedia.org/wiki/Metadato>metadati</a> (nello specifico: data e ora) alle circa 1700 foto scattate dal fotografo al mio matrimonio:</p><pre tabindex=0><code class=language-default data-lang=default>$ brew install exiftool
-</code></pre><p>Fortunatamente i file erano stati nominati in ordine cronologico crescente di scatto, quindi mi è bastato dapprima inserire in tutte le foto la stessa data e la stessa ora (<code>DIR</code> è il nome della cartella che contiene i file):</p><pre tabindex=0><code class=language-default data-lang=default>$ exiftool -AllDates=&#34;YYYY:MM:DD HH:MM:SS&#34; DIR -overwrite_original -r
-</code></pre><p>Dopodiché ad ogni foto, in base all&rsquo;ordine crescente di nome, sono stati aggiunti 10 secondi all&rsquo;ora di scatto rispetto a quella della precedente, il tutto con questo unico comando:</p><pre tabindex=0><code class=language-default data-lang=default>$ exiftool &#39;-AllDates+&lt;0:0:${filesequence}0&#39; DIR -fileOrder FileName -overwrite_original -r
-</code></pre><p>Per verificare che la modifica sia stata effettuata correttamente, questo comando genera un file <a href=https://it.wikipedia.org/wiki/Comma-separated_values>CSV</a> facilmente analizzabile:</p><pre tabindex=0><code class=language-default data-lang=default>$ exiftool -AllDates -csv DIR &gt; out.csv
-</code></pre><p>In questo modo, una volta aggiunte alla libreria di <a href=https://www.apple.com/it/macos/photos/>Foto</a>, erano in perfetto ordine cronologico (ovviamente l&rsquo;ora di scatto era arbitraria e non rispettava quella effettiva, ma di meglio non si poteva fare).</p><h2 id=wget-tree-e-trash>Wget, tree e trash</h2><p>Installo anche il classico <a href=https://www.gnu.org/software/wget/>Wget</a>, <a href=http://mama.indstate.edu/users/ice/tree/>Tree</a> per visualizzare le cartelle in una struttura ad albero e <a href=https://github.com/ali-rantakari/trash>Trash</a> per spostare i file nel cestino da terminale evitando di poter solo cancellarli definitivamente usando il comando <a href=https://it.wikipedia.org/wiki/Rm_(Unix)>rm</a>:</p><pre tabindex=0><code class=language-default data-lang=default>$ brew install wget trash tree
+</code></pre><h2 id=imagemagick>ImageMagick</h2><p><a href=https://imagemagick.org>ImageMagick</a> per la manipolazione delle immagini:</p><pre tabindex=0><code class=language-default data-lang=default>brew install imagemagick
+</code></pre><h2 id=exiftool>ExifTool</h2><p><a href=https://exiftool.org>ExifTool</a> mi ha tolto dagli impicci di dover inserire i <a href=https://it.wikipedia.org/wiki/Metadato>metadati</a> (nello specifico: data e ora) alle circa 1700 foto scattate dal fotografo al mio matrimonio:</p><pre tabindex=0><code class=language-default data-lang=default>brew install exiftool
+</code></pre><p>Fortunatamente i file erano stati nominati in ordine cronologico crescente di scatto, quindi mi è bastato dapprima inserire in tutte le foto la stessa data e la stessa ora (<code>DIR</code> è il nome della cartella che contiene i file):</p><pre tabindex=0><code class=language-default data-lang=default>exiftool -AllDates=&#34;YYYY:MM:DD HH:MM:SS&#34; DIR -overwrite_original -r
+</code></pre><p>Dopodiché ad ogni foto, in base all&rsquo;ordine crescente di nome, sono stati aggiunti 10 secondi all&rsquo;ora di scatto rispetto a quella della precedente, il tutto con questo unico comando:</p><pre tabindex=0><code class=language-default data-lang=default>exiftool &#39;-AllDates+&lt;0:0:${filesequence}0&#39; DIR -fileOrder FileName -overwrite_original -r
+</code></pre><p>Per verificare che la modifica sia stata effettuata correttamente, questo comando genera un file <a href=https://it.wikipedia.org/wiki/Comma-separated_values>CSV</a> facilmente analizzabile:</p><pre tabindex=0><code class=language-default data-lang=default>exiftool -AllDates -csv DIR &gt; out.csv
+</code></pre><p>In questo modo, una volta aggiunte alla libreria di <a href=https://www.apple.com/it/macos/photos/>Foto</a>, erano in perfetto ordine cronologico (ovviamente l&rsquo;ora di scatto era arbitraria e non rispettava quella effettiva, ma di meglio non si poteva fare).</p><h2 id=wget-tree-e-trash>Wget, tree e trash</h2><p>Installo anche il classico <a href=https://www.gnu.org/software/wget/>Wget</a>, <a href=http://mama.indstate.edu/users/ice/tree/>Tree</a> per visualizzare le cartelle in una struttura ad albero e <a href=https://github.com/ali-rantakari/trash>Trash</a> per spostare i file nel cestino da terminale evitando di poter solo cancellarli definitivamente usando il comando <a href=https://it.wikipedia.org/wiki/Rm_(Unix)>rm</a>:</p><pre tabindex=0><code class=language-default data-lang=default>brew install wget trash tree
 </code></pre><h2 id=zsh>ZSH</h2><p>Ed infine, visto che macOS utilizza <a href=https://zsh.sourceforge.io>ZSH</a> come <a href=https://it.wikipedia.org/wiki/Shell_(informatica)>shell</a> di default, perché non personalizzarla un pochino?</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ brew install pure zsh-autosuggestions
 </span></span><span class=line><span class=cl>$ <span class=nb>cd</span> ~
 </span></span><span class=line><span class=cl>$ touch ~/.hushlogin
-</span></span><span class=line><span class=cl>$ micro .zshrc
+</span></span><span class=line><span class=cl>$ nano ~/.zshrc
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1>#!/usr/bin/env zsh</span>
 </span></span><span class=line><span class=cl>
@@ -50,9 +82,8 @@ $ micro ~/.config/micro/settings.json
 </span></span><span class=line><span class=cl><span class=c1>###############################</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># editor</span>
-</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>EDITOR</span><span class=o>=</span><span class=s1>&#39;micro&#39;</span>
-</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>VISUAL</span><span class=o>=</span><span class=s1>&#39;micro&#39;</span>
-</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>MICRO_TRUECOLOR</span><span class=o>=</span><span class=m>1</span>
+</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>EDITOR</span><span class=o>=</span><span class=s1>&#39;nano&#39;</span>
+</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>VISUAL</span><span class=o>=</span><span class=s1>&#39;nano&#39;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># zsh</span>
 </span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>HISTSIZE</span><span class=o>=</span><span class=m>10000</span>                   <span class=c1># Maximum events for internal history</span>
@@ -95,7 +126,7 @@ $ micro ~/.config/micro/settings.json
 </span></span><span class=line><span class=cl>setopt PUSHD_SILENT         <span class=c1># Do not print the directory stack after pushd or popd</span>
 </span></span><span class=line><span class=cl>setopt CDABLE_VARS          <span class=c1># Change directory to a path stored in a variable</span>
 </span></span><span class=line><span class=cl>setopt EXTENDED_GLOB        <span class=c1># Use extended globbing syntax</span>
-</span></span><span class=line><span class=cl>setopt NO_LIST_AMBIGUOUS    <span class=c1># Case insensivity</span>
+</span></span><span class=line><span class=cl>setopt NO_LIST_AMBIGUOUS <span class=c1># Case insensivity</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1>##########</span>
@@ -103,7 +134,7 @@ $ micro ~/.config/micro/settings.json
 </span></span><span class=line><span class=cl><span class=c1>##########</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>CLICOLOR</span><span class=o>=</span><span class=m>1</span>
-</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>LSCOLORS</span><span class=o>=</span>ExGxBxDxCxEgEdxbxgxcxd
+</span></span><span class=line><span class=cl><span class=nb>export</span> <span class=nv>LSCOLORS</span><span class=o>=</span>ExFxBxDxCxegedabagacad
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1>###########</span>
@@ -115,7 +146,8 @@ $ micro ~/.config/micro/settings.json
 </span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>myip</span><span class=o>=</span><span class=s1>&#39;curl http://ipecho.net/plain; echo&#39;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># folders</span>
-</span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>iCloud</span><span class=o>=</span><span class=s1>&#39;$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/&#39;</span>
+</span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>icloud</span><span class=o>=</span><span class=s1>&#39;$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/&#39;</span>
+</span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>dot</span><span class=o>=</span><span class=s1>&#39;$HOME/.dotfiles&#39;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># cp</span>
 </span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>cp</span><span class=o>=</span><span class=s1>&#39;cp -iv&#39;</span>
@@ -129,9 +161,6 @@ $ micro ~/.config/micro/settings.json
 </span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>fgrep</span><span class=o>=</span><span class=s1>&#39;fgrep --color=auto&#39;</span>
 </span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>egrep</span><span class=o>=</span><span class=s1>&#39;egrep --color=auto&#39;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># hugo</span>
-</span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>hugostart</span><span class=o>=</span><span class=s1>&#39;hugo server -DEF --ignoreCache&#39;</span>
-</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># directory stack</span>
 </span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>d</span><span class=o>=</span><span class=s1>&#39;dirs -v&#39;</span>
 </span></span><span class=line><span class=cl><span class=k>for</span> index <span class=o>({</span>1..9<span class=o>})</span> <span class=nb>alias</span> <span class=s2>&#34;</span><span class=nv>$index</span><span class=s2>&#34;</span><span class=o>=</span><span class=s2>&#34;cd +</span><span class=si>${</span><span class=nv>index</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>;</span> <span class=nb>unset</span> index
@@ -143,7 +172,7 @@ $ micro ~/.config/micro/settings.json
 </span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>mkcd</span><span class=o>=</span><span class=s1>&#39;foo(){ mkdir -p &#34;$1&#34;; cd &#34;$1&#34; }; foo &#39;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># applications</span>
-</span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>edit</span><span class=o>=</span><span class=s1>&#39;micro&#39;</span>
+</span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>edit</span><span class=o>=</span><span class=s1>&#39;nano&#39;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1>#####################</span>
@@ -179,9 +208,9 @@ $ micro ~/.config/micro/settings.json
 </span></span><span class=line><span class=cl>zle -N down-line-or-beginning-search
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># up</span>
-</span></span><span class=line><span class=cl>bindkey <span class=s1>&#39;^[[A&#39;</span>	up-line-or-beginning-search
+</span></span><span class=line><span class=cl>bindkey <span class=s1>&#39;^[[A&#39;</span> up-line-or-beginning-search
 </span></span><span class=line><span class=cl><span class=c1># down</span>
-</span></span><span class=line><span class=cl>bindkey <span class=s1>&#39;^[[B&#39;</span>	down-line-or-beginning-search
+</span></span><span class=line><span class=cl>bindkey <span class=s1>&#39;^[[B&#39;</span> down-line-or-beginning-search
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1>###############</span>
@@ -198,7 +227,7 @@ $ micro ~/.config/micro/settings.json
 </span></span><span class=line><span class=cl><span class=nv>PURE_CMD_MAX_EXEC_TIME</span><span class=o>=</span><span class=m>10</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># change the path color</span>
-</span></span><span class=line><span class=cl>zstyle :prompt:pure:path color cyan
+</span></span><span class=line><span class=cl>zstyle :prompt:pure:path color blue
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># turn on git stash status</span>
 </span></span><span class=line><span class=cl>zstyle :prompt:pure:git:stash show yes
@@ -221,7 +250,7 @@ $ micro ~/.config/micro/settings.json
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1>####################</span>
-</span></span><span class=line><span class=cl><span class=c1># COLORED MANUALS #</span>
+</span></span><span class=line><span class=cl><span class=c1># COLOURED MANUALS #</span>
 </span></span><span class=line><span class=cl><span class=c1>####################</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>man<span class=o>()</span> <span class=o>{</span>
@@ -236,6 +265,7 @@ $ micro ~/.config/micro/settings.json
 </span></span></span><span class=line><span class=cl><span class=se></span>    man <span class=s2>&#34;</span><span class=nv>$@</span><span class=s2>&#34;</span>
 </span></span><span class=line><span class=cl><span class=o>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>$ <span class=nb>source</span> .zshrc
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>$ <span class=nb>source</span> ~/.zshrc
 </span></span></code></pre></div><p>Si potrebbe fare molto di più, ma per il mio approccio questo è già abbastanza per avere tutto ciò di cui necessito razionalmente installato.</p><p>Adesso sì che mi sento a casa!</p></section><footer><p class="remove-margin-bottom add-padding-right"><small>&copy; 2021-2022 Simone Vaccarin</a>
 <a href=https://disinteressato.it//index.xml><span class=footer-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328.0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765.0 183.105.0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686.0 38.981.0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"/></svg></a></small></p></footer></div><script src=https://disinteressato.it/js/scale.fix.js></script></body></html>

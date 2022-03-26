@@ -262,6 +262,10 @@ footer {
   pre, code {
     word-wrap: normal;
   }
+
+  small {
+    font-size: .9rem;
+   }
 }
 
 @media print, screen and (max-width: 30rem) {
