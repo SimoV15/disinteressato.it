@@ -153,7 +153,6 @@ E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo co
 &lt;li>&lt;a href="https://transmissionbt.com/">Transmission&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.torproject.org">Tor Browser&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://freemacsoft.net/appcleaner/">App Cleaner&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.cakebrew.com">Cakebrew&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>Ho lasciato alla riga di comando le operazioni che possono essere svolte esclusivamente da terminale oppure quelle per le quali mi sento più a mio agio ad utilizzarlo.&lt;/p>
 &lt;p>Con macOS la prima cosa da fare è installare &lt;a href="https://brew.sh/index_it">Homebrew&lt;/a>, un gestore di pacchetti col quale scaricare, installare e mantenere aggiornato del software rigorosamente &lt;a href="https://it.wikipedia.org/wiki/Open_source">open source&lt;/a>: in pratica è una specie di App Store da linea di comando.
@@ -333,7 +332,8 @@ brew install --cask font-roboto font-roboto-mono font-roboto-slab font-bebas-neu
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###########&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># system&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">brewup&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;brew update; brew upgrade; brew cleanup; brew doctor&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">brewup&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;brew update &amp;amp;&amp;amp; brew upgrade &amp;amp;&amp;amp; brew update --cask &amp;amp;&amp;amp; brew upgrade --cask $(brew outdated) --cask &amp;amp;&amp;amp; brew cleanup &amp;amp;&amp;amp; brew doctor&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">texup&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;sudo tlmgr update --self &amp;amp;&amp;amp; sudo tlmgr update --all&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">myip&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;curl http://ipecho.net/plain; echo&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># folders&lt;/span>
