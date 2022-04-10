@@ -165,7 +165,7 @@ kbd > kbd {
   font-family: var(--font-sans);
   font-weight: 400;
   font-size: .875em/1.5;
-  padding: .3rem .5rem;
+  padding: .2rem .4rem;
   margin: .125em;
 }
 
@@ -357,7 +357,15 @@ float: left;
     }
   
   a:hover {
-        color: var(--white);
+      color: var(--white);
+    }
+  
+  mark a {
+      color: var(--black);
+    }
+
+  mark a:hover {
+      color: var(--black);
     }
     
   th, td, dt {
