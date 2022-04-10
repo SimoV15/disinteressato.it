@@ -3,37 +3,37 @@
 &lt;p>La scelta è ricaduta sul metodo del &lt;strong>bare repository&lt;/strong> (ovvero un repository privo della cartella di lavoro) e &lt;strong>alias&lt;/strong>, come descritto in queste due fondamentali letture: &lt;a href="https://www.atlassian.com/git/tutorials/dotfiles">The best way to store your dotfiles: A bare Git repository&lt;/a> e l&amp;rsquo;irrinunciabile &lt;a href="https://wiki.archlinux.org/title/Dotfiles">Wiki&lt;/a> di Arch Linux.&lt;/p>
 &lt;p>Per prima cosa ho creato un repository in GitHub: deve essere vuoto, quindi senza README e LICENSE.&lt;/p>
 &lt;p>Da terminale, con questi soli 3 comandi, ho configurato il tutto:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ git init --bare ~/DOTFILES_FOLDER
-$ alias dotfiles=&amp;#39;/usr/bin/git --git-dir=$HOME/DOTFILES_FOLDER/ --work-tree=$HOME&amp;#39;
-$ dotfiles config status.showUntrackedFiles no
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">git init --bare ~/DOTFILES_FOLDER
+alias dotfiles=&amp;#39;/usr/bin/git --git-dir=$HOME/DOTFILES_FOLDER/ --work-tree=$HOME&amp;#39;
+dotfiles config status.showUntrackedFiles no
 &lt;/code>&lt;/pre>&lt;p>Utilizzando macOS è una buona idea escludere i file .DS_Store dal controllo di versione utilizzando &lt;code>gitignore&lt;/code>:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ touch ~/.gitignore
-$ echo &amp;#34;.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
-$ echo &amp;#34;._.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
-$ echo &amp;#34;**/.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
-$ echo &amp;#34;**/._.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
-$ dotfiles add ~/.gitignore
-$ dotfiles commit -m &amp;#34;Ignoring .DS_Store&amp;#34;
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">touch ~/.gitignore
+echo &amp;#34;.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
+echo &amp;#34;._.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
+echo &amp;#34;**/.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
+echo &amp;#34;**/._.DS_Store&amp;#34; &amp;gt;&amp;gt; .gitignore
+dotfiles add ~/.gitignore
+dotfiles commit -m &amp;#34;Ignoring .DS_Store&amp;#34;
 &lt;/code>&lt;/pre>&lt;p>Aggiungere il repository remoto:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ dotfiles remote add origin https://github.com/GitHub_Username/GitHub_Repository
-$ dotfiles branch -M main
-$ dotfiles push -u origin main
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">dotfiles remote add origin https://github.com/GitHub_Username/GitHub_Repository
+dotfiles branch -M main
+dotfiles push -u origin main
 &lt;/code>&lt;/pre>&lt;p>Per evitare che la cartella &lt;em>home&lt;/em> venga popolata con i file README e LICENSE utilizzo il comando di git &lt;code>sparse checkout&lt;/code>:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ dotfiles config core.sparsecheckout true
-$ touch ~/DOTFILES_FOLDER/info/sparse-checkout
-$ echo &amp;#34;/*&amp;#34; &amp;gt;&amp;gt; ~/DOTFILES_FOLDER/info/sparse-checkout
-$ echo &amp;#39;!&amp;#39;&amp;#34;README.md&amp;#34; &amp;gt;&amp;gt; ~/DOTFILES_FOLDER/info/sparse-checkout
-$ echo &amp;#39;!&amp;#39;&amp;#34;LICENSE&amp;#34; &amp;gt;&amp;gt; ~/DOTFILES_FOLDER/info/sparse-checkout
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">dotfiles config core.sparsecheckout true
+touch ~/DOTFILES_FOLDER/info/sparse-checkout
+echo &amp;#34;/*&amp;#34; &amp;gt;&amp;gt; ~/DOTFILES_FOLDER/info/sparse-checkout
+echo &amp;#39;!&amp;#39;&amp;#34;README.md&amp;#34; &amp;gt;&amp;gt; ~/DOTFILES_FOLDER/info/sparse-checkout
+echo &amp;#39;!&amp;#39;&amp;#34;LICENSE&amp;#34; &amp;gt;&amp;gt; ~/DOTFILES_FOLDER/info/sparse-checkout
 &lt;/code>&lt;/pre>&lt;p>Direttamente dall&amp;rsquo;interfaccia web di GitHub inserire i file README e LICENSE e per testare che vengano effettivamente ignorati fare un &lt;code>pull&lt;/code>:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ dotfiles pull
-&lt;/code>&lt;/pre>&lt;p>Inserire un &lt;code>alias&lt;/code> a &lt;code>.zshrc&lt;/code>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">dotfiles pull
+&lt;/code>&lt;/pre>&lt;p>Inserire un &lt;code>alias&lt;/code> in &lt;code>.zshrc&lt;/code>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ micro ~/.zshrc
 alias dotfiles=&amp;#39;/usr/bin/git --git-dir=$HOME/DOTFILES_FOLDER/ --work-tree=$HOME&amp;#39;
 $ source ~/.zshrc
 &lt;/code>&lt;/pre>&lt;p>Inviare al repository remoto su GitHub:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ dotfiles add ~/.zshrc
-$ dotfiles commit -m &amp;#34;Add .zshrc&amp;#34;
-$ dotfiles push
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">dotfiles add ~/.zshrc
+dotfiles commit -m &amp;#34;Add .zshrc&amp;#34;
+dotfiles push
 &lt;/code>&lt;/pre>&lt;p>Ecco qua, adesso basterà aggiungere col comando &lt;code>add&lt;/code> ogni singolo file che si vuole tracciare ed il gioco è fatto.&lt;/p></description></item><item><title>La promessa</title><link>https://disinteressato.it/posts/07-promessa/</link><pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/07-promessa/</guid><description>&lt;p>&lt;a href="https://it.m.wikipedia.org/wiki/La_promessa_(Friedrich_D%C3%BCrrenmatt)">La promessa di Friedrich Dürrenmatt&lt;/a> è un giallo anomalo, particolare, ma soprattutto profondo. Una buona compagnia per passare qualche sera invernale davanti al focolare.&lt;/p>
 &lt;p>Ci sono due passaggi importanti nel libro, il primo nella parte iniziale:&lt;/p>
 &lt;blockquote>
@@ -158,6 +158,7 @@ E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo co
 &lt;p>Con macOS la prima cosa da fare è installare &lt;a href="https://brew.sh/index_it">Homebrew&lt;/a>, un gestore di pacchetti col quale scaricare, installare e mantenere aggiornato del software rigorosamente &lt;a href="https://it.wikipedia.org/wiki/Open_source">open source&lt;/a>: in pratica è una specie di App Store da linea di comando.
 Anche l&amp;rsquo;installazione, ovviamente, avviene da riga di comando:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">/bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34;
+uname -m | grep arm64 &amp;amp;&amp;amp; echo &amp;#39;export PATH=$PATH:/opt/homebrew/bin&amp;#39; &amp;gt;&amp;gt; ~/.zshrc &amp;amp;&amp;amp; source ~/.zshrc
 &lt;/code>&lt;/pre>&lt;p>Piccolo extra, disattivare il monitoraggio di &lt;a href="https://docs.brew.sh/Analytics">Homebrew Analytics&lt;/a>:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">brew analytics off
 &lt;/code>&lt;/pre>&lt;p>Invece, per aggiornare i pacchetti installati basteranno poi i seguenti comandi:&lt;/p>
