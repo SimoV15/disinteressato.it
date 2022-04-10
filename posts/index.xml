@@ -1,4 +1,232 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Disinteressato</title><link>https://disinteressato.it/posts/</link><description>Recent content in Posts on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><lastBuildDate>Sat, 12 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://disinteressato.it/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Un metodo semplice per gestire i dotfiles</title><link>https://disinteressato.it/posts/08-dotfiles/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/08-dotfiles/</guid><description>&lt;p>In vita mia non avevo mai approfondito la gestione dei &lt;a href="https://en.m.wikipedia.org/wiki/Hidden_file_and_hidden_directory#Unix_and_Unix-like_environments">dotfiles&lt;/a>, avevo letto qualcosa, ma era rimasta nel cassetto tra i progetti incompiuti.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Disinteressato</title><link>https://disinteressato.it/posts/</link><description>Recent content in Posts on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><lastBuildDate>Sun, 10 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://disinteressato.it/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>La mia strategia di backup (anche se di mio c'è quasi niente)</title><link>https://disinteressato.it/posts/09-backup/</link><pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/09-backup/</guid><description>&lt;p>La prima volta che mi resi conto dell&amp;rsquo;importanza di avere almeno un backup dei miei dati è stato nel lontano 2006, quando persi quasi tutto a causa di una défaillance del mio portatile.
+Da allora ho sempre cercato di avere almeno una copia completa e recente dei miei dati e col tempo ho cercato di affinare e rendere più solida la procedura, fino a giungere a quella attuale che copre le mie principali necessità:&lt;/p>
+&lt;ul>
+&lt;li>una copia locale criptata facile da aggiornare e ripristinare;&lt;/li>
+&lt;li>una copia locale non criptata che garantisca universalmente l&amp;rsquo;accesso ai miei dati a terzi nel caso io ne sia impossibilitato;&lt;/li>
+&lt;li>una copia remota criptata nel caso in cui la copia locale sia inutilizzabile.&lt;/li>
+&lt;/ul>
+&lt;p>La prima e la terza necessità sono puramente personali, mentre la seconda mi serve per garantire che non vadano persi per sempre dati non particolarmente sensibili, ma indubbiamente molto importanti come foto, video o alcuni documenti personali.&lt;/p>
+&lt;h2 id="time-machine">Time Machine&lt;/h2>
+&lt;p>È il mio sistema di backup principale, non serve praticamente nessuna configurazione perché è integrato in macOS (basta collegare l&amp;rsquo;hard disk esterno dedicato) e mi garantisce un ripristino dei dati facile e rapido. Lo utilizzo per soddisfare la prima delle mie necessità.&lt;/p>
+&lt;h2 id="rsync">rsync&lt;/h2>
+&lt;p>La seconda necessità è invece soddisfatta da una copia dei dati su un hard disk esterno con &lt;a href="https://rsync.samba.org">rsync&lt;/a> tramite il comando qui sotto, a cui ho assegnato un &lt;code>alias&lt;/code> in &lt;code>.zshrc&lt;/code>.&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">rsync -ah --info=stats1,progress2 --delete --exclude={&amp;#39;Library&amp;#39;,&amp;#39;.Trash&amp;#39;,&amp;#39;.cache&amp;#39;,&amp;#39;.gnupg&amp;#39;} $HOME/ /Volumes/Backup/
+&lt;/code>&lt;/pre>&lt;h2 id="borgbackup">BorgBackup&lt;/h2>
+&lt;p>La terza necessità è quella che richiede un&amp;rsquo;implementazione più articolata e per questo ho dovuto investire un po&amp;rsquo; di tempo per trovare la soluzione che mi permettesse di raggiungere il risultato finale che mi ero prefissato.&lt;/p>
+&lt;p>La scelta è quella di utilizzare &lt;a href="https://www.borgbackup.org">BorgBackup&lt;/a> per creare backup remoti su
+&lt;a href="https://www.borgbase.com">BorgBase&lt;/a>.&lt;/p>
+&lt;p>&lt;mark>&lt;strong>N.B.&lt;/strong>: le istruzioni qui di seguito sono al 99% la trascrizione di questa fantastica &lt;a href="https://github.com/sunknudsen/privacy-guides/tree/master/how-to-configure-borg-client-on-macos-using-command-line#how-to-configure-borg-client-on-macos-using-command-line">guida&lt;/a> di &lt;a href="https://sunknudsen.com/">Sun Knudsen&lt;/a>, ci sono solo minime modifiche per adattarla alle mie esigenze.&lt;/mark>&lt;/p>
+&lt;h3 id="1---creare-la-chiave-ssh-borg">1 - Creare la chiave SSH &lt;code>borg&lt;/code>&lt;/h3>
+&lt;p>Generare una &lt;em>passphrase&lt;/em> e memorizzarla nel proprio password manager:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">openssl rand -base64 24 | pbcopy
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>N.B.&lt;/strong>: il comando &lt;code>pbcopy&lt;/code> copia direttamente la &lt;em>passphrase&lt;/em> nella &lt;em>clipboard&lt;/em>. Quando richiesta, basterà dare &lt;kbd>&lt;kbd>⌘&lt;/kbd>+&lt;kbd>V&lt;/kbd>&lt;/kbd> per incollarla.&lt;/p>
+&lt;p>Con questi comandi creare la chiave SSH e quando richiesto inserire la &lt;em>passphrase&lt;/em> generata precedentemente:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">mkdir ~/.ssh
+cd ~/.ssh
+ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/borg -C &amp;#34;borg&amp;#34;
+cat borg.pub | pbcopy
+&lt;/code>&lt;/pre>&lt;h3 id="2---creare-la-chiave-ssh-borg-append-only">2 - Creare la chiave SSH &lt;code>borg-append-only&lt;/code>&lt;/h3>
+&lt;p>Per questa chiave non c&amp;rsquo;è necessità di generare una &lt;em>passphrase&lt;/em> perché verrà utilizzata solo per le operazioni &lt;a href="https://en.wikipedia.org/wiki/Append-only">append-only&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/borg-append-only -C &amp;#34;borg-append-only&amp;#34;
+cat borg-append-only.pub | pbcopy
+&lt;/code>&lt;/pre>&lt;h3 id="3---configurare-le-chiavi-ssh-e-creare-il-repository-in-borgbase">3 - Configurare le chiavi SSH e creare il repository in BorgBase&lt;/h3>
+&lt;p>In BorgBase andare alla pagina &lt;a href="https://www.borgbase.com/ssh">SSH Keys&lt;/a> e inserire le chiavi pubbliche &lt;code>borg.pub&lt;/code> e &lt;code>borg-append-only.pub&lt;/code>.&lt;/p>
+&lt;p>Successivamente andare in &lt;a href="https://www.borgbase.com/repositories">Repositories&lt;/a> e creare un repository per i backup.&lt;/p>
+&lt;h3 id="4---installare-macfusehttpsosxfusegithubio-e-borgbackup">4 - Installare &lt;a href="https://osxfuse.github.io/">macFUSE&lt;/a> e BorgBackup&lt;/h3>
+&lt;p>macFUSE serve per montare il repository come fosse una archivio esterno per poter accedere ai backup.&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">brew install --cask macfuse
+brew install borgbackup/tap/borgbackup-fuse
+&lt;/code>&lt;/pre>&lt;h3 id="5---configurare-borgbackup">5 - Configurare BorgBackup&lt;/h3>
+&lt;p>Generare una &lt;em>passphrase&lt;/em> che utilizzeremo per la connessione a BorgBase ed aggiungerla ad &lt;a href="https://support.apple.com/it-it/guide/keychain-access/welcome/mac">Accesso Portachiavi&lt;/a> con questo unico comando (memorizzarla anche nel proprio password manager):&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">security add-generic-password -D secret -U -a $USER -s borg-passphrase -w $(openssl rand -base64 24)
+&lt;/code>&lt;/pre>&lt;h3 id="6---initializzare-il-repository">6 - Initializzare il repository&lt;/h3>
+&lt;p>Esportare temporaneamente le due &lt;a href="%3Chttps://it.wikipedia.org/wiki/Variabile_d%27ambiente">variabili d&amp;rsquo;ambiente&lt;/a> prima di inizializzare il repository (quando richiesto inserire la &lt;em>passphrase&lt;/em> della chiave SSH &lt;code>borg&lt;/code>):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">BORG_PASSCOMMAND&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;security find-generic-password -a &lt;/span>&lt;span class="nv">$USER&lt;/span>&lt;span class="s2"> -s borg-passphrase -w&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">BORG_RSH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;ssh -i ~/.ssh/borg&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">borg init --encryption&lt;span class="o">=&lt;/span>keyfile-blake2 &lt;span class="s2">&amp;#34;1234abcd@1234abcd.repo.borgbase.com:repo&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="7---impostare-le-variabili-dambiente">7 - Impostare le variabili d&amp;rsquo;ambiente&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">nano ~/.zshrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">BORG_REPO&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;1234abcd@1234abcd.repo.borgbase.com:repo&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">BACKUP_NAME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$USER&lt;/span>&lt;span class="s2">-macbook-air”
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">source ~/.zshrc
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="8---creare-lo-script-usrlocalbinborg-backup">8 - Creare lo script &lt;code>/usr/local/bin/borg-backup&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt; EOF &amp;gt; /usr/local/bin/borg-backup
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"># ! /bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">set -e
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">repo=&amp;#34;$BORG_REPO&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">prefix=&amp;#34;$BACKUP_NAME-&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_PASSCOMMAND=&amp;#34;security find-generic-password -a $USER -s borg-passphrase -w&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_RSH=&amp;#34;ssh -i ~/.ssh/borg-append-only&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">borg create \\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> --filter &amp;#34;AME&amp;#34; \\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> --list \\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> --stats \\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> --verbose \\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> --compression auto,zstd,9 \\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> --exclude &amp;#34;*.DS_Store&amp;#34; \\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> --exclude &amp;#34;*.localized&amp;#34; \\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> &amp;#34;\$repo::\$prefix{now:%F-%H%M}&amp;#34; \\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> &amp;#34;$HOME/.ssh&amp;#34; \\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> &amp;#34;$HOME/Library/Keychains&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">printf &amp;#34;%s\n&amp;#34; &amp;#34;Done&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/borg-backup
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="9---creare-lo-script-usrlocalbinborg-list">9 - Creare lo script &lt;code>/usr/local/bin/borg-list&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt; EOF &amp;gt; /usr/local/bin/borg-list
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"># ! /bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">set -e
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">prefix=&amp;#34;$BACKUP_NAME-&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">repo=&amp;#34;$BORG_REPO&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_PASSCOMMAND=&amp;#34;security find-generic-password -a $USER -s borg-passphrase -w&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_RSH=&amp;#34;ssh -i ~/.ssh/borg-append-only&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">borg list --prefix &amp;#34;\$prefix&amp;#34; &amp;#34;\$repo&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">printf &amp;#34;%s\n&amp;#34; &amp;#34;Done&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/borg-list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="10---creare-lo-script-usrlocalbinborg-check">10 - Creare lo script &lt;code>/usr/local/bin/borg-check&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt; EOF &amp;gt; /usr/local/bin/borg-check
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"># ! /bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">set -e
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">prefix=&amp;#34;$BACKUP_NAME-&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">repo=&amp;#34;$BORG_REPO&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_PASSCOMMAND=&amp;#34;security find-generic-password -a $USER -s borg-passphrase -w&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_RSH=&amp;#34;ssh -i ~/.ssh/borg-append-only&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">borg check --prefix &amp;#34;\$prefix&amp;#34; &amp;#34;\$repo&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">printf &amp;#34;%s\n&amp;#34; &amp;#34;Done&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/borg-check
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="11---creare-lo-script-usrlocalbinborg-restore">11 - Creare lo script &lt;code>/usr/local/bin/borg-restore&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt; EOF &amp;gt; /usr/local/bin/borg-restore
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"># ! /bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">set -e
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">function umount()
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">{
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> if [ -d &amp;#34;\$mount_point&amp;#34; ]; then
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> borg umount \$mount_point
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> fi
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">trap umount ERR INT
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">mount_point=&amp;#34;\${TMPDIR}borg&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">prefix=&amp;#34;$BACKUP_NAME-&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">repo=&amp;#34;$BORG_REPO&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">mkdir -p \$mount_point
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_PASSCOMMAND=&amp;#34;security find-generic-password -a $USER -s borg-passphrase -w&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_RSH=&amp;#34;ssh -i ~/.ssh/borg-append-only&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">borg mount --prefix &amp;#34;\$prefix&amp;#34; &amp;#34;\$repo&amp;#34; &amp;#34;\$mount_point&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">open \$mount_point
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">printf &amp;#34;Restore data and press enter&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">read -r answer
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">umount
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">printf &amp;#34;%s\n&amp;#34; &amp;#34;Done&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/borg-restore
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="12---creare-lo-script-usrlocalbinborg-prune">12 - Creare lo script &lt;code>/usr/local/bin/borg-prune&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt; EOF &amp;gt; /usr/local/bin/borg-prune
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"># ! /bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">set -e
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">prefix=&amp;#34;$BACKUP_NAME-&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">repo=&amp;#34;$BORG_REPO&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_PASSCOMMAND=&amp;#34;security find-generic-password -a $USER -s borg-passphrase -w&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_RSH=&amp;#34;ssh -i ~/.ssh/borg&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">borg prune --keep-hourly 24 --keep-daily 31 --keep-weekly 52 --keep-monthly 12 --keep-yearly 10 --list --prefix &amp;#34;\$prefix&amp;#34; --stats &amp;#34;\$repo&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">printf &amp;#34;%s\n&amp;#34; &amp;#34;Done&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/borg-prune
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="13---creare-lo-script-usrlocalbinborg-break-lock">13 - Creare lo script &lt;code>/usr/local/bin/borg-break-lock&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat &lt;span class="s">&amp;lt;&amp;lt; EOF &amp;gt; /usr/local/bin/borg-break-lock
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"># ! /bin/sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">set -e
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">prefix=&amp;#34;$BACKUP_NAME-&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">repo=&amp;#34;$BORG_REPO&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_PASSCOMMAND=&amp;#34;security find-generic-password -a $USER -s borg-passphrase -w&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">export BORG_RSH=&amp;#34;ssh -i ~/.ssh/borg-append-only&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">borg break-lock &amp;#34;\$repo&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">printf &amp;#34;%s\n&amp;#34; &amp;#34;Done&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/borg-break-lock
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="14---creare-un-wrapperhttpsitwikipediaorgwikiwrapper-con-applescript">14 - Creare un &lt;a href="https://it.wikipedia.org/wiki/Wrapper">wrapper&lt;/a> con AppleScript&lt;/h3>
+&lt;p>In macOS bisogna utilizzare un&amp;rsquo;applicazione nativa per poter schedulare i backup con BorgBackup, diversamente si dovrebbe concedere a &lt;code>zsh&lt;/code> l&amp;rsquo;accesso completo al disco (oppure a singole cartelle protette) e questo potenzialmente potrebbe causare delle vulnerabilità e pregiudicare la sicurezza.&lt;/p>
+&lt;p>&lt;a href="https://sunknudsen.com/">Sun Knudsen&lt;/a> ha reso disponibile &lt;a href="https://github.com/sunknudsen/borg-wrapper">Borg Wrapper&lt;/a> per assolvere questa funzione.&lt;/p>
+&lt;p>Io ho preferito crearmi un semplicissimo &lt;a href="https://it.wikipedia.org/wiki/AppleScript">AppleScript&lt;/a> con &lt;a href="https://support.apple.com/it-it/guide/script-editor/welcome/mac">Script Editor&lt;/a> ed esportarlo come applicazione nativa.&lt;/p>
+&lt;p>Questo è il codice dello script:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-applescript" data-lang="applescript">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">display&lt;/span> &lt;span class="nv">notification&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">current date&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &lt;span class="k">with&lt;/span> &lt;span class="na">title&lt;/span> &lt;span class="s2">&amp;#34;Backup avviato&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">try&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">do shell script&lt;/span> &lt;span class="s2">&amp;#34;PATH=$PATH:/opt/homebrew/bin:/usr/local/bin borg-backup&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">display&lt;/span> &lt;span class="nv">notification&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">current date&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &lt;span class="k">with&lt;/span> &lt;span class="na">title&lt;/span> &lt;span class="s2">&amp;#34;Backup completato&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">on&lt;/span> &lt;span class="k">error&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">display alert&lt;/span> &lt;span class="s2">&amp;#34;Backup non completato
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">current date&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nv">critical&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">end&lt;/span> &lt;span class="k">try&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="15---schedulare-i-backup">15 - Schedulare i backup&lt;/h3>
+&lt;p>Creare un agente per avviare automaticamente il backup ogni ora:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-xml" data-lang="xml">&lt;span class="line">&lt;span class="cl">mkdir -p ~/Library/LaunchAgents
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="nt">&amp;lt; EOF&lt;/span> &lt;span class="nt">&amp;gt;&lt;/span> ~/Library/LaunchAgents/local.borg-wrapper.plist
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE plist PUBLIC &amp;#34;-//Apple//DTD PLIST 1.0//EN&amp;#34; &amp;#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;#34;&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;plist&lt;/span> &lt;span class="na">version=&lt;/span>&lt;span class="s">&amp;#34;1.0&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;dict&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;key&amp;gt;&lt;/span>Label&lt;span class="nt">&amp;lt;/key&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;string&amp;gt;&lt;/span>local.borg-wrapper&lt;span class="nt">&amp;lt;/string&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;key&amp;gt;&lt;/span>ProgramArguments&lt;span class="nt">&amp;lt;/key&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;array&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;string&amp;gt;&lt;/span>open&lt;span class="nt">&amp;lt;/string&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;string&amp;gt;&lt;/span>/Applications/Borg Wrapper.app&lt;span class="nt">&amp;lt;/string&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;/array&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;key&amp;gt;&lt;/span>RunAtLoad&lt;span class="nt">&amp;lt;/key&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;false/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;key&amp;gt;&lt;/span>StartCalendarInterval&lt;span class="nt">&amp;lt;/key&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;dict&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;key&amp;gt;&lt;/span>Minute&lt;span class="nt">&amp;lt;/key&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;integer&amp;gt;&lt;/span>0&lt;span class="nt">&amp;lt;/integer&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;/dict&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;/dict&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/plist&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">launchctl load ~/Library/LaunchAgents/local.borg-wrapper.plist
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Rimane un po’ il dubbio sull’affidabilità nel lungo periodo, soprattutto per quanto riguarda l’eventuale manutenzione degli script, ma dopo qualche settimana di utilizzo posso ritenermi soddisfatto del funzionamento.&lt;/p></description></item><item><title>Un metodo semplice per gestire i dotfiles</title><link>https://disinteressato.it/posts/08-dotfiles/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/08-dotfiles/</guid><description>&lt;p>In vita mia non avevo mai approfondito la gestione dei &lt;a href="https://en.m.wikipedia.org/wiki/Hidden_file_and_hidden_directory#Unix_and_Unix-like_environments">dotfiles&lt;/a>, avevo letto qualcosa, ma era rimasta nel cassetto tra i progetti incompiuti.&lt;/p>
 &lt;p>Poi sono capitato per caso sul sito &lt;a href="http://dotfiles.github.io/">GitHub does dotfiles&lt;/a>, così ho ricominciato a pensarci e a studiare qua e là per ottenere un risultato semplice e funzionale.&lt;/p>
 &lt;p>La scelta è ricaduta sul metodo del &lt;strong>bare repository&lt;/strong> (ovvero un repository privo della cartella di lavoro) e &lt;strong>alias&lt;/strong>, come descritto in queste due fondamentali letture: &lt;a href="https://www.atlassian.com/git/tutorials/dotfiles">The best way to store your dotfiles: A bare Git repository&lt;/a> e l&amp;rsquo;irrinunciabile &lt;a href="https://wiki.archlinux.org/title/Dotfiles">Wiki&lt;/a> di Arch Linux.&lt;/p>
 &lt;p>Per prima cosa ho creato un repository in GitHub: deve essere vuoto, quindi senza README e LICENSE.&lt;/p>
