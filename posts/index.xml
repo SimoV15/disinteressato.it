@@ -186,7 +186,8 @@ brew install borgbackup/tap/borgbackup-fuse
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="14---creare-un-wrapperhttpsitwikipediaorgwikiwrapper-con-applescript">14 - Creare un &lt;a href="https://it.wikipedia.org/wiki/Wrapper">wrapper&lt;/a> con AppleScript&lt;/h3>
 &lt;p>In macOS bisogna utilizzare un&amp;rsquo;applicazione nativa per poter schedulare i backup con BorgBackup, diversamente si dovrebbe concedere a &lt;code>zsh&lt;/code> l&amp;rsquo;accesso completo al disco (oppure a singole cartelle protette) e questo potenzialmente potrebbe causare delle vulnerabilità e pregiudicare la sicurezza.&lt;/p>
 &lt;p>&lt;a href="https://sunknudsen.com/">Sun Knudsen&lt;/a> ha reso disponibile &lt;a href="https://github.com/sunknudsen/borg-wrapper">Borg Wrapper&lt;/a> per assolvere questa funzione.&lt;/p>
-&lt;p>Io ho preferito crearmi un semplicissimo &lt;a href="https://it.wikipedia.org/wiki/AppleScript">AppleScript&lt;/a> con &lt;a href="https://support.apple.com/it-it/guide/script-editor/welcome/mac">Script Editor&lt;/a> ed esportarlo come applicazione nativa.&lt;/p>
+&lt;p>Io ho preferito crearmi un semplicissimo &lt;a href="https://it.wikipedia.org/wiki/AppleScript">AppleScript&lt;/a> con &lt;a href="https://support.apple.com/it-it/guide/script-editor/welcome/mac">Script Editor&lt;/a> ed esportarlo come applicazione nativa.
+Questo script controlla che ci sia una connessione e fa partire il backup&lt;/p>
 &lt;p>Questo è il codice dello script:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-applescript" data-lang="applescript">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">display&lt;/span> &lt;span class="nv">notification&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">current date&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span> &lt;span class="k">with&lt;/span> &lt;span class="na">title&lt;/span> &lt;span class="s2">&amp;#34;Backup avviato&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">try&lt;/span>
@@ -199,19 +200,18 @@ brew install borgbackup/tap/borgbackup-fuse
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="15---schedulare-i-backup">15 - Schedulare i backup&lt;/h3>
 &lt;p>Creare un agente per avviare automaticamente il backup ogni ora:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-xml" data-lang="xml">&lt;span class="line">&lt;span class="cl">mkdir -p ~/Library/LaunchAgents
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="nt">&amp;lt; EOF&lt;/span> &lt;span class="nt">&amp;gt;&lt;/span> ~/Library/LaunchAgents/local.borg-wrapper.plist
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="nt">&amp;lt; EOF&lt;/span> &lt;span class="nt">&amp;gt;&lt;/span> ~/Library/LaunchAgents/local.borgbackup-wrapper.plist
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE plist PUBLIC &amp;#34;-//Apple//DTD PLIST 1.0//EN&amp;#34; &amp;#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;#34;&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;plist&lt;/span> &lt;span class="na">version=&lt;/span>&lt;span class="s">&amp;#34;1.0&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;dict&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;key&amp;gt;&lt;/span>Label&lt;span class="nt">&amp;lt;/key&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;string&amp;gt;&lt;/span>local.borg-wrapper&lt;span class="nt">&amp;lt;/string&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;string&amp;gt;&lt;/span>local.borgbackup-wrapper&lt;span class="nt">&amp;lt;/string&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;key&amp;gt;&lt;/span>ProgramArguments&lt;span class="nt">&amp;lt;/key&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;array&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;string&amp;gt;&lt;/span>open&lt;span class="nt">&amp;lt;/string&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;string&amp;gt;&lt;/span>/Applications/Borg Wrapper.app&lt;span class="nt">&amp;lt;/string&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;string&amp;gt;&lt;/span>/Applications/BorgBackup Wrapper.app&lt;span class="nt">&amp;lt;/string&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;/array&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;key&amp;gt;&lt;/span>RunAtLoad&lt;span class="nt">&amp;lt;/key&amp;gt;&lt;/span>
@@ -225,7 +225,7 @@ brew install borgbackup/tap/borgbackup-fuse
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;/dict&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/plist&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">launchctl load ~/Library/LaunchAgents/local.borg-wrapper.plist
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">launchctl load ~/Library/LaunchAgents/local.borgbackup-wrapper.plist
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Rimane un po’ il dubbio sull’affidabilità nel lungo periodo, soprattutto per quanto riguarda l’eventuale manutenzione degli script, ma dopo qualche settimana di utilizzo posso ritenermi soddisfatto del funzionamento.&lt;/p></description></item><item><title>Un metodo semplice per gestire i dotfiles</title><link>https://disinteressato.it/posts/08-dotfiles/</link><pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/08-dotfiles/</guid><description>&lt;p>In vita mia non avevo mai approfondito la gestione dei &lt;a href="https://en.m.wikipedia.org/wiki/Hidden_file_and_hidden_directory#Unix_and_Unix-like_environments">dotfiles&lt;/a>, avevo letto qualcosa, ma era rimasta nel cassetto tra i progetti incompiuti.&lt;/p>
 &lt;p>Poi sono capitato per caso sul sito &lt;a href="http://dotfiles.github.io/">GitHub does dotfiles&lt;/a>, così ho ricominciato a pensarci e a studiare qua e là per ottenere un risultato semplice e funzionale.&lt;/p>
 &lt;p>La scelta è ricaduta sul metodo del &lt;strong>bare repository&lt;/strong> (ovvero un repository privo della cartella di lavoro) e &lt;strong>alias&lt;/strong>, come descritto in queste due fondamentali letture: &lt;a href="https://www.atlassian.com/git/tutorials/dotfiles">The best way to store your dotfiles: A bare Git repository&lt;/a> e l&amp;rsquo;irrinunciabile &lt;a href="https://wiki.archlinux.org/title/Dotfiles">Wiki&lt;/a> di Arch Linux.&lt;/p>
@@ -380,6 +380,7 @@ E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo co
 &lt;li>&lt;a href="https://handbrake.fr">HandBrake&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://transmissionbt.com/">Transmission&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.torproject.org">Tor Browser&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.keka.io/">Keka&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://freemacsoft.net/appcleaner/">App Cleaner&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>Ho lasciato alla riga di comando le operazioni che possono essere svolte esclusivamente da terminale oppure quelle per le quali mi sento più a mio agio ad utilizzarlo.&lt;/p>
@@ -561,7 +562,7 @@ brew install --cask font-roboto font-roboto-mono font-roboto-slab font-bebas-neu
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">###########&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># system&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">brewup&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;brew update &amp;amp;&amp;amp; brew upgrade &amp;amp;&amp;amp; brew update --cask &amp;amp;&amp;amp; brew upgrade --cask $(brew outdated) --cask &amp;amp;&amp;amp; brew cleanup &amp;amp;&amp;amp; brew doctor&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">brewup&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;brew update &amp;amp;&amp;amp; brew upgrade &amp;amp;&amp;amp; brew update --cask &amp;amp;&amp;amp; brew upgrade --cask $(brew outdated) --cask &amp;amp;&amp;amp; brew cleanup &amp;amp;&amp;amp; brew autoremove &amp;amp;&amp;amp; brew doctor&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">texup&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;sudo tlmgr update --self &amp;amp;&amp;amp; sudo tlmgr update --all&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">myip&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;curl http://ipecho.net/plain; echo&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
