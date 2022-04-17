@@ -462,16 +462,18 @@ brew install --cask font-roboto font-roboto-mono font-roboto-slab font-bebas-neu
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="rsync">rsync&lt;/h2>
 &lt;p>Sempre utile avere &lt;a href="https://rsync.samba.org">rsync&lt;/a> per sincronizzare file o cartelle:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">brew install rsync
-&lt;/code>&lt;/pre>&lt;h2 id="youtube-dl">youtube-dl&lt;/h2>
-&lt;p>Immancabile &lt;a href="https://youtube-dl.org">youtube-dl&lt;/a> per scaricare i video da &lt;a href="https://www.youtube.com">YouTube&lt;/a>:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">brew install youtube-dl atomicparsley ffmpeg
+&lt;/code>&lt;/pre>&lt;h2 id="yt-dlp">yt-dlp&lt;/h2>
+&lt;p>Per scaricare i video da &lt;a href="https://www.youtube.com">YouTube&lt;/a> utilizzo &lt;a href="https://github.com/yt-dlp/yt-dlp">yt-dlp&lt;/a>:&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">brew install yt-dlp/taps/yt-dlp
+brew install atomicparsley ffmpeg
 &lt;/code>&lt;/pre>&lt;p>Questo invece è il mio file di configurazione:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ nano ~/.config/youtube-dl/config
---embed-thumbnail
+&lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ nano ~/.config/yt-dlp/config
+--compat-options embed-thumbnail-atomicparsley
 --add-metadata
 --no-mtime
+--yes-playlist
 -o /Users/&amp;lt;USER&amp;gt;/Movies/%(title)s.%(ext)s
--f &amp;#39;bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best&amp;#39;
+-f &amp;#39;bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b&amp;#39;
 &lt;/code>&lt;/pre>&lt;h2 id="imagemagick">ImageMagick&lt;/h2>
 &lt;p>&lt;a href="https://imagemagick.org">ImageMagick&lt;/a> per la manipolazione delle immagini:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">brew install imagemagick
