@@ -380,8 +380,9 @@ E poi venivo da Windows e il &lt;em>Prompt dei comandi&lt;/em> neanche sapevo co
 &lt;li>&lt;a href="https://handbrake.fr">HandBrake&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://transmissionbt.com/">Transmission&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.torproject.org">Tor Browser&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.keka.io/">Keka&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://freemacsoft.net/appcleaner/">App Cleaner&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.corecode.io/uninstallpkg/">UninstallPKG&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://media-converter.sourceforge.io">Media Converter&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>Ho lasciato alla riga di comando le operazioni che possono essere svolte esclusivamente da terminale oppure quelle per le quali mi sento più a mio agio ad utilizzarlo.&lt;/p>
 &lt;p>Con macOS la prima cosa da fare è installare &lt;a href="https://brew.sh/index_it">Homebrew&lt;/a>, un gestore di pacchetti col quale scaricare, installare e mantenere aggiornato del software rigorosamente &lt;a href="https://it.wikipedia.org/wiki/Open_source">open source&lt;/a>: in pratica è una specie di App Store da linea di comando.
