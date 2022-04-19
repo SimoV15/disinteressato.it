@@ -469,12 +469,14 @@ brew install --cask font-roboto font-roboto-mono font-roboto-slab font-bebas-neu
 brew install atomicparsley ffmpeg
 &lt;/code>&lt;/pre>&lt;p>Questo invece è il mio file di configurazione:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">$ nano ~/.config/yt-dlp/config
---compat-options embed-thumbnail-atomicparsley
---add-metadata
 --no-mtime
+--embed-metadata
+--embed-thumbnail
+# --write-thumbnail
 --yes-playlist
--o /Users/&amp;lt;USER&amp;gt;/Movies/%(title)s.%(ext)s
+-o /Users/simo/Downloads/YouTube/%(title)s.%(ext)s
 -f &amp;#39;bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b&amp;#39;
+# -f &amp;#39;ba[ext=m4a]/b[ext=mp4]&amp;#39;
 &lt;/code>&lt;/pre>&lt;h2 id="imagemagick">ImageMagick&lt;/h2>
 &lt;p>&lt;a href="https://imagemagick.org">ImageMagick&lt;/a> per la manipolazione delle immagini:&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-default" data-lang="default">brew install imagemagick
