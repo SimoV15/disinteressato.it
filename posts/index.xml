@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Disinteressato</title><link>https://disinteressato.it/posts/</link><description>Recent content in Posts on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><lastBuildDate>Sun, 10 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://disinteressato.it/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>La mia strategia di backup (anche se di mio c'è quasi niente)</title><link>https://disinteressato.it/posts/09-backup/</link><pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/09-backup/</guid><description>&lt;p>La prima volta che mi resi conto dell&amp;rsquo;importanza di avere almeno un backup dei miei dati è stato nel lontano 2006, quando persi quasi tutto a causa di una défaillance del mio portatile.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Disinteressato</title><link>https://disinteressato.it/posts/</link><description>Recent content in Posts on Disinteressato</description><generator>Hugo -- gohugo.io</generator><language>it-IT</language><lastBuildDate>Mon, 27 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://disinteressato.it/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>OHIO (Only Handle It Once)</title><link>https://disinteressato.it/posts/10-ohio/</link><pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/10-ohio/</guid><description>&lt;p>Dopo le vacanze natalizie, il primo giorno di lavoro del 2022 l’ho fatto in smart working.&lt;/p>
+&lt;p>Erano dieci giorni che non accendevo il portatile aziendale e mi sono ritrovato nella Posta in arrivo un tot di e-mail da leggere più un’altra marea di e-mail già lette e magari già processate che però avevo l’abitudine di tenere lì, perché solo per alcune avevo previsto delle cartelle personalizzate in cui spostarle.&lt;/p>
+&lt;p>Il risultato è stato che ci ho messo un attimo a ritrovare il bandolo della matassa, a ricordarmi dove ero rimasto e quale era l’ordine delle priorità da affrontare.&lt;/p>
+&lt;p>Un disastro.&lt;/p>
+&lt;p>Dovevo necessariamente trovare una metodologia organizzativa differente che facesse meno affidamento alla mia memoria nel distinguere ciò che era stato portato a termine da ciò che era ancora da completare.
+Rassegnato, ho iniziato a pensare a cosa avrei potuto fare, ma poi, come sempre, ho trovato la risposta nel &lt;a href="https://www.howtogeek.com/411312/forget-inbox-zero-use-ohio-to-triage-your-emails-instead/">web&lt;/a>.&lt;/p>
+&lt;p>Il concetto di base è di iniziare a lavorare dall&amp;rsquo;inizio alla fine ad uno specifico argomento, in modo da non doverci ritornare in futuro per completarlo. Una cosa del tipo &amp;ldquo;non lasciare le cose a metà&amp;rdquo;, soprattutto se occorrerebbero solo 10 secondi per portarle a termine.&lt;/p>
+&lt;p>Applicando questo concetto alle e-mail in arrivo, le attività possono essere queste:&lt;/p>
+&lt;ul>
+&lt;li>rispondere all&amp;rsquo;e-mail;&lt;/li>
+&lt;li>inoltrare l&amp;rsquo;e-mail;&lt;/li>
+&lt;li>svolgere, anche in un secondo momento, l&amp;rsquo;attività richiesta nell&amp;rsquo;e-mail;&lt;/li>
+&lt;li>organizzare una riunione/chiedere delucidazioni sull&amp;rsquo;argomento dell&amp;rsquo;e-mail;&lt;/li>
+&lt;li>non fare niente (se non è richiesta nessuna delle attività di cui sopra).&lt;/li>
+&lt;/ul>
+&lt;p>Dopo aver compiuto la più appropriata tra queste attività, l&amp;rsquo;e-mail deve essere archiviata oppure cancellata: in questo modo nella Posta in arrivo ci saranno solo le attività ancora da svolgere e, per esperienza, a fine giornata non ci saranno più di una ventina di e-mail tra le quali doversi districare.&lt;/p>
+&lt;p>Visto che comunque è impossibile non dover mai rileggere un&amp;rsquo;e-mail, ho organizzato anche l&amp;rsquo;Archivio con alcune sottocartelle in base al mittente o all&amp;rsquo;argomento, alla quali posso accedere rapidamente in caso di necessità. Partendo dalla situazione che ho descritto inizialmente è stato un lavoro abbastanza lungo (circa 10.000 e-mail), ma alla fine necessario per raggiungere un certo livello di organizzazione ed omogeneità.&lt;/p>
+&lt;p>Altra cosa che ho imparato è di impostare dei promemoria con delle scadenze ben precise per le attività che risultano ancora da completare.&lt;/p>
+&lt;p>I risultati che ho ottenuto in questi sei mesi sono questi:&lt;/p>
+&lt;ul>
+&lt;li>devo fare molto meno affidamento alla mia memoria nella gestione delle attività;&lt;/li>
+&lt;li>le attività prioritarie ancora da completare oltre a risiedere nella Posta in arrivo hanno un promemoria;&lt;/li>
+&lt;li>ho una visione d&amp;rsquo;insieme rapida e precisa;&lt;/li>
+&lt;li>tutto ciò che non è ancora da svolgere è già stato completato;&lt;/li>
+&lt;li>meno stress.&lt;/li>
+&lt;/ul></description></item><item><title>La mia strategia di backup (anche se di mio c'è quasi niente)</title><link>https://disinteressato.it/posts/09-backup/</link><pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate><guid>https://disinteressato.it/posts/09-backup/</guid><description>&lt;p>La prima volta che mi resi conto dell&amp;rsquo;importanza di avere almeno un backup dei miei dati è stato nel lontano 2006, quando persi quasi tutto a causa di una défaillance del mio portatile.
 Da allora ho sempre cercato di avere almeno una copia completa e recente dei miei dati e col tempo ho cercato di affinare e rendere più solida la procedura, fino a giungere a quella attuale che copre le mie principali necessità:&lt;/p>
 &lt;ul>
 &lt;li>una copia locale criptata facile da aggiornare e ripristinare;&lt;/li>
